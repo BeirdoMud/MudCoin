@@ -277,10 +277,10 @@ class CmudcoinAddress : public CBase58Data
 public:
     enum
     {
-        PUBKEY_ADDRESS = 26,
-        SCRIPT_ADDRESS = 30, 
-        PUBKEY_ADDRESS_TEST = 111,
-        SCRIPT_ADDRESS_TEST = 196,
+        PUBKEY_ADDRESS = 50,
+        SCRIPT_ADDRESS = 63, 
+        PUBKEY_ADDRESS_TEST = 110,
+        SCRIPT_ADDRESS_TEST = 125,
     };
 
     bool Set(const CKeyID &id) {

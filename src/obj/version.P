@@ -1,4 +1,4 @@
-obj/version.o: version.cpp version.h clientversion.h \
- /home/toe/mud/src/obj/build.h
-version.cpp version.h clientversion.h :
- /home/toe/mud/src/obj/build.h :
+obj/version.o: version.cpp version.h \
+ /opt/home-ubuntu/src/MudCoin/src/obj/build.h
+version.cpp version.h :
+ /opt/home-ubuntu/src/MudCoin/src/obj/build.h :

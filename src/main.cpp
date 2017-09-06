@@ -2541,7 +2541,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
 
         // Genesis block
-        const char* pszTimestamp = "mudcoin - yea he did.";
+        const char* pszTimestamp = "MudCoin - Banking for the Adventurers";
         CTransaction txNew;
         txNew.nTime = nChainStartTime;
         txNew.vin.resize(1);
@@ -2549,7 +2549,7 @@ bool LoadBlockIndex(bool fAllowNew)
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(9999) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].SetEmpty();
         //txNew.vout[0].scriptPubKey = CScript() << ParseHex(pszMainKey) << OP_CHECKSIG;
-        txNew.strTxComment = "text:mudcoin genesis block";
+        txNew.strTxComment = "text:MudCoin genesis block";
 
 
         CBlock block;
@@ -2559,7 +2559,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = nChainStartTime;;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 383236;
+        block.nNonce   = 1231790;
 
         if (IsCalculatingGenesisBlockHash && (block.GetHash() != hashGenesisBlock)) {
 			block.nNonce = 0;
@@ -2591,7 +2591,9 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("block.nNonce = %u \n", block.nNonce);
         printf("block.nBits = %u \n", block.nBits);
 
-        assert(block.hashMerkleRoot == uint256("0x5859961828d530f7ca2eea01ffd44df95e39869ea82c5a89c226d7f305126c7a"));
+	fflush(stdout);
+	sleep(1);
+        assert(block.hashMerkleRoot == uint256("0xf5edad392db3879dfea648b4ac64a037b05cfea40f4f0f25ab1b29a709534ecc"));
         block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
