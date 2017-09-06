@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About tekcoin</source>
-        <translation>O tekcoinu</translation>
+        <source>About mudcoin</source>
+        <translation>O mudcoinu</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;tekcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;tekcoin&lt;/b&gt; verze</translation>
+        <source>&lt;b&gt;mudcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;mudcoin&lt;/b&gt; verze</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -35,7 +35,7 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     <message>
         <location line="+0"/>
         <source>Dr. Kimoto Chan</source>
-        <translation>Vývojáři tekcoinu</translation>
+        <translation>Vývojáři mudcoinu</translation>
     </message>
 </context>
 <context>
@@ -67,8 +67,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your tekcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Tohle jsou tvé tekcoinové adresy pro příjem plateb. Můžeš dát pokaždé každému plátci novou adresu, abys věděl, kdo ti kdy kolik platil.</translation>
+        <source>These are your mudcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Tohle jsou tvé mudcoinové adresy pro příjem plateb. Můžeš dát pokaždé každému plátci novou adresu, abys věděl, kdo ti kdy kolik platil.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -82,8 +82,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a tekcoin address</source>
-        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem tekcoinové adresy</translation>
+        <source>Sign a message to prove you own a mudcoin address</source>
+        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem mudcoinové adresy</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -107,8 +107,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified tekcoin address</source>
-        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou tekcoinovou adresou</translation>
+        <source>Verify a message to ensure it was signed with a specified mudcoin address</source>
+        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou mudcoinovou adresou</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -122,8 +122,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your tekcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Tohle jsou tvé tekcoinové adresy pro posílání plateb. Před odesláním mincí si vždy zkontroluj částku a cílovou adresu.</translation>
+        <source>These are your mudcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tohle jsou tvé mudcoinové adresy pro posílání plateb. Před odesláním mincí si vždy zkontroluj částku a cílovou adresu.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -248,8 +248,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR tekcoinS&lt;/b&gt;!</source>
-        <translation>Varování: Pokud si zašifruješ peněženku a ztratíš či zapomeneš heslo, &lt;b&gt;PŘIJDEŠ O VŠECHNY tekcoinS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR mudcoinS&lt;/b&gt;!</source>
+        <translation>Varování: Pokud si zašifruješ peněženku a ztratíš či zapomeneš heslo, &lt;b&gt;PŘIJDEŠ O VŠECHNY mudcoinS&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -275,8 +275,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="-56"/>
-        <source>tekcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your tekcoins from being stolen by malware infecting your computer.</source>
-        <translation>tekcoin se teď ukončí, aby dokončil zašifrování. Pamatuj však, že pouhé zašifrování peněženky úplně nezabraňuje krádeži tvých tekcoinů malwarem, kterým se může počítač nakazit.</translation>
+        <source>mudcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your mudcoins from being stolen by malware infecting your computer.</source>
+        <translation>mudcoin se teď ukončí, aby dokončil zašifrování. Pamatuj však, že pouhé zašifrování peněženky úplně nezabraňuje krádeži tvých mudcoinů malwarem, kterým se může počítač nakazit.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -321,9 +321,9 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
 </context>
 <context>
-    <name>tekcoinGUI</name>
+    <name>mudcoinGUI</name>
     <message>
-        <location filename="../tekcoingui.cpp" line="+233"/>
+        <location filename="../mudcoingui.cpp" line="+233"/>
         <source>Sign &amp;message...</source>
         <translation>Po&amp;depiš zprávu...</translation>
     </message>
@@ -374,8 +374,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about tekcoin</source>
-        <translation>Zobraz informace o tekcoinu</translation>
+        <source>Show information about mudcoin</source>
+        <translation>Zobraz informace o mudcoinu</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -419,13 +419,13 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a tekcoin address</source>
-        <translation>Pošli mince na tekcoinovou adresu</translation>
+        <source>Send coins to a mudcoin address</source>
+        <translation>Pošli mince na mudcoinovou adresu</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for tekcoin</source>
-        <translation>Uprav nastavení tekcoinu</translation>
+        <source>Modify configuration options for mudcoin</source>
+        <translation>Uprav nastavení mudcoinu</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -455,8 +455,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>tekcoin</source>
-        <translation>tekcoin</translation>
+        <source>mudcoin</source>
+        <translation>mudcoin</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -480,8 +480,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About tekcoin</source>
-        <translation>O &amp;tekcoinu</translation>
+        <source>&amp;About mudcoin</source>
+        <translation>O &amp;mudcoinu</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your tekcoin addresses to prove you own them</source>
-        <translation>Podepiš zprávy svými tekcoinovými adresami, čímž prokážeš, že jsi jejich vlastníkem</translation>
+        <source>Sign messages with your mudcoin addresses to prove you own them</source>
+        <translation>Podepiš zprávy svými mudcoinovými adresami, čímž prokážeš, že jsi jejich vlastníkem</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified tekcoin addresses</source>
-        <translation>Ověř zprávy, aby ses ujistil, že byly podepsány danými tekcoinovými adresami</translation>
+        <source>Verify messages to ensure they were signed with specified mudcoin addresses</source>
+        <translation>Ověř zprávy, aby ses ujistil, že byly podepsány danými mudcoinovými adresami</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -536,13 +536,13 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+47"/>
-        <source>tekcoin client</source>
-        <translation>tekcoin klient</translation>
+        <source>mudcoin client</source>
+        <translation>mudcoin klient</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to tekcoin network</source>
-        <translation><numerusform>%n aktivní spojení do tekcoinové sítě</numerusform><numerusform>%n aktivní spojení do tekcoinové sítě</numerusform><numerusform>%n aktivních spojení do tekcoinové sítě</numerusform></translation>
+        <source>%n active connection(s) to mudcoin network</source>
+        <translation><numerusform>%n aktivní spojení do mudcoinové sítě</numerusform><numerusform>%n aktivní spojení do mudcoinové sítě</numerusform><numerusform>%n aktivních spojení do mudcoinové sítě</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -607,7 +607,7 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     <message>
         <location line="+70"/>
         <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
-        <translation>Tahle transakce přesahuje velikostní limit. I tak ji ale můžeš poslat, pokud za ni zaplatíš poplatek %1, který půjde uzlům, které tvou transakci zpracují, a navíc tak podpoříš síť. Chceš zaplatit poplatek?</translation>
+        <translation>Tahle transakce přesahuje velikostní limit. I tak ji ale můžeš poslat, pokud za ni zaplatíš poplamud %1, který půjde uzlům, které tvou transakci zpracují, a navíc tak podpoříš síť. Chceš zaplatit poplamud?</translation>
     </message>
     <message>
         <location line="-140"/>
@@ -622,7 +622,7 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     <message>
         <location line="+113"/>
         <source>Confirm transaction fee</source>
-        <translation>Potvrď transakční poplatek</translation>
+        <translation>Potvrď transakční poplamud</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -656,8 +656,8 @@ Adresa: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid tekcoin address or malformed URI parameters.</source>
-        <translation>Nepodařilo se analyzovat URI! Důvodem může být neplatná tekcoinová adresa nebo poškozené parametry URI.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid mudcoin address or malformed URI parameters.</source>
+        <translation>Nepodařilo se analyzovat URI! Důvodem může být neplatná mudcoinová adresa nebo poškozené parametry URI.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -670,9 +670,9 @@ Adresa: %4
         <translation>Peněženka je &lt;b&gt;zašifrovaná&lt;/b&gt; a momentálně &lt;b&gt;zamčená&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../tekcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. tekcoin can no longer continue safely and will quit.</source>
-        <translation>Stala se fatální chyba. tekcoin nemůže bezpečně pokračovat v činnosti, a proto skončí.</translation>
+        <location filename="../mudcoin.cpp" line="+111"/>
+        <source>A fatal error occurred. mudcoin can no longer continue safely and will quit.</source>
+        <translation>Stala se fatální chyba. mudcoin nemůže bezpečně pokračovat v činnosti, a proto skončí.</translation>
     </message>
 </context>
 <context>
@@ -737,8 +737,8 @@ Adresa: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid tekcoin address.</source>
-        <translation>Zadaná adresa &quot;%1&quot; není platná tekcoinová adresa.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid mudcoin address.</source>
+        <translation>Zadaná adresa &quot;%1&quot; není platná mudcoinová adresa.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -756,8 +756,8 @@ Adresa: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>tekcoin-Qt</source>
-        <translation>tekcoin-Qt</translation>
+        <source>mudcoin-Qt</source>
+        <translation>mudcoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -810,22 +810,22 @@ Adresa: %4
     <message>
         <location line="+6"/>
         <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB.</source>
-        <translation>Dobrovolný transakční poplatek za každý započatý kB dopomáhá k rychlému zpracování tvých transakcí. Většina transakcí má do 1 kB.</translation>
+        <translation>Dobrovolný transakční poplamud za každý započatý kB dopomáhá k rychlému zpracování tvých transakcí. Většina transakcí má do 1 kB.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Pay transaction &amp;fee</source>
-        <translation>Platit &amp;transakční poplatek</translation>
+        <translation>Platit &amp;transakční poplamud</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start tekcoin after logging in to the system.</source>
-        <translation>Automaticky spustí tekcoin po přihlášení do systému.</translation>
+        <source>Automatically start mudcoin after logging in to the system.</source>
+        <translation>Automaticky spustí mudcoin po přihlášení do systému.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start tekcoin on system login</source>
-        <translation>S&amp;pustit tekcoin po přihlášení do systému</translation>
+        <source>&amp;Start mudcoin on system login</source>
+        <translation>S&amp;pustit mudcoin po přihlášení do systému</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -844,7 +844,7 @@ Adresa: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the tekcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the mudcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Automaticky otevře potřebný port na routeru. Tohle funguje jen za předpokladu, že tvůj router podporuje UPnP a že je UPnP povolené.</translation>
     </message>
     <message>
@@ -854,8 +854,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the tekcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Připojí se do tekcoinové sítě přes SOCKS proxy (např. když se připojuje přes Tor).</translation>
+        <source>Connect to the mudcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Připojí se do mudcoinové sítě přes SOCKS proxy (např. když se připojuje přes Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -929,8 +929,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting tekcoin.</source>
-        <translation>Tady lze nastavit jazyk uživatelského rozhraní. Nastavení se projeví až po restartování tekcoinu.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting mudcoin.</source>
+        <translation>Tady lze nastavit jazyk uživatelského rozhraní. Nastavení se projeví až po restartování mudcoinu.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -944,8 +944,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show tekcoin addresses in the transaction list or not.</source>
-        <translation>Zda ukazovat tekcoinové adresy ve výpisu transakcí nebo ne.</translation>
+        <source>Whether to show mudcoin addresses in the transaction list or not.</source>
+        <translation>Zda ukazovat mudcoinové adresy ve výpisu transakcí nebo ne.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -996,8 +996,8 @@ Adresa: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting tekcoin.</source>
-        <translation>Nastavení se projeví až po restartování tekcoinu.</translation>
+        <source>This setting will take effect after restarting mudcoin.</source>
+        <translation>Nastavení se projeví až po restartování mudcoinu.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1015,8 +1015,8 @@ Adresa: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the tekcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informace nemusí být aktuální. Tvá peněženka se automaticky sesynchronizuje s tekcoinovou sítí, jakmile se s ní spojí. Zatím ale ještě není synchronizace dokončena.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the mudcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informace nemusí být aktuální. Tvá peněženka se automaticky sesynchronizuje s mudcoinovou sítí, jakmile se s ní spojí. Zatím ale ještě není synchronizace dokončena.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1069,8 +1069,8 @@ Adresa: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start tekcoin: click-to-pay handler</source>
-        <translation>Nemůžu spustit tekcoin: obsluha click-to-pay</translation>
+        <source>Cannot start mudcoin: click-to-pay handler</source>
+        <translation>Nemůžu spustit mudcoin: obsluha click-to-pay</translation>
     </message>
 </context>
 <context>
@@ -1219,8 +1219,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the tekcoin-Qt help message to get a list with possible tekcoin command-line options.</source>
-        <translation>Seznam parametrů tekcoinu pro příkazovou řádku získáš v nápovědě tekcoinu Qt.</translation>
+        <source>Show the mudcoin-Qt help message to get a list with possible mudcoin command-line options.</source>
+        <translation>Seznam parametrů mudcoinu pro příkazovou řádku získáš v nápovědě mudcoinu Qt.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1239,13 +1239,13 @@ Adresa: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>tekcoin - Debug window</source>
-        <translation>tekcoin - ladicí okno</translation>
+        <source>mudcoin - Debug window</source>
+        <translation>mudcoin - ladicí okno</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>tekcoin Core</source>
-        <translation>Jádro tekcoinu</translation>
+        <source>mudcoin Core</source>
+        <translation>Jádro mudcoinu</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1254,8 +1254,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the tekcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Otevři soubor s ladicími záznamy tekcoinu z aktuálního datového adresáře. U velkých logů to může pár vteřin zabrat.</translation>
+        <source>Open the mudcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Otevři soubor s ladicími záznamy mudcoinu z aktuálního datového adresáře. U velkých logů to může pár vteřin zabrat.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1264,8 +1264,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the tekcoin RPC console.</source>
-        <translation>Vítej v tekcoinové RPC konzoli.</translation>
+        <source>Welcome to the mudcoin RPC console.</source>
+        <translation>Vítej v mudcoinové RPC konzoli.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1448,8 +1448,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a tekcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Zadej tekcoinovou adresu (např. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a mudcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Zadej mudcoinovou adresu (např. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
@@ -1513,8 +1513,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this tekcoin address</source>
-        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem této tekcoinové adresy</translation>
+        <source>Sign the message to prove you own this mudcoin address</source>
+        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem této mudcoinové adresy</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1549,8 +1549,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified tekcoin address</source>
-        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou tekcoinovou adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified mudcoin address</source>
+        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou mudcoinovou adresou</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1565,8 +1565,8 @@ Adresa: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a tekcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Zadej tekcoinovou adresu (např. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a mudcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Zadej mudcoinovou adresu (např. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1575,8 +1575,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter tekcoin signature</source>
-        <translation>Vlož tekcoinový podpis</translation>
+        <source>Enter mudcoin signature</source>
+        <translation>Vlož mudcoinový podpis</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1650,7 +1650,7 @@ Adresa: %4
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
         <source>Dr. Kimoto Chan</source>
-        <translation>Vývojáři tekcoinu</translation>
+        <translation>Vývojáři mudcoinu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1759,7 +1759,7 @@ Adresa: %4
     <message>
         <location line="-39"/>
         <source>Transaction fee</source>
-        <translation>Transakční poplatek</translation>
+        <translation>Transakční poplamud</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -2184,11 +2184,11 @@ Adresa: %4
     </message>
 </context>
 <context>
-    <name>tekcoin-core</name>
+    <name>mudcoin-core</name>
     <message>
-        <location filename="../tekcoinstrings.cpp" line="+94"/>
-        <source>tekcoin version</source>
-        <translation>Verze tekcoinu</translation>
+        <location filename="../mudcoinstrings.cpp" line="+94"/>
+        <source>mudcoin version</source>
+        <translation>Verze mudcoinu</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2197,8 +2197,8 @@ Adresa: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or tekcoind</source>
-        <translation>Poslat příkaz pro -server nebo tekcoind</translation>
+        <source>Send command to -server or mudcoind</source>
+        <translation>Poslat příkaz pro -server nebo mudcoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2217,13 +2217,13 @@ Adresa: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: tekcoin.conf)</source>
-        <translation>Konfigurační soubor (výchozí: tekcoin.conf)</translation>
+        <source>Specify configuration file (default: mudcoin.conf)</source>
+        <translation>Konfigurační soubor (výchozí: mudcoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: tekcoind.pid)</source>
-        <translation>PID soubor (výchozí: tekcoind.pid)</translation>
+        <source>Specify pid file (default: mudcoind.pid)</source>
+        <translation>PID soubor (výchozí: mudcoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2300,24 +2300,24 @@ Adresa: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=tekcoinrpc
+rpcuser=mudcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;mudcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, musíš nastavit rpcpassword v konfiguračním souboru:
 %s
 Je vhodné použít následující náhodné heslo:
-rpcuser=tekcoinrpc
+rpcuser=mudcoinrpc
 rpcpassword=%s
 (není potřeba si ho pamatovat)
 rpcuser a rpcpassword NESMÍ být stejné.
 Pokud konfigurační soubor ještě neexistuje, vytvoř ho tak, aby ho mohl číst pouze vlastník.
 Je také doporučeno si nastavit alertnotify, abys byl upozorněn na případné problémy;
-například: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.com
+například: alertnotify=echo %%s | mail -s &quot;mudcoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2332,8 +2332,8 @@ například: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. tekcoin is probably already running.</source>
-        <translation>Nedaří se mi získat zámek na datový adresář %s. tekcoin pravděpodobně už jednou běží.</translation>
+        <source>Cannot obtain a lock on data directory %s. mudcoin is probably already running.</source>
+        <translation>Nedaří se mi získat zámek na datový adresář %s. mudcoin pravděpodobně už jednou běží.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2343,7 +2343,7 @@ například: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     <message>
         <location line="+4"/>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>Chyba: Tahle transakce vyžaduje transakční poplatek nejméně %s kvůli velikosti zasílané částky, komplexnosti nebo použití nedávno přijatých mincí!</translation>
+        <translation>Chyba: Tahle transakce vyžaduje transakční poplamud nejméně %s kvůli velikosti zasílané částky, komplexnosti nebo použití nedávno přijatých mincí!</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2368,7 +2368,7 @@ například: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     <message>
         <location line="+5"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
-        <translation>Upozornění: -paytxfee je nastaveno velmi vysoko! Toto je transakční poplatek, který zaplatíš za každou poslanou transakci.</translation>
+        <translation>Upozornění: -paytxfee je nastaveno velmi vysoko! Toto je transakční poplamud, který zaplatíš za každou poslanou transakci.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2377,8 +2377,8 @@ například: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong tekcoin will not work properly.</source>
-        <translation>Upozornění: Zkontroluj, že máš v počítači správně nastavený datum a čas! Pokud jsou nastaveny špatně, tekcoin nebude fungovat správně.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong mudcoin will not work properly.</source>
+        <translation>Upozornění: Zkontroluj, že máš v počítači správně nastavený datum a čas! Pokud jsou nastaveny špatně, mudcoin nebude fungovat správně.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2533,7 +2533,7 @@ například: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     <message>
         <location line="+19"/>
         <source>Not enough file descriptors available.</source>
-        <translation>Je nedostatek deskriptorů souborů.</translation>
+        <translation>Je nedostamud deskriptorů souborů.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2627,8 +2627,8 @@ například: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the tekcoin Wiki for SSL setup instructions)</source>
-        <translation>Možnosti SSL: (viz instrukce nastavení SSL v tekcoin Wiki)</translation>
+        <source>SSL options: (see the mudcoin Wiki for SSL setup instructions)</source>
+        <translation>Možnosti SSL: (viz instrukce nastavení SSL v mudcoin Wiki)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2817,13 +2817,13 @@ například: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of tekcoin</source>
-        <translation>Chyba při načítání wallet.dat: peněženka vyžaduje novější verzi tekcoinu</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of mudcoin</source>
+        <translation>Chyba při načítání wallet.dat: peněženka vyžaduje novější verzi mudcoinu</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart tekcoin to complete</source>
-        <translation>Soubor s peněženkou potřeboval přepsat: restartuj tekcoin, aby se operace dokončila</translation>
+        <source>Wallet needed to be rewritten: restart mudcoin to complete</source>
+        <translation>Soubor s peněženkou potřeboval přepsat: restartuj mudcoin, aby se operace dokončila</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2868,7 +2868,7 @@ například: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     <message>
         <location line="-6"/>
         <source>Insufficient funds</source>
-        <translation>Nedostatek prostředků</translation>
+        <translation>Nedostamud prostředků</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2882,13 +2882,13 @@ například: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. tekcoin is probably already running.</source>
-        <translation>Nedaří se mi připojit na %s na tomhle počítači. tekcoin už pravděpodobně jednou běží.</translation>
+        <source>Unable to bind to %s on this computer. mudcoin is probably already running.</source>
+        <translation>Nedaří se mi připojit na %s na tomhle počítači. mudcoin už pravděpodobně jednou běží.</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Fee per KB to add to transactions you send</source>
-        <translation>Poplatek za kB, který se přidá ke každé odeslané transakci</translation>
+        <translation>Poplamud za kB, který se přidá ke každé odeslané transakci</translation>
     </message>
     <message>
         <location line="+19"/>

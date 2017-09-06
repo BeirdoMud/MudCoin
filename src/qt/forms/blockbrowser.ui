@@ -32,7 +32,7 @@
    <bool>false</bool>
   </property>
   <property name="windowTitle">
-   <string>TEKcoin Block Browser</string>
+   <string>MudCoin Block Browser</string>
   </property>
   <layout class="QGridLayout">
    <property name="sizeConstraint">

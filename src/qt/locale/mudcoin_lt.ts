@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About tekcoin</source>
-        <translation>Apie tekcoin</translation>
+        <source>About mudcoin</source>
+        <translation>Apie mudcoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;tekcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;tekcoin&lt;/b&gt; versija</translation>
+        <source>&lt;b&gt;mudcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;mudcoin&lt;/b&gt; versija</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -66,8 +66,8 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your tekcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Tai yra jūsų tekcoin adresai mokėjimų gavimui. Galite duoti skirtingus adresus atskiriems siuntėjams, kad galėtumėte sekti, kas jums moka.</translation>
+        <source>These are your mudcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Tai yra jūsų mudcoin adresai mokėjimų gavimui. Galite duoti skirtingus adresus atskiriems siuntėjams, kad galėtumėte sekti, kas jums moka.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -81,8 +81,8 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a tekcoin address</source>
-        <translation>Pasirašykite žinutę, kad įrodytume, jog esate tekcoin adreso savininkas</translation>
+        <source>Sign a message to prove you own a mudcoin address</source>
+        <translation>Pasirašykite žinutę, kad įrodytume, jog esate mudcoin adreso savininkas</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -106,8 +106,8 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified tekcoin address</source>
-        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas tekcoin adresas</translation>
+        <source>Verify a message to ensure it was signed with a specified mudcoin address</source>
+        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas mudcoin adresas</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -121,7 +121,7 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your tekcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your mudcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -247,8 +247,8 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR tekcoinS&lt;/b&gt;!</source>
-        <translation>Dėmesio: jei užšifruosite savo piniginę ir pamesite slaptafrazę, jūs&lt;b&gt;PRARASITE VISUS SAVO tekcoinUS&lt;/b&gt;! </translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR mudcoinS&lt;/b&gt;!</source>
+        <translation>Dėmesio: jei užšifruosite savo piniginę ir pamesite slaptafrazę, jūs&lt;b&gt;PRARASITE VISUS SAVO mudcoinUS&lt;/b&gt;! </translation>
     </message>
     <message>
         <location line="+0"/>
@@ -274,8 +274,8 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location line="-56"/>
-        <source>tekcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your tekcoins from being stolen by malware infecting your computer.</source>
-        <translation>tekcoin dabar užsidarys šifravimo proceso pabaigai. Atminkite, kad piniginės šifravimas negali pilnai apsaugoti tekcoinų vagysčių kai tinkle esančios kenkėjiškos programos patenka į jūsų kompiuterį.</translation>
+        <source>mudcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your mudcoins from being stolen by malware infecting your computer.</source>
+        <translation>mudcoin dabar užsidarys šifravimo proceso pabaigai. Atminkite, kad piniginės šifravimas negali pilnai apsaugoti mudcoinų vagysčių kai tinkle esančios kenkėjiškos programos patenka į jūsų kompiuterį.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -320,9 +320,9 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
 </context>
 <context>
-    <name>tekcoinGUI</name>
+    <name>mudcoinGUI</name>
     <message>
-        <location filename="../tekcoingui.cpp" line="+233"/>
+        <location filename="../mudcoingui.cpp" line="+233"/>
         <source>Sign &amp;message...</source>
         <translation>Pasirašyti ži&amp;nutę...</translation>
     </message>
@@ -373,8 +373,8 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about tekcoin</source>
-        <translation>Rodyti informaciją apie tekcoin</translation>
+        <source>Show information about mudcoin</source>
+        <translation>Rodyti informaciją apie mudcoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -418,13 +418,13 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a tekcoin address</source>
-        <translation>Siųsti monetas tekcoin adresui</translation>
+        <source>Send coins to a mudcoin address</source>
+        <translation>Siųsti monetas mudcoin adresui</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for tekcoin</source>
-        <translation>Keisti tekcoin konfigūracijos galimybes</translation>
+        <source>Modify configuration options for mudcoin</source>
+        <translation>Keisti mudcoin konfigūracijos galimybes</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -454,8 +454,8 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>tekcoin</source>
-        <translation>tekcoin</translation>
+        <source>mudcoin</source>
+        <translation>mudcoin</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -479,8 +479,8 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About tekcoin</source>
-        <translation>&amp;Apie tekcoin</translation>
+        <source>&amp;About mudcoin</source>
+        <translation>&amp;Apie mudcoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -499,12 +499,12 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your tekcoin addresses to prove you own them</source>
+        <source>Sign messages with your mudcoin addresses to prove you own them</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified tekcoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified mudcoin addresses</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -535,13 +535,13 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location line="+47"/>
-        <source>tekcoin client</source>
-        <translation>tekcoin klientas</translation>
+        <source>mudcoin client</source>
+        <translation>mudcoin klientas</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to tekcoin network</source>
-        <translation><numerusform>%n tekcoin tinklo aktyvus ryšys</numerusform><numerusform>%n tekcoin tinklo aktyvūs ryšiai</numerusform><numerusform>%n tekcoin tinklo aktyvūs ryšiai</numerusform></translation>
+        <source>%n active connection(s) to mudcoin network</source>
+        <translation><numerusform>%n mudcoin tinklo aktyvus ryšys</numerusform><numerusform>%n mudcoin tinklo aktyvūs ryšiai</numerusform><numerusform>%n mudcoin tinklo aktyvūs ryšiai</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -654,7 +654,7 @@ Adresas: %4</translation>
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid tekcoin address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid mudcoin address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -668,8 +668,8 @@ Adresas: %4</translation>
         <translation>Piniginė &lt;b&gt;užšifruota&lt;/b&gt; ir šiuo metu &lt;b&gt;užrakinta&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../tekcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. tekcoin can no longer continue safely and will quit.</source>
+        <location filename="../mudcoin.cpp" line="+111"/>
+        <source>A fatal error occurred. mudcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -735,8 +735,8 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid tekcoin address.</source>
-        <translation>Įvestas adresas „%1“ nėra galiojantis tekcoin adresas.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid mudcoin address.</source>
+        <translation>Įvestas adresas „%1“ nėra galiojantis mudcoin adresas.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -754,8 +754,8 @@ Adresas: %4</translation>
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>tekcoin-Qt</source>
-        <translation>tekcoin-Qt</translation>
+        <source>mudcoin-Qt</source>
+        <translation>mudcoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -817,13 +817,13 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start tekcoin after logging in to the system.</source>
+        <source>Automatically start mudcoin after logging in to the system.</source>
         <translation>Automatiškai paleisti Megakoin programą įjungus sistemą.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start tekcoin on system login</source>
-        <translation>&amp;Paleisti tekcoin programą su window sistemos paleidimu</translation>
+        <source>&amp;Start mudcoin on system login</source>
+        <translation>&amp;Paleisti mudcoin programą su window sistemos paleidimu</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -842,8 +842,8 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the tekcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatiškai atidaryti tekcoin kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
+        <source>Automatically open the mudcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatiškai atidaryti mudcoin kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -852,7 +852,7 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the tekcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the mudcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation>Jungtis į Megakoin tinklą per  socks proxy (pvz. jungiantis per Tor)</translation>
     </message>
     <message>
@@ -927,8 +927,8 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting tekcoin.</source>
-        <translation>Čia gali būti nustatyta naudotojo sąsajos kalba. Šis nustatymas įsigalios iš naujo paleidus tekcoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting mudcoin.</source>
+        <translation>Čia gali būti nustatyta naudotojo sąsajos kalba. Šis nustatymas įsigalios iš naujo paleidus mudcoin.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -942,7 +942,7 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show tekcoin addresses in the transaction list or not.</source>
+        <source>Whether to show mudcoin addresses in the transaction list or not.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -994,7 +994,7 @@ Adresas: %4</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting tekcoin.</source>
+        <source>This setting will take effect after restarting mudcoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1013,7 +1013,7 @@ Adresas: %4</translation>
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the tekcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the mudcoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1067,7 +1067,7 @@ Adresas: %4</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start tekcoin: click-to-pay handler</source>
+        <source>Cannot start mudcoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1217,7 +1217,7 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the tekcoin-Qt help message to get a list with possible tekcoin command-line options.</source>
+        <source>Show the mudcoin-Qt help message to get a list with possible mudcoin command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1237,13 +1237,13 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>tekcoin - Debug window</source>
-        <translation>tekcoin - Derinimo langas</translation>
+        <source>mudcoin - Debug window</source>
+        <translation>mudcoin - Derinimo langas</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>tekcoin Core</source>
-        <translation>tekcoin branduolys</translation>
+        <source>mudcoin Core</source>
+        <translation>mudcoin branduolys</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1252,7 +1252,7 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the tekcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the mudcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1262,7 +1262,7 @@ Adresas: %4</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the tekcoin RPC console.</source>
+        <source>Welcome to the mudcoin RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1446,7 +1446,7 @@ Adresas: %4</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a tekcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <source>Enter a mudcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation>Įveskite megakoinų adresą (pvz. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
@@ -1511,7 +1511,7 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this tekcoin address</source>
+        <source>Sign the message to prove you own this mudcoin address</source>
         <translation>Registruotis žinute įrodymuii, kad turite šį adresą</translation>
     </message>
     <message>
@@ -1547,8 +1547,8 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified tekcoin address</source>
-        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas tekcoin adresas</translation>
+        <source>Verify the message to ensure it was signed with the specified mudcoin address</source>
+        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas mudcoin adresas</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1563,7 +1563,7 @@ Adresas: %4</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a tekcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <source>Enter a mudcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation>Įveskite megakoinų adresą (pvz. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
@@ -1573,8 +1573,8 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter tekcoin signature</source>
-        <translation>Įveskite tekcoin parašą</translation>
+        <source>Enter mudcoin signature</source>
+        <translation>Įveskite mudcoin parašą</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1782,7 +1782,7 @@ Adresas: %4</translation>
     <message>
         <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Išgautos monetos turi sulaukti 120 blokų, kol jos gali būti naudojamos. Kai sukūrėte šį bloką, jis buvo transliuojamas tinkle ir turėjo būti įtrauktas į blokų grandinę. Jei nepavyksta patekti į grandinę, bus pakeista į &quot;nepriėmė&quot;, o ne &quot;vartojamas&quot;. Tai kartais gali atsitikti, jei kitas mazgas per keletą sekundžių sukuria bloką po jūsų bloko.</translation>
+        <translation>Išgautos monetos turi sulaukti 120 blokų, kol jos gali būti naudojamos. Kai sukūrėte šį bloką, jis buvo transliuojamas tinkle ir turėjo būti įtrauktas į blokų grandinę. Jei nepavyksta pamudti į grandinę, bus pakeista į &quot;nepriėmė&quot;, o ne &quot;vartojamas&quot;. Tai kartais gali atsitikti, jei kitas mazgas per keletą sekundžių sukuria bloką po jūsų bloko.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2182,11 +2182,11 @@ Adresas: %4</translation>
     </message>
 </context>
 <context>
-    <name>tekcoin-core</name>
+    <name>mudcoin-core</name>
     <message>
-        <location filename="../tekcoinstrings.cpp" line="+94"/>
-        <source>tekcoin version</source>
-        <translation>tekcoin versija</translation>
+        <location filename="../mudcoinstrings.cpp" line="+94"/>
+        <source>mudcoin version</source>
+        <translation>mudcoin versija</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2195,8 +2195,8 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or tekcoind</source>
-        <translation>Siųsti komandą serveriui arba tekcoind</translation>
+        <source>Send command to -server or mudcoind</source>
+        <translation>Siųsti komandą serveriui arba mudcoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2215,13 +2215,13 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: tekcoin.conf)</source>
-        <translation>Nurodyti konfigūracijos failą (pagal nutylėjimąt: tekcoin.conf)</translation>
+        <source>Specify configuration file (default: mudcoin.conf)</source>
+        <translation>Nurodyti konfigūracijos failą (pagal nutylėjimąt: mudcoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: tekcoind.pid)</source>
-        <translation>Nurodyti pid failą (pagal nutylėjimą: tekcoind.pid)</translation>
+        <source>Specify pid file (default: mudcoind.pid)</source>
+        <translation>Nurodyti pid failą (pagal nutylėjimą: mudcoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2298,13 +2298,13 @@ Adresas: %4</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=tekcoinrpc
+rpcuser=mudcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;mudcoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2320,7 +2320,7 @@ for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. tekcoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. mudcoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2365,8 +2365,8 @@ for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong tekcoin will not work properly.</source>
-        <translation>Įspėjimas: Patikrinkite, kad kompiuterio data ir laikas yra teisingi.Jei Jūsų laikrodis neteisingai nustatytas tekcoin, veiks netinkamai.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong mudcoin will not work properly.</source>
+        <translation>Įspėjimas: Patikrinkite, kad kompiuterio data ir laikas yra teisingi.Jei Jūsų laikrodis neteisingai nustatytas mudcoin, veiks netinkamai.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2615,8 +2615,8 @@ for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the tekcoin Wiki for SSL setup instructions)</source>
-        <translation>SSL opcijos (žr.e tekcoin Wiki for SSL setup instructions)</translation>
+        <source>SSL options: (see the mudcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL opcijos (žr.e mudcoin Wiki for SSL setup instructions)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2805,13 +2805,13 @@ for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of tekcoin</source>
-        <translation> wallet.dat pakrovimo klaida,  wallet.dat reikalauja naujasnės tekcoin versijos</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of mudcoin</source>
+        <translation> wallet.dat pakrovimo klaida,  wallet.dat reikalauja naujasnės mudcoin versijos</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart tekcoin to complete</source>
-        <translation>Piniginė turi būti prrašyta: įvykdymui perkraukite tekcoin</translation>
+        <source>Wallet needed to be rewritten: restart mudcoin to complete</source>
+        <translation>Piniginė turi būti prrašyta: įvykdymui perkraukite mudcoin</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2870,8 +2870,8 @@ for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. tekcoin is probably already running.</source>
-        <translation>Nepavyko susieti šiame kompiuteryje prievado %s. tekcoin tikriausiai jau veikia.</translation>
+        <source>Unable to bind to %s on this computer. mudcoin is probably already running.</source>
+        <translation>Nepavyko susieti šiame kompiuteryje prievado %s. mudcoin tikriausiai jau veikia.</translation>
     </message>
     <message>
         <location line="+64"/>

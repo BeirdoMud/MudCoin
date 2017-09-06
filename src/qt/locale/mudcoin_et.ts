@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About tekcoin</source>
-        <translation>tekcoinist</translation>
+        <source>About mudcoin</source>
+        <translation>mudcoinist</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;tekcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;tekcoini&lt;/b&gt; versioon</translation>
+        <source>&lt;b&gt;mudcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;mudcoini&lt;/b&gt; versioon</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -67,8 +67,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your tekcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Maksete saamiseks kasutatavad tekcoini aadressid. Maksjate paremaks jälgimiseks võib igaühele anda erineva.</translation>
+        <source>These are your mudcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Maksete saamiseks kasutatavad mudcoini aadressid. Maksjate paremaks jälgimiseks võib igaühele anda erineva.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -82,7 +82,7 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a tekcoin address</source>
+        <source>Sign a message to prove you own a mudcoin address</source>
         <translation>Allkirjasta sõnum, et tõestada Megaconi aadressi olemasolu.</translation>
     </message>
     <message>
@@ -107,8 +107,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified tekcoin address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud tekcoini aadressiga.</translation>
+        <source>Verify a message to ensure it was signed with a specified mudcoin address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud mudcoini aadressiga.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -122,8 +122,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your tekcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu tekcoini aadressid maksete saatmiseks. Müntide saatmisel kontrolli alati summat ning saaja aadressi.</translation>
+        <source>These are your mudcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Need on sinu mudcoini aadressid maksete saatmiseks. Müntide saatmisel kontrolli alati summat ning saaja aadressi.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -248,8 +248,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR tekcoinS&lt;/b&gt;!</source>
-        <translation>Hoiatus: Kui sa kaotad oma, rahakoti krüpteerimisel kasutatud, salafraasi, siis &lt;b&gt;KAOTAD KA KÕIK OMA tekcoinID&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR mudcoinS&lt;/b&gt;!</source>
+        <translation>Hoiatus: Kui sa kaotad oma, rahakoti krüpteerimisel kasutatud, salafraasi, siis &lt;b&gt;KAOTAD KA KÕIK OMA mudcoinID&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -275,8 +275,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="-56"/>
-        <source>tekcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your tekcoins from being stolen by malware infecting your computer.</source>
-        <translation>tekcoin sulgub krüpteeringu lõpetamiseks. Pea meeles, et rahakoti krüpteerimine ei välista tekcoinide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
+        <source>mudcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your mudcoins from being stolen by malware infecting your computer.</source>
+        <translation>mudcoin sulgub krüpteeringu lõpetamiseks. Pea meeles, et rahakoti krüpteerimine ei välista mudcoinide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -321,9 +321,9 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
 </context>
 <context>
-    <name>tekcoinGUI</name>
+    <name>mudcoinGUI</name>
     <message>
-        <location filename="../tekcoingui.cpp" line="+233"/>
+        <location filename="../mudcoingui.cpp" line="+233"/>
         <source>Sign &amp;message...</source>
         <translation>Signeeri &amp;sõnum</translation>
     </message>
@@ -374,8 +374,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about tekcoin</source>
-        <translation>Kuva info tekcoini kohta</translation>
+        <source>Show information about mudcoin</source>
+        <translation>Kuva info mudcoini kohta</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -419,13 +419,13 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a tekcoin address</source>
-        <translation>Saada münte tekcoini aadressile</translation>
+        <source>Send coins to a mudcoin address</source>
+        <translation>Saada münte mudcoini aadressile</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for tekcoin</source>
-        <translation>Muuda tekcoini seadeid</translation>
+        <source>Modify configuration options for mudcoin</source>
+        <translation>Muuda mudcoini seadeid</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -455,8 +455,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>tekcoin</source>
-        <translation>tekcoin</translation>
+        <source>mudcoin</source>
+        <translation>mudcoin</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -480,8 +480,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About tekcoin</source>
-        <translation>%tekcoinist</translation>
+        <source>&amp;About mudcoin</source>
+        <translation>%mudcoinist</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your tekcoin addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma tekcoini aadressiga</translation>
+        <source>Sign messages with your mudcoin addresses to prove you own them</source>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma mudcoini aadressiga</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified tekcoin addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud tekcoini aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified mudcoin addresses</source>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud mudcoini aadressiga</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -536,13 +536,13 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+47"/>
-        <source>tekcoin client</source>
-        <translation>tekcoini klient</translation>
+        <source>mudcoin client</source>
+        <translation>mudcoini klient</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to tekcoin network</source>
-        <translation><numerusform>%n aktiivne ühendus tekcoini võrku</numerusform><numerusform>%n aktiivset ühendust tekcoini võrku</numerusform></translation>
+        <source>%n active connection(s) to mudcoin network</source>
+        <translation><numerusform>%n aktiivne ühendus mudcoini võrku</numerusform><numerusform>%n aktiivset ühendust mudcoini võrku</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -655,8 +655,8 @@ Aadress: %4⏎</translation>
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid tekcoin address or malformed URI parameters.</source>
-        <translation>URI ei suudeta parsida. Põhjuseks võib olla kehtetu tekcoini aadress või vigased URI parameetrid.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid mudcoin address or malformed URI parameters.</source>
+        <translation>URI ei suudeta parsida. Põhjuseks võib olla kehtetu mudcoini aadress või vigased URI parameetrid.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -669,9 +669,9 @@ Aadress: %4⏎</translation>
         <translation>Rahakott on &lt;b&gt;krüpteeritud&lt;/b&gt; ning hetkel &lt;b&gt;suletud&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../tekcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. tekcoin can no longer continue safely and will quit.</source>
-        <translation>Ilmnes kriitiline tõrge. tekcoin suletakse turvakaalutluste tõttu.</translation>
+        <location filename="../mudcoin.cpp" line="+111"/>
+        <source>A fatal error occurred. mudcoin can no longer continue safely and will quit.</source>
+        <translation>Ilmnes kriitiline tõrge. mudcoin suletakse turvakaalutluste tõttu.</translation>
     </message>
 </context>
 <context>
@@ -736,8 +736,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid tekcoin address.</source>
-        <translation>Sisestatud aadress &quot;%1&quot; ei ole tekcoinis kehtiv.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid mudcoin address.</source>
+        <translation>Sisestatud aadress &quot;%1&quot; ei ole mudcoinis kehtiv.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -755,8 +755,8 @@ Aadress: %4⏎</translation>
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>tekcoin-Qt</source>
-        <translation>tekcoini-Qt</translation>
+        <source>mudcoin-Qt</source>
+        <translation>mudcoini-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -818,13 +818,13 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start tekcoin after logging in to the system.</source>
-        <translation>Käivita tekcoin süsteemi logimisel.</translation>
+        <source>Automatically start mudcoin after logging in to the system.</source>
+        <translation>Käivita mudcoin süsteemi logimisel.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start tekcoin on system login</source>
-        <translation>&amp;Start tekcoin sisselogimisel</translation>
+        <source>&amp;Start mudcoin on system login</source>
+        <translation>&amp;Start mudcoin sisselogimisel</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -843,8 +843,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the tekcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>tekcoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the mudcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>mudcoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -853,8 +853,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the tekcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Kasuta tekcoini võrgustikku ühendumiseks SOCKS turva proxy&apos;t (nt Tor&apos;i kasutamisel).</translation>
+        <source>Connect to the mudcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Kasuta mudcoini võrgustikku ühendumiseks SOCKS turva proxy&apos;t (nt Tor&apos;i kasutamisel).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -928,8 +928,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting tekcoin.</source>
-        <translation>Kasutajaliidese keele valimise koht. Valik rakendub tekcoini käivitamisel.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting mudcoin.</source>
+        <translation>Kasutajaliidese keele valimise koht. Valik rakendub mudcoini käivitamisel.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -943,8 +943,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show tekcoin addresses in the transaction list or not.</source>
-        <translation>Kuvada tekcoini aadress tehingute loetelus või mitte.</translation>
+        <source>Whether to show mudcoin addresses in the transaction list or not.</source>
+        <translation>Kuvada mudcoini aadress tehingute loetelus või mitte.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -995,8 +995,8 @@ Aadress: %4⏎</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting tekcoin.</source>
-        <translation>Tehtud valik rakendub tekcoini käivitamisel.</translation>
+        <source>This setting will take effect after restarting mudcoin.</source>
+        <translation>Tehtud valik rakendub mudcoini käivitamisel.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1014,7 +1014,7 @@ Aadress: %4⏎</translation>
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the tekcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the mudcoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Megaconi võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
@@ -1068,8 +1068,8 @@ Aadress: %4⏎</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start tekcoin: click-to-pay handler</source>
-        <translation>tekcoin ei käivitu: vajuta-maksa toiming</translation>
+        <source>Cannot start mudcoin: click-to-pay handler</source>
+        <translation>mudcoin ei käivitu: vajuta-maksa toiming</translation>
     </message>
 </context>
 <context>
@@ -1117,7 +1117,7 @@ Aadress: %4⏎</translation>
     <message>
         <location line="+23"/>
         <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>Tulemuseks on liiga pikk URL, püüa lühendada märgise/teate teksti.</translation>
+        <translation>Tulemuseks on liiga pikk URL, püüa lühendada märgise/teate mudsti.</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -1218,8 +1218,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the tekcoin-Qt help message to get a list with possible tekcoin command-line options.</source>
-        <translation>Näita kehtivate käsurea valikute kuvamiseks tekcoini-Qt abiteksti</translation>
+        <source>Show the mudcoin-Qt help message to get a list with possible mudcoin command-line options.</source>
+        <translation>Näita kehtivate käsurea valikute kuvamiseks mudcoini-Qt abimudsti</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1238,13 +1238,13 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>tekcoin - Debug window</source>
-        <translation>tekcoin - debugimise aken</translation>
+        <source>mudcoin - Debug window</source>
+        <translation>mudcoin - debugimise aken</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>tekcoin Core</source>
-        <translation>tekcoini tuumik</translation>
+        <source>mudcoin Core</source>
+        <translation>mudcoini tuumik</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1253,8 +1253,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the tekcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Ava tekcoini logifail praegusest andmekaustast. Toiminguks võib kuluda kuni mõni sekund.</translation>
+        <source>Open the mudcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Ava mudcoini logifail praegusest andmekaustast. Toiminguks võib kuluda kuni mõni sekund.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1263,8 +1263,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the tekcoin RPC console.</source>
-        <translation>Teretulemast tekcoini RPC konsooli.</translation>
+        <source>Welcome to the mudcoin RPC console.</source>
+        <translation>Teretulemast mudcoini RPC konsooli.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1274,7 +1274,7 @@ Aadress: %4⏎</translation>
     <message>
         <location line="+1"/>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
-        <translation>Ülevaateks võimalikest käsklustest trüki &lt;b&gt;help&lt;/b&gt;.</translation>
+        <translation>Ülevaamuds võimalikest käsklustest trüki &lt;b&gt;help&lt;/b&gt;.</translation>
     </message>
 </context>
 <context>
@@ -1447,8 +1447,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a tekcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Sisesta tekcoini aadress (nt: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a mudcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Sisesta mudcoini aadress (nt: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
@@ -1512,8 +1512,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this tekcoin address</source>
-        <translation>Allkirjasta sõnum tekcoini aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this mudcoin address</source>
+        <translation>Allkirjasta sõnum mudcoini aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1548,8 +1548,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified tekcoin address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud tekcoini aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified mudcoin address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud mudcoini aadressiga.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1564,8 +1564,8 @@ Aadress: %4⏎</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a tekcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Sisesta tekcoini aadress (nt: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a mudcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Sisesta mudcoini aadress (nt: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1574,8 +1574,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter tekcoin signature</source>
-        <translation>Sisesta tekcoini allkiri</translation>
+        <source>Enter mudcoin signature</source>
+        <translation>Sisesta mudcoini allkiri</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2183,11 +2183,11 @@ Aadress: %4⏎</translation>
     </message>
 </context>
 <context>
-    <name>tekcoin-core</name>
+    <name>mudcoin-core</name>
     <message>
-        <location filename="../tekcoinstrings.cpp" line="+94"/>
-        <source>tekcoin version</source>
-        <translation>tekcoini versioon</translation>
+        <location filename="../mudcoinstrings.cpp" line="+94"/>
+        <source>mudcoin version</source>
+        <translation>mudcoini versioon</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2196,8 +2196,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or tekcoind</source>
-        <translation>Saada käsklus -serverile või tekcoindile</translation>
+        <source>Send command to -server or mudcoind</source>
+        <translation>Saada käsklus -serverile või mudcoindile</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2216,13 +2216,13 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: tekcoin.conf)</source>
-        <translation>Täpsusta sätete fail (vaikimisi: tekcoin.conf)</translation>
+        <source>Specify configuration file (default: mudcoin.conf)</source>
+        <translation>Täpsusta sätete fail (vaikimisi: mudcoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: tekcoind.pid)</source>
-        <translation>Täpsusta PID fail (vaikimisi: tekcoin.pid)</translation>
+        <source>Specify pid file (default: mudcoind.pid)</source>
+        <translation>Täpsusta PID fail (vaikimisi: mudcoin.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2299,24 +2299,24 @@ Aadress: %4⏎</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=tekcoinrpc
+rpcuser=mudcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;mudcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, sul tuleb rpcpassword määrata seadete failis:
 %s
 Soovitatav on kasutada järgmist juhuslikku parooli:
-rpcuser=tekcoinrpc
+rpcuser=mudcoinrpc
 rpcpassword=%s
 (seda parooli ei pea meeles pidama)
 Kasutajanimi ning parool EI TOHI kattuda.
 Kui faili ei leita, loo see ainult-omaniku-loetavas failiõigustes .
 Soovitatav on seadistada tõrgete puhul teavitus;
-nt: alertnotify=echo %%s | email -s &quot;tekcoin Alert&quot; admin@foo.com
+nt: alertnotify=echo %%s | email -s &quot;mudcoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2331,8 +2331,8 @@ nt: alertnotify=echo %%s | email -s &quot;tekcoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. tekcoin is probably already running.</source>
-        <translation>Ei suuda määrata ainuõigust andmekaustale %s. Tõenäolisel on tekcoin juba avatud.</translation>
+        <source>Cannot obtain a lock on data directory %s. mudcoin is probably already running.</source>
+        <translation>Ei suuda määrata ainuõigust andmekaustale %s. Tõenäolisel on mudcoin juba avatud.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2376,8 +2376,8 @@ nt: alertnotify=echo %%s | email -s &quot;tekcoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong tekcoin will not work properly.</source>
-        <translation>Hoiatus: Palun kontrolli oma arvuti kuupäeva/kellaaega! Kui arvuti kell on vale, siis tekcoin ei tööta korralikult</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong mudcoin will not work properly.</source>
+        <translation>Hoiatus: Palun kontrolli oma arvuti kuupäeva/kellaaega! Kui arvuti kell on vale, siis mudcoin ei tööta korralikult</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2626,8 +2626,8 @@ nt: alertnotify=echo %%s | email -s &quot;tekcoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the tekcoin Wiki for SSL setup instructions)</source>
-        <translation>SSL valikud: (vaata tekcoini Wikist või SSL sätete juhendist)</translation>
+        <source>SSL options: (see the mudcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL valikud: (vaata mudcoini Wikist või SSL sätete juhendist)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2787,7 +2787,7 @@ nt: alertnotify=echo %%s | email -s &quot;tekcoin Alert&quot; admin@foo.com
     <message>
         <location line="+165"/>
         <source>This help message</source>
-        <translation>Käesolev abitekst</translation>
+        <translation>Käesolev abimudst</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2816,13 +2816,13 @@ nt: alertnotify=echo %%s | email -s &quot;tekcoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of tekcoin</source>
-        <translation>Viga wallet.dat käivitamisel: Rahakott nõuab tekcoini uusimat versiooni</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of mudcoin</source>
+        <translation>Viga wallet.dat käivitamisel: Rahakott nõuab mudcoini uusimat versiooni</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart tekcoin to complete</source>
-        <translation>Rahakott tuli ümberkirjutada: toimingu lõpetamiseks taaskäivita tekcoin</translation>
+        <source>Wallet needed to be rewritten: restart mudcoin to complete</source>
+        <translation>Rahakott tuli ümberkirjutada: toimingu lõpetamiseks taaskäivita mudcoin</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2881,8 +2881,8 @@ nt: alertnotify=echo %%s | email -s &quot;tekcoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. tekcoin is probably already running.</source>
-        <translation>%s&apos;ga ei ole võimalik sellest arvutist siduda. tekcoin juba töötab.</translation>
+        <source>Unable to bind to %s on this computer. mudcoin is probably already running.</source>
+        <translation>%s&apos;ga ei ole võimalik sellest arvutist siduda. mudcoin juba töötab.</translation>
     </message>
     <message>
         <location line="+64"/>

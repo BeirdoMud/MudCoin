@@ -1,5 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2013-2015 The TEKcoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -215,7 +216,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
         {
             string strAddress;
             ssKey >> strAddress;
-            ssValue >> pwallet->mapAddressBook[CtekcoinAddress(strAddress).Get()];
+            ssValue >> pwallet->mapAddressBook[CmudcoinAddress(strAddress).Get()];
         }
         else if (strType == "tx")
         {
@@ -533,7 +534,7 @@ DBErrors CWalletDB::LoadWallet(CWallet* pwallet)
 void ThreadFlushWalletDB(void* parg)
 {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("tekcoin-wallet");
+    RenameThread("mudcoin-wallet");
 
     const string& strFile = ((const string*)parg)[0];
     static bool fOneThread;
@@ -741,7 +742,7 @@ bool DumpWallet(CWallet* pwallet, const string& strDest)
          return false;
 
       // produce output
-      file << strprintf("# Wallet dump created by TekCoin %s (%s)\n", CLIENT_BUILD.c_str(), CLIENT_DATE.c_str());
+      file << strprintf("# Wallet dump created by MudCoin %s (%s)\n", CLIENT_BUILD.c_str(), CLIENT_DATE.c_str());
       file << strprintf("# * Created on %s\n", EncodeDumpTime(GetTime()).c_str());
       file << strprintf("# * Best block at time of backup was %i (%s),\n", nBestHeight, hashBestChain.ToString().c_str());
       file << strprintf("# mined on %s\n", EncodeDumpTime(pindexBest->nTime).c_str());
@@ -749,7 +750,7 @@ bool DumpWallet(CWallet* pwallet, const string& strDest)
       for (std::vector<std::pair<int64, CKeyID> >::const_iterator it = vKeyBirth.begin(); it != vKeyBirth.end(); it++) {
           const CKeyID &keyid = it->second;
           std::string strTime = EncodeDumpTime(it->first);
-          std::string strAddr = CtekcoinAddress(keyid).ToString();
+          std::string strAddr = CmudcoinAddress(keyid).ToString();
           bool IsCompressed;
 
           CKey key;
@@ -757,20 +758,20 @@ bool DumpWallet(CWallet* pwallet, const string& strDest)
               if (pwallet->mapAddressBook.count(keyid)) {
                   CSecret secret = key.GetSecret(IsCompressed);
                   file << strprintf("%s %s label=%s # addr=%s\n",
-                                    CtekcoinSecret(secret, IsCompressed).ToString().c_str(),
+                                    CmudcoinSecret(secret, IsCompressed).ToString().c_str(),
                                     strTime.c_str(),
                                     EncodeDumpString(pwallet->mapAddressBook[keyid]).c_str(),
                                     strAddr.c_str());
               } else if (setKeyPool.count(keyid)) {
                   CSecret secret = key.GetSecret(IsCompressed);
                   file << strprintf("%s %s reserve=1 # addr=%s\n",
-                                    CtekcoinSecret(secret, IsCompressed).ToString().c_str(),
+                                    CmudcoinSecret(secret, IsCompressed).ToString().c_str(),
                                     strTime.c_str(),
                                     strAddr.c_str());
               } else {
                   CSecret secret = key.GetSecret(IsCompressed);
                   file << strprintf("%s %s change=1 # addr=%s\n",
-                                    CtekcoinSecret(secret, IsCompressed).ToString().c_str(),
+                                    CmudcoinSecret(secret, IsCompressed).ToString().c_str(),
                                     strTime.c_str(),
                                     strAddr.c_str());
               }
@@ -813,7 +814,7 @@ bool ImportWallet(CWallet *pwallet, const string& strLocation)
           boost::split(vstr, line, boost::is_any_of(" "));
           if (vstr.size() < 2)
               continue;
-          CtekcoinSecret vchSecret;
+          CmudcoinSecret vchSecret;
           if (!vchSecret.SetString(vstr[0]))
               continue;
 
@@ -824,7 +825,7 @@ bool ImportWallet(CWallet *pwallet, const string& strLocation)
           CKeyID keyid = key.GetPubKey().GetID();
 
           if (pwallet->HaveKey(keyid)) {
-              printf("Skipping import of %s (key already present)\n", CtekcoinAddress(keyid).ToString().c_str());
+              printf("Skipping import of %s (key already present)\n", CmudcoinAddress(keyid).ToString().c_str());
              continue;
           }
           int64 nTime = DecodeDumpTime(vstr[1]);
@@ -842,7 +843,7 @@ bool ImportWallet(CWallet *pwallet, const string& strLocation)
                   fLabel = true;
               }
           }
-          printf("Importing %s...\n", CtekcoinAddress(keyid).ToString().c_str());
+          printf("Importing %s...\n", CmudcoinAddress(keyid).ToString().c_str());
           if (!pwallet->AddKey(key)) {
               fGood = false;
               continue;

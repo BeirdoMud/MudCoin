@@ -1,9 +1,9 @@
-tekcoin: a SHA256D pow/pos coin
+mudcoin: a SHA256D pow/pos coin
 
-Pos 500% a year
-1 Pow coin per block
+POS 50% a year
+10 POW coin per block
 1 minute block time
 
-def port 8514
-rpcport 18514
+def port 8462
+rpcport 18462
 

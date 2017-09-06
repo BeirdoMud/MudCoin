@@ -1,8 +1,8 @@
-// Copyright (c) 2012 The tekcoin developers
+// Copyright (c) 2012 The mudcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef tekcoin_MRUSET_H
-#define tekcoin_MRUSET_H
+#ifndef mudcoin_MRUSET_H
+#define mudcoin_MRUSET_H
 
 #include <set>
 #include <deque>

@@ -1,4 +1,4 @@
-// Copyright (c) 2012 The tekcoin developers
+// Copyright (c) 2012 The mudcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #include <string>
@@ -6,12 +6,12 @@
 #include "version.h"
 
 // Name of client reported in the 'version' message. Report the same name
-// for both tekcoind and tekcoin-qt, to make it harder for attackers to
+// for both mudcoind and MudCoin-qt, to make it harder for attackers to
 // target servers or GUI users specifically.
-const std::string CLIENT_NAME("TEKcoin");
+const std::string CLIENT_NAME("MudCoin");
 
 // Client version number
-#define CLIENT_VERSION_SUFFIX   "-TEK"
+#define CLIENT_VERSION_SUFFIX   "-MUD"
 
 
 // The following part of the code determines the CLIENT_BUILD variable.

@@ -3,7 +3,7 @@
 #include "init.h" //presstab
 #include "walletmodel.h"
 #include "addresstablemodel.h" //presstab
-#include "tekcoinunits.h"
+#include "mudcoinunits.h"
 #include "addressbookpage.h"
 #include "optionsmodel.h"
 #include "sendcoinsentry.h"
@@ -32,7 +32,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
 #endif
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-     ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a TEK address (e.g. TkJpVxeBAu1romfLQGxC3JvZ6SCsuoE1mU)")); //presstab
+     ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a MUD address (e.g. MkJpVxeBAu1romfLQGxC3JvZ6SCsuoE1mU)")); //presstab
 	 ui->splitBlockLineEdit->setPlaceholderText(tr("# of Blocks to Make"));
 #endif
 
@@ -42,7 +42,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     connect(ui->clearButton, SIGNAL(clicked()), this, SLOT(clear()));
 	
 	// Coin Control presstab start
-     ui->lineEditCoinControlChange->setFont(GUIUtil::tekcoinAddressFont());
+     ui->lineEditCoinControlChange->setFont(GUIUtil::mudcoinAddressFont());
      connect(ui->pushButtonCoinControl, SIGNAL(clicked()), this, SLOT(coinControlButtonClicked()));
      connect(ui->checkBoxCoinControlChange, SIGNAL(stateChanged(int)), this, SLOT(coinControlChangeChecked(int)));
      connect(ui->lineEditCoinControlChange, SIGNAL(textEdited(const QString &)), this, SLOT(coinControlChangeEdited(const QString &)));
@@ -87,7 +87,7 @@ void SendCoinsDialog::setModel(WalletModel *model)
     for(int i = 0; i < ui->entries->count(); ++i)
     {
         SendCoinsEntry *entry = qobject_cast<SendCoinsEntry*>(ui->entries->itemAt(i)->widget());
-		        CtekcoinAddress address = entry->getValue().address.toStdString(); 
+		        CmudcoinAddress address = entry->getValue().address.toStdString(); 
 				if(!model->isMine(address) && ui->splitBlockCheckBox->checkState() == Qt::Checked) 
 		{
 					model->setSplitBlock(false); //don't allow the blocks to split if sending to an outside address
@@ -179,25 +179,25 @@ void SendCoinsDialog::on_sendButton_clicked()
         if(!model->getSplitBlock())
 		{ 
 	#if QT_VERSION < 0x050000 //presstab qt5
-        formatted.append(tr("<b>%1</b> to %2 (%3)").arg(tekcoinUnits::formatWithUnit(tekcoinUnits::BTC, rcp.amount), Qt::escape(rcp.label), rcp.address));
+        formatted.append(tr("<b>%1</b> to %2 (%3)").arg(mudcoinUnits::formatWithUnit(mudcoinUnits::BTC, rcp.amount), Qt::escape(rcp.label), rcp.address));
     #else
-		formatted.append(tr("<b>%1</b> to %2 (%3)").arg(tekcoinUnits::formatWithUnit(tekcoinUnits::BTC, rcp.amount), rcp.label.toHtmlEscaped(), rcp.address));
+		formatted.append(tr("<b>%1</b> to %2 (%3)").arg(mudcoinUnits::formatWithUnit(mudcoinUnits::BTC, rcp.amount), rcp.label.toHtmlEscaped(), rcp.address));
 	#endif
 		} 
 		else 
 		{ 
 #if QT_VERSION < 0x050000 
-		formatted.append(tr("<b>%1</b> in %4 blocks of %5 TEK each to %2 (%3)?").arg(tekcoinUnits::formatWithUnit(tekcoinUnits::BTC, rcp.amount),  
+		formatted.append(tr("<b>%1</b> in %4 blocks of %5 MUD each to %2 (%3)?").arg(mudcoinUnits::formatWithUnit(mudcoinUnits::BTC, rcp.amount),  
 			Qt::escape(rcp.label),  
 			rcp.address,  
 			QString::number(nSplitBlock),  
-			tekcoinUnits::formatWithUnit(tekcoinUnits::BTC, rcp.amount / nSplitBlock)));
+			mudcoinUnits::formatWithUnit(mudcoinUnits::BTC, rcp.amount / nSplitBlock)));
 #else 
-		formatted.append(tr("<b>%1</b> in %4 blocks of %5 TEK each to %2 (%3)?").arg(tekcoinUnits::formatWithUnit(tekcoinUnits::BTC, rcp.amount),  
+		formatted.append(tr("<b>%1</b> in %4 blocks of %5 MUD each to %2 (%3)?").arg(mudcoinUnits::formatWithUnit(mudcoinUnits::BTC, rcp.amount),  
 			rcp.label.toHtmlEscaped(),  
 			rcp.address,  
 			QString::number(nSplitBlock),  
-			tekcoinUnits::formatWithUnit(tekcoinUnits::BTC, rcp.amount / nSplitBlock)));
+			mudcoinUnits::formatWithUnit(mudcoinUnits::BTC, rcp.amount / nSplitBlock)));
 #endif	 
 		}
 	}
@@ -247,7 +247,7 @@ void SendCoinsDialog::on_sendButton_clicked()
     case WalletModel::AmountWithFeeExceedsBalance:
         QMessageBox::warning(this, tr("Send Coins"),
             tr("The total exceeds your balance when the %1 transaction fee is included.").
-            arg(tekcoinUnits::formatWithUnit(tekcoinUnits::BTC, sendstatus.fee)),
+            arg(mudcoinUnits::formatWithUnit(mudcoinUnits::BTC, sendstatus.fee)),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::DuplicateAddress:
@@ -387,9 +387,9 @@ bool SendCoinsDialog::handleURI(const QString &uri)
 {
     SendCoinsRecipient rv;
     // URI has to be valid
-    if (GUIUtil::parsetekcoinURI(uri, &rv))
+    if (GUIUtil::parsemudcoinURI(uri, &rv))
     {
-        CtekcoinAddress address(rv.address.toStdString());
+        CmudcoinAddress address(rv.address.toStdString());
         if (!address.IsValid())
             return false;
         pasteEntry(rv);
@@ -408,7 +408,7 @@ void SendCoinsDialog::setBalance(qint64 balance, qint64 stake, qint64 unconfirme
         return;
 
     int unit = model->getOptionsModel()->getDisplayUnit();
-    ui->labelBalance->setText(tekcoinUnits::formatWithUnit(unit, balance));
+    ui->labelBalance->setText(mudcoinUnits::formatWithUnit(unit, balance));
 }
 
 void SendCoinsDialog::updateDisplayUnit()
@@ -416,7 +416,7 @@ void SendCoinsDialog::updateDisplayUnit()
     if(model && model->getOptionsModel())
     {
         // Update labelBalance with the current balance and the current unit
-        ui->labelBalance->setText(tekcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), model->getBalance()));
+        ui->labelBalance->setText(mudcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), model->getBalance()));
     }
 }
 
@@ -528,7 +528,7 @@ void SendCoinsDialog::coinControlChangeChecked(int state)
     if (model)
     {
         if (state == Qt::Checked)
-            CoinControlDialog::coinControl->destChange = CtekcoinAddress(ui->lineEditCoinControlChange->text().toStdString()).Get();
+            CoinControlDialog::coinControl->destChange = CmudcoinAddress(ui->lineEditCoinControlChange->text().toStdString()).Get();
         else
             CoinControlDialog::coinControl->destChange = CNoDestination();
     }
@@ -542,16 +542,16 @@ void SendCoinsDialog::coinControlChangeEdited(const QString & text)
 {
     if (model)
     {
-        CoinControlDialog::coinControl->destChange = CtekcoinAddress(text.toStdString()).Get();
+        CoinControlDialog::coinControl->destChange = CmudcoinAddress(text.toStdString()).Get();
         
         // label for the change address
         ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:black;}");
         if (text.isEmpty())
             ui->labelCoinControlChangeLabel->setText("");
-        else if (!CtekcoinAddress(text.toStdString()).IsValid())
+        else if (!CmudcoinAddress(text.toStdString()).IsValid())
         {
             ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:red;}");
-            ui->labelCoinControlChangeLabel->setText(tr("WARNING: Invalid TEK address"));
+            ui->labelCoinControlChangeLabel->setText(tr("WARNING: Invalid MUD address"));
         }
         else
         {
@@ -562,7 +562,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString & text)
             {
                 CPubKey pubkey;
                 CKeyID keyid;
-                CtekcoinAddress(text.toStdString()).GetKeyID(keyid);   
+                CmudcoinAddress(text.toStdString()).GetKeyID(keyid);   
                 if (model->getPubKey(keyid, pubkey))
                     ui->labelCoinControlChangeLabel->setText(tr("(no label)"));
                 else

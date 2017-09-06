@@ -1,5 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2013-2015 The TEKcoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -189,7 +190,7 @@ bool GetIPFromIRC(SOCKET hSocket, string strMyName, CNetAddr& ipRet)
 void ThreadIRCSeed(void* parg)
 {
     // Make this thread recognisable as the IRC seeding thread
-    RenameThread("tekcoin-ircseed");
+    RenameThread("mudcoin-ircseed");
 
     try
     {
@@ -306,16 +307,16 @@ void ThreadIRCSeed2(void* parg)
         }
 
         if (fTestNet) {
-            Send(hSocket, "JOIN #tekcoinTEST2\r");
-            Send(hSocket, "WHO #tekcoinTEST2\r");
+            Send(hSocket, "JOIN #mudcoinTEST2\r");
+            Send(hSocket, "WHO #mudcoinTEST2\r");
         } else {
-            // randomly join #tekcoin00-#tekcoin05
+            // randomly join #mudcoin00-#mudcoin05
             // int channel_number = GetRandInt(5);
 
             // Channel number is always 0 for initial release
             int channel_number = 0;
-            Send(hSocket, strprintf("JOIN #tekcoin%02d\r", channel_number).c_str());
-            Send(hSocket, strprintf("WHO #tekcoin%02d\r", channel_number).c_str());
+            Send(hSocket, strprintf("JOIN #mudcoin%02d\r", channel_number).c_str());
+            Send(hSocket, strprintf("WHO #mudcoin%02d\r", channel_number).c_str());
         }
 
         int64 nStart = GetTime();

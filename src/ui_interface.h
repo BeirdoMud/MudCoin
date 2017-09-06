@@ -1,9 +1,9 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2013 The tekcoin developer
+// Copyright (c) 2013 The mudcoin developer
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef tekcoin_UI_INTERFACE_H
-#define tekcoin_UI_INTERFACE_H
+#ifndef mudcoin_UI_INTERFACE_H
+#define mudcoin_UI_INTERFACE_H
 
 #include <string>
 #include "util.h" // for int64

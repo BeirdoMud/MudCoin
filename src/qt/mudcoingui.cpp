@@ -1,10 +1,11 @@
 /*
- * Qt4 tekcoin GUI.
+ * Qt4 mudcoin GUI.
  *
- * W.J. van der Laan 2011-2012
- * The tekcoin Developers 2011-2012
+ * Copyright (c) 2011-2012 W.J. van der Laan 
+ * Copyright (c) 2011-2012 The Tekcoin Developers
+ * Copyright (c) 2017 The MudCoin Developers
  */
-#include "tekcoingui.h"
+#include "mudcoingui.h"
 #include "transactiontablemodel.h"
 #include "addressbookpage.h"
 #include "sendcoinsdialog.h"
@@ -19,7 +20,7 @@
 #include "addresstablemodel.h"
 #include "transactionview.h"
 #include "overviewpage.h"
-#include "tekcoinunits.h"
+#include "mudcoinunits.h"
 #include "guiconstants.h"
 #include "askpassphrasedialog.h"
 #include "notificator.h"
@@ -66,7 +67,7 @@ extern int64 nLastCoinStakeSearchInterval;
 extern int nStakeTargetSpacing;
 double GetPoSKernelPS(const CBlockIndex* blockindex = NULL);
 
-tekcoinGUI::tekcoinGUI(QWidget *parent):
+mudcoinGUI::mudcoinGUI(QWidget *parent):
     QMainWindow(parent),
     clientModel(0),
     walletModel(0),
@@ -82,10 +83,10 @@ tekcoinGUI::tekcoinGUI(QWidget *parent):
 	blockBrowser(0)
 {
     resize(850, 550);
-    setWindowTitle(tr("TEKcoin") + " - " + tr("Wallet"));
+    setWindowTitle(tr("MudCoin") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
-    qApp->setWindowIcon(QIcon(":icons/tekcoin"));
-    setWindowIcon(QIcon(":icons/tekcoin"));
+    qApp->setWindowIcon(QIcon(":icons/mudcoin"));
+    setWindowIcon(QIcon(":icons/mudcoin"));
 #else
     setUnifiedTitleAndToolBarOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
@@ -206,7 +207,7 @@ tekcoinGUI::tekcoinGUI(QWidget *parent):
     gotoOverviewPage();
 }
 
-tekcoinGUI::~tekcoinGUI()
+mudcoinGUI::~mudcoinGUI()
 {
     if(trayIcon) // Hide tray icon, as deleting will let it linger until quit (on Ubuntu)
         trayIcon->hide();
@@ -215,7 +216,7 @@ tekcoinGUI::~tekcoinGUI()
 #endif
 }
 
-void tekcoinGUI::createActions()
+void mudcoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
@@ -226,7 +227,7 @@ void tekcoinGUI::createActions()
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send coins"), this);
-    sendCoinsAction->setToolTip(tr("Send coins to a tekcoin address"));
+    sendCoinsAction->setToolTip(tr("Send coins to a mudcoin address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
@@ -264,16 +265,16 @@ void tekcoinGUI::createActions()
     quitAction->setToolTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/tekcoin"), tr("&About tekcoin"), this);
-    aboutAction->setToolTip(tr("Show information about tekcoin"));
+    aboutAction = new QAction(QIcon(":/icons/mudcoin"), tr("&About mudcoin"), this);
+    aboutAction->setToolTip(tr("Show information about mudcoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options"), this);
-    optionsAction->setToolTip(tr("Modify configuration options for tekcoin"));
+    optionsAction->setToolTip(tr("Modify configuration options for mudcoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
-    toggleHideAction = new QAction(QIcon(":/icons/tekcoin"), tr("&Show / Hide"), this);
+    toggleHideAction = new QAction(QIcon(":/icons/mudcoin"), tr("&Show / Hide"), this);
 	
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet"), this);
     encryptWalletAction->setToolTip(tr("Encrypt or decrypt wallet"));
@@ -332,7 +333,7 @@ void tekcoinGUI::createActions()
 	connect(blockAction, SIGNAL(triggered()), this, SLOT(gotoBlockBrowser()));
 }
 
-void tekcoinGUI::createMenuBar()
+void mudcoinGUI::createMenuBar()
 {
 #ifdef Q_OS_MAC
     // Create a decoupled menu bar on Mac which stays even if the window is closed
@@ -375,7 +376,7 @@ void tekcoinGUI::createMenuBar()
     help->addAction(aboutQtAction);
 }
 
-void tekcoinGUI::createToolBars()
+void mudcoinGUI::createToolBars()
 {
     QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
@@ -391,7 +392,7 @@ void tekcoinGUI::createToolBars()
     toolbar2->addAction(exportAction);
 }
 
-void tekcoinGUI::setClientModel(ClientModel *clientModel)
+void mudcoinGUI::setClientModel(ClientModel *clientModel)
 {
     this->clientModel = clientModel;
     if(clientModel)
@@ -401,14 +402,14 @@ void tekcoinGUI::setClientModel(ClientModel *clientModel)
         {
             setWindowTitle(windowTitle() + QString(" ") + tr("[testnet]"));
 #ifndef Q_OS_MAC
-            qApp->setWindowIcon(QIcon(":icons/tekcoin_testnet"));
-            setWindowIcon(QIcon(":icons/tekcoin_testnet"));
+            qApp->setWindowIcon(QIcon(":icons/mudcoin_testnet"));
+            setWindowIcon(QIcon(":icons/mudcoin_testnet"));
 #else
-            MacDockIconHandler::instance()->setIcon(QIcon(":icons/tekcoin_testnet"));
+            MacDockIconHandler::instance()->setIcon(QIcon(":icons/mudcoin_testnet"));
 #endif
             if(trayIcon)
             {
-                trayIcon->setToolTip(tr("tekcoin client") + QString(" ") + tr("[testnet]"));
+                trayIcon->setToolTip(tr("mudcoin client") + QString(" ") + tr("[testnet]"));
                 trayIcon->setIcon(QIcon(":/icons/toolbar_testnet"));
                 toggleHideAction->setIcon(QIcon(":/icons/toolbar_testnet"));
             }
@@ -432,7 +433,7 @@ void tekcoinGUI::setClientModel(ClientModel *clientModel)
     }
 }
 
-void tekcoinGUI::setWalletModel(WalletModel *walletModel)
+void mudcoinGUI::setWalletModel(WalletModel *walletModel)
 {
     this->walletModel = walletModel;
     if(walletModel)
@@ -461,14 +462,14 @@ void tekcoinGUI::setWalletModel(WalletModel *walletModel)
     }
 }
 
-void tekcoinGUI::createTrayIcon()
+void mudcoinGUI::createTrayIcon()
 {
     QMenu *trayIconMenu;
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setToolTip(tr("tekcoin client"));
+    trayIcon->setToolTip(tr("mudcoin client"));
     trayIcon->setIcon(QIcon(":/icons/toolbar"));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
@@ -499,7 +500,7 @@ void tekcoinGUI::createTrayIcon()
 }
 
 #ifndef Q_OS_MAC
-void tekcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
+void mudcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if(reason == QSystemTrayIcon::Trigger)
     {
@@ -509,7 +510,7 @@ void tekcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 }
 #endif
 
-void tekcoinGUI::optionsClicked()
+void mudcoinGUI::optionsClicked()
 {
     if(!clientModel || !clientModel->getOptionsModel())
         return;
@@ -518,14 +519,14 @@ void tekcoinGUI::optionsClicked()
     dlg.exec();
 }
 
-void tekcoinGUI::aboutClicked()
+void mudcoinGUI::aboutClicked()
 {
     AboutDialog dlg;
     dlg.setModel(clientModel);
     dlg.exec();
 }
 
-void tekcoinGUI::setNumConnections(int count)
+void mudcoinGUI::setNumConnections(int count)
 {
     QString icon;
     switch(count)
@@ -537,10 +538,10 @@ void tekcoinGUI::setNumConnections(int count)
     default: icon = ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to tekcoin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to mudcoin network", "", count));
 }
 
-void tekcoinGUI::setNumBlocks(int count, int nTotalBlocks)
+void mudcoinGUI::setNumBlocks(int count, int nTotalBlocks)
 {
     // don't show / hide progress bar and its label if we have no connection to the network
     if (!clientModel || clientModel->getNumConnections() == 0)
@@ -647,7 +648,7 @@ void tekcoinGUI::setNumBlocks(int count, int nTotalBlocks)
     progressBar->setToolTip(tooltip);
 }
 
-void tekcoinGUI::error(const QString &title, const QString &message, bool modal)
+void mudcoinGUI::error(const QString &title, const QString &message, bool modal)
 {
     // Report errors from network/worker thread
     if(modal)
@@ -658,7 +659,7 @@ void tekcoinGUI::error(const QString &title, const QString &message, bool modal)
     }
 }
 
-void tekcoinGUI::changeEvent(QEvent *e)
+void mudcoinGUI::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
 #ifndef Q_OS_MAC // Ignored on Mac
@@ -677,7 +678,7 @@ void tekcoinGUI::changeEvent(QEvent *e)
 #endif
 }
 
-void tekcoinGUI::closeEvent(QCloseEvent *event)
+void mudcoinGUI::closeEvent(QCloseEvent *event)
 {
     if(clientModel)
     {
@@ -692,20 +693,20 @@ void tekcoinGUI::closeEvent(QCloseEvent *event)
     QMainWindow::closeEvent(event);
 }
 
-void tekcoinGUI::askFee(qint64 nFeeRequired, bool *payFee)
+void mudcoinGUI::askFee(qint64 nFeeRequired, bool *payFee)
 {
     QString strMessage =
         tr("This transaction is over the size limit.  You can still send it for a fee of %1, "
           "which goes to the nodes that process your transaction and helps to support the network.  "
           "Do you want to pay the fee?").arg(
-                tekcoinUnits::formatWithUnit(tekcoinUnits::BTC, nFeeRequired));
+                mudcoinUnits::formatWithUnit(mudcoinUnits::BTC, nFeeRequired));
     QMessageBox::StandardButton retval = QMessageBox::question(
           this, tr("Confirm transaction fee"), strMessage,
           QMessageBox::Yes|QMessageBox::Cancel, QMessageBox::Yes);
     *payFee = (retval == QMessageBox::Yes);
 }
 
-void tekcoinGUI::incomingTransaction(const QModelIndex & parent, int start, int end)
+void mudcoinGUI::incomingTransaction(const QModelIndex & parent, int start, int end)
 {
     if(!walletModel || !clientModel)
         return;
@@ -734,13 +735,13 @@ void tekcoinGUI::incomingTransaction(const QModelIndex & parent, int start, int 
                                  "Type: %3\n"
                                  "Address: %4\n")
                               .arg(date)
-                              .arg(tekcoinUnits::formatWithUnit(walletModel->getOptionsModel()->getDisplayUnit(), amount, true))
+                              .arg(mudcoinUnits::formatWithUnit(walletModel->getOptionsModel()->getDisplayUnit(), amount, true))
                               .arg(type)
                               .arg(address), icon);
     }
 }
 
-void tekcoinGUI::gotoOverviewPage()
+void mudcoinGUI::gotoOverviewPage()
 {
     overviewAction->setChecked(true);
     centralWidget->setCurrentWidget(overviewPage);
@@ -749,7 +750,7 @@ void tekcoinGUI::gotoOverviewPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void tekcoinGUI::gotoHistoryPage()
+void mudcoinGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);
     centralWidget->setCurrentWidget(transactionsPage);
@@ -759,7 +760,7 @@ void tekcoinGUI::gotoHistoryPage()
     connect(exportAction, SIGNAL(triggered()), transactionView, SLOT(exportClicked()));
 }
 
-void tekcoinGUI::gotoAddressBookPage()
+void mudcoinGUI::gotoAddressBookPage()
 {
     addressBookAction->setChecked(true);
     centralWidget->setCurrentWidget(addressBookPage);
@@ -769,7 +770,7 @@ void tekcoinGUI::gotoAddressBookPage()
     connect(exportAction, SIGNAL(triggered()), addressBookPage, SLOT(exportClicked()));
 }
 
-void tekcoinGUI::gotoBlockBrowser(QString transactionId)
+void mudcoinGUI::gotoBlockBrowser(QString transactionId)
 {
     if(!transactionId.isEmpty())
     blockBrowser->setTransactionId(transactionId);
@@ -777,7 +778,7 @@ void tekcoinGUI::gotoBlockBrowser(QString transactionId)
     blockBrowser->show();
 }
 
-void tekcoinGUI::gotoReceiveCoinsPage()
+void mudcoinGUI::gotoReceiveCoinsPage()
 {
     receiveCoinsAction->setChecked(true);
     centralWidget->setCurrentWidget(receiveCoinsPage);
@@ -787,7 +788,7 @@ void tekcoinGUI::gotoReceiveCoinsPage()
     connect(exportAction, SIGNAL(triggered()), receiveCoinsPage, SLOT(exportClicked()));
 }
 
-void tekcoinGUI::gotoSendCoinsPage()
+void mudcoinGUI::gotoSendCoinsPage()
 {
     sendCoinsAction->setChecked(true);
     centralWidget->setCurrentWidget(sendCoinsPage);
@@ -796,7 +797,7 @@ void tekcoinGUI::gotoSendCoinsPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void tekcoinGUI::gotoSignMessageTab(QString addr)
+void mudcoinGUI::gotoSignMessageTab(QString addr)
 {
     // call show() in showTab_SM()
     signVerifyMessageDialog->showTab_SM(true);
@@ -805,7 +806,7 @@ void tekcoinGUI::gotoSignMessageTab(QString addr)
         signVerifyMessageDialog->setAddress_SM(addr);
 }
 
-void tekcoinGUI::gotoVerifyMessageTab(QString addr)
+void mudcoinGUI::gotoVerifyMessageTab(QString addr)
 {
     // call show() in showTab_VM()
     signVerifyMessageDialog->showTab_VM(true);
@@ -814,14 +815,14 @@ void tekcoinGUI::gotoVerifyMessageTab(QString addr)
         signVerifyMessageDialog->setAddress_VM(addr);
 }
 
-void tekcoinGUI::dragEnterEvent(QDragEnterEvent *event)
+void mudcoinGUI::dragEnterEvent(QDragEnterEvent *event)
 {
     // Accept only URIs
     if(event->mimeData()->hasUrls())
         event->acceptProposedAction();
 }
 
-void tekcoinGUI::dropEvent(QDropEvent *event)
+void mudcoinGUI::dropEvent(QDropEvent *event)
 {
     if(event->mimeData()->hasUrls())
     {
@@ -837,13 +838,13 @@ void tekcoinGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             gotoSendCoinsPage();
         else
-            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid tekcoin address or malformed URI parameters."));
+            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid mudcoin address or malformed URI parameters."));
     }
 
     event->acceptProposedAction();
 }
 
-void tekcoinGUI::handleURI(QString strURI)
+void mudcoinGUI::handleURI(QString strURI)
 {
     // URI has to be valid
     if (sendCoinsPage->handleURI(strURI))
@@ -852,10 +853,10 @@ void tekcoinGUI::handleURI(QString strURI)
         gotoSendCoinsPage();
     }
     else
-        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid tekcoin address or malformed URI parameters."));
+        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid mudcoin address or malformed URI parameters."));
 }
 
-void tekcoinGUI::setEncryptionStatus(int status)
+void mudcoinGUI::setEncryptionStatus(int status)
 {
     switch(status)
     {
@@ -902,7 +903,7 @@ void tekcoinGUI::setEncryptionStatus(int status)
     }
 }
 
-void tekcoinGUI::encryptWallet(bool status)
+void mudcoinGUI::encryptWallet(bool status)
 {
     if(!walletModel)
         return;
@@ -914,7 +915,7 @@ void tekcoinGUI::encryptWallet(bool status)
     setEncryptionStatus(walletModel->getEncryptionStatus());
 }
 
-void tekcoinGUI::backupWallet()
+void mudcoinGUI::backupWallet()
 {
 	#if QT_VERSION < 0x050000 //presstab qt5
     QString saveDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
@@ -930,7 +931,7 @@ void tekcoinGUI::backupWallet()
     }
 }
 
-void tekcoinGUI::dumpWallet()
+void mudcoinGUI::dumpWallet()
 {
    if(!walletModel)
       return;
@@ -972,7 +973,7 @@ void tekcoinGUI::dumpWallet()
     }
 }
 
-void tekcoinGUI::importWallet()
+void mudcoinGUI::importWallet()
 {
    if(!walletModel)
       return;
@@ -1017,14 +1018,14 @@ void tekcoinGUI::importWallet()
     }
 }
 
-void tekcoinGUI::changePassphrase()
+void mudcoinGUI::changePassphrase()
 {
     AskPassphraseDialog dlg(AskPassphraseDialog::ChangePass, this);
     dlg.setModel(walletModel);
     dlg.exec();
 }
 
-void tekcoinGUI::unlockWallet()
+void mudcoinGUI::unlockWallet()
 {
     if(!walletModel)
         return;
@@ -1047,7 +1048,7 @@ void tekcoinGUI::unlockWallet()
    }
 }
 
-void tekcoinGUI::unlockWalletForMint()
+void mudcoinGUI::unlockWalletForMint()
 {
     if(!walletModel)
         return;
@@ -1071,7 +1072,7 @@ void tekcoinGUI::unlockWalletForMint()
     }
 }
 
-void tekcoinGUI::lockWallet() 
+void mudcoinGUI::lockWallet() 
 { 
     if(!walletModel) 
         return; 
@@ -1093,7 +1094,7 @@ void tekcoinGUI::lockWallet()
 
 // Enables or disables the internal stake miner;
 // only sets the menu icon and text on the initial run 
-void tekcoinGUI::stakeMinerToggle(bool fInitial) {
+void mudcoinGUI::stakeMinerToggle(bool fInitial) {
     bool fStakingInt = fStaking;
 
     if(fInitial) {
@@ -1115,7 +1116,7 @@ void tekcoinGUI::stakeMinerToggle(bool fInitial) {
       updateStakingIcon();
 }
 
-void tekcoinGUI::showNormalIfMinimized(bool fToggleHidden)
+void mudcoinGUI::showNormalIfMinimized(bool fToggleHidden)
 {
     // activateWindow() (sometimes) helps with keyboard focus on Windows
     if (isHidden())
@@ -1137,12 +1138,12 @@ void tekcoinGUI::showNormalIfMinimized(bool fToggleHidden)
         hide();
 }
 
-void tekcoinGUI::toggleHidden()
+void mudcoinGUI::toggleHidden()
 {
     showNormalIfMinimized(true);
 }
 
-void tekcoinGUI::updateStakingIcon()
+void mudcoinGUI::updateStakingIcon()
 {
     uint64 nMinWeight = 0, nMaxWeight = 0, nWeight = 0;
     if (pwalletMain)

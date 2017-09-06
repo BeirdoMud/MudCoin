@@ -1,4 +1,5 @@
-// Copyright (c) 2013 tekcoin Developers
+// Copyright (c) 2013 Tekcoin Developers
+// Copyright (c) 2017 MudCoin Developers
 
 #ifndef PBKDF2_H
 #define PBKDF2_H

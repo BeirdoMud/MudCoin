@@ -38,7 +38,7 @@ Designer: http://www.everaldo.com
 Icon Pack: Crystal SVG
 License: LGPL
 
-Icon: src/qt/res/icons/tekcoin.png, src/qt/res/icons/toolbar.png
+Icon: src/qt/res/icons/mudcoin.png, src/qt/res/icons/toolbar.png
 Designer: Mao
 License: Public Domain
 Site:

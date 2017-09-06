@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About tekcoin</source>
-        <translation>A propos de tekcoin</translation>
+        <source>About mudcoin</source>
+        <translation>A propos de mudcoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;tekcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;tekcoin&lt;/b&gt; version</translation>
+        <source>&lt;b&gt;mudcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;mudcoin&lt;/b&gt; version</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -67,8 +67,8 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your tekcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Ceux-ci sont vos adresses tekcoin qui vous permettent de recevoir des paiements.  Vous pouvez en donner une différente à chaque expédieur afin de savoir qui vous payent.</translation>
+        <source>These are your mudcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Ceux-ci sont vos adresses mudcoin qui vous permettent de recevoir des paiements.  Vous pouvez en donner une différente à chaque expédieur afin de savoir qui vous payent.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -82,7 +82,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a tekcoin address</source>
+        <source>Sign a message to prove you own a mudcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -107,7 +107,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified tekcoin address</source>
+        <source>Verify a message to ensure it was signed with a specified mudcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -122,7 +122,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your tekcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your mudcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -248,7 +248,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR tekcoinS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR mudcoinS&lt;/b&gt;!</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -275,7 +275,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="-56"/>
-        <source>tekcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your tekcoins from being stolen by malware infecting your computer.</source>
+        <source>mudcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your mudcoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -321,9 +321,9 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
 </context>
 <context>
-    <name>tekcoinGUI</name>
+    <name>mudcoinGUI</name>
     <message>
-        <location filename="../tekcoingui.cpp" line="+233"/>
+        <location filename="../mudcoingui.cpp" line="+233"/>
         <source>Sign &amp;message...</source>
         <translation type="unfinished"/>
     </message>
@@ -374,7 +374,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about tekcoin</source>
+        <source>Show information about mudcoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -419,12 +419,12 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a tekcoin address</source>
+        <source>Send coins to a mudcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for tekcoin</source>
+        <source>Modify configuration options for mudcoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -455,7 +455,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>tekcoin</source>
+        <source>mudcoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -480,8 +480,8 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About tekcoin</source>
-        <translation>&amp;A propos de tekcoin</translation>
+        <source>&amp;About mudcoin</source>
+        <translation>&amp;A propos de mudcoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,12 +500,12 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your tekcoin addresses to prove you own them</source>
+        <source>Sign messages with your mudcoin addresses to prove you own them</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified tekcoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified mudcoin addresses</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -536,12 +536,12 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="+47"/>
-        <source>tekcoin client</source>
+        <source>mudcoin client</source>
         <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to tekcoin network</source>
+        <source>%n active connection(s) to mudcoin network</source>
         <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
@@ -652,7 +652,7 @@ Address: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid tekcoin address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid mudcoin address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -666,8 +666,8 @@ Address: %4
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../tekcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. tekcoin can no longer continue safely and will quit.</source>
+        <location filename="../mudcoin.cpp" line="+111"/>
+        <source>A fatal error occurred. mudcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -733,7 +733,7 @@ Address: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid tekcoin address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid mudcoin address.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -752,7 +752,7 @@ Address: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>tekcoin-Qt</source>
+        <source>mudcoin-Qt</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -815,12 +815,12 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start tekcoin after logging in to the system.</source>
+        <source>Automatically start mudcoin after logging in to the system.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start tekcoin on system login</source>
+        <source>&amp;Start mudcoin on system login</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -840,7 +840,7 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the tekcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the mudcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -850,7 +850,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the tekcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the mudcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -925,7 +925,7 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting tekcoin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting mudcoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -940,7 +940,7 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show tekcoin addresses in the transaction list or not.</source>
+        <source>Whether to show mudcoin addresses in the transaction list or not.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -992,7 +992,7 @@ Address: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting tekcoin.</source>
+        <source>This setting will take effect after restarting mudcoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1011,7 +1011,7 @@ Address: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the tekcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the mudcoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1065,7 +1065,7 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start tekcoin: click-to-pay handler</source>
+        <source>Cannot start mudcoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1215,7 +1215,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the tekcoin-Qt help message to get a list with possible tekcoin command-line options.</source>
+        <source>Show the mudcoin-Qt help message to get a list with possible mudcoin command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1235,12 +1235,12 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>tekcoin - Debug window</source>
+        <source>mudcoin - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>tekcoin Core</source>
+        <source>mudcoin Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1250,7 +1250,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the tekcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the mudcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1260,7 +1260,7 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the tekcoin RPC console.</source>
+        <source>Welcome to the mudcoin RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1444,7 +1444,7 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a tekcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <source>Enter a mudcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1509,7 +1509,7 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this tekcoin address</source>
+        <source>Sign the message to prove you own this mudcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1545,7 +1545,7 @@ Address: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified tekcoin address</source>
+        <source>Verify the message to ensure it was signed with the specified mudcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1561,7 +1561,7 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a tekcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <source>Enter a mudcoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1571,7 +1571,7 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter tekcoin signature</source>
+        <source>Enter mudcoin signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2180,10 +2180,10 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>tekcoin-core</name>
+    <name>mudcoin-core</name>
     <message>
-        <location filename="../tekcoinstrings.cpp" line="+94"/>
-        <source>tekcoin version</source>
+        <location filename="../mudcoinstrings.cpp" line="+94"/>
+        <source>mudcoin version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2193,7 +2193,7 @@ Address: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or tekcoind</source>
+        <source>Send command to -server or mudcoind</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2213,12 +2213,12 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: tekcoin.conf)</source>
+        <source>Specify configuration file (default: mudcoin.conf)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: tekcoind.pid)</source>
+        <source>Specify pid file (default: mudcoind.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2296,13 +2296,13 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=tekcoinrpc
+rpcuser=mudcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;mudcoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2318,7 +2318,7 @@ for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. tekcoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. mudcoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2363,7 +2363,7 @@ for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong tekcoin will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong mudcoin will not work properly.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2613,7 +2613,7 @@ for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the tekcoin Wiki for SSL setup instructions)</source>
+        <source>SSL options: (see the mudcoin Wiki for SSL setup instructions)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2803,12 +2803,12 @@ for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of tekcoin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of mudcoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart tekcoin to complete</source>
+        <source>Wallet needed to be rewritten: restart mudcoin to complete</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2868,7 +2868,7 @@ for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. tekcoin is probably already running.</source>
+        <source>Unable to bind to %s on this computer. mudcoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

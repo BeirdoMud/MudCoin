@@ -6,17 +6,17 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About tekcoin</source>
+        <source>About mudcoin</source>
         <translation>关于赏金币</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;tekcoin&lt;/b&gt; version</source>
+        <source>&lt;b&gt;mudcoin&lt;/b&gt; version</source>
         <translation>&lt;b&gt;赏金币&lt;/b&gt;版本</translation>
     </message>
     <message>
         <location line="+41"/>
-        <source>Copyright © 2013 The tekcoin developers</source>
+        <source>Copyright © 2013 The mudcoin developers</source>
         <translation>版权所有 © 2013 赏金币开发团队</translation>
     </message>
     <message>
@@ -66,7 +66,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your tekcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <source>These are your mudcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation>这是你接收付款的赏金币地址。你可以给每个发送者一个不同的地址，从而能够确定是谁向你发送了货币。</translation>
     </message>
     <message>
@@ -81,7 +81,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a tekcoin address</source>
+        <source>Sign a message to prove you own a mudcoin address</source>
         <translation>发送签名消息以证明您是该赏金币地址的拥有者</translation>
     </message>
     <message>
@@ -96,7 +96,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified tekcoin address</source>
+        <source>Verify a message to ensure it was signed with a specified mudcoin address</source>
         <translation>进行消息验证，以确认该消息是被某一赏金币地址签名的。</translation>
     </message>
     <message>
@@ -255,7 +255,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>tekcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <source>mudcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
         <translation>赏金币将关闭客户端软件以完成加密过程，完成加密后，请即时备份加密后的钱包。 请您谨记：钱包加密并不是万能的，电脑中毒，您的赏金币还是有可能丢失。</translation>
     </message>
     <message>
@@ -301,9 +301,9 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
 </context>
 <context>
-    <name>tekcoinGUI</name>
+    <name>mudcoinGUI</name>
         <message>
-        <location filename="../tekcoingui.cpp" line="+257"/>
+        <location filename="../mudcoingui.cpp" line="+257"/>
         <source>Sign &amp;message...</source>
         <translation>对&amp;消息签名...</translation>
     </message>
@@ -372,7 +372,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 
     <message>
         <location line="+4"/>
-        <source>Show information about tekcoin</source>
+        <source>Show information about mudcoin</source>
         <translation>显示赏金币的相关信息</translation>
     </message>
     <message>
@@ -424,12 +424,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-58"/>
-        <source>Send coins to a tekcoin address</source>
+        <source>Send coins to a mudcoin address</source>
         <translation>向一个赏金币地址发送赏金币</translation>
     </message>
     <message>
         <location line="+45"/>
-        <source>Modify configuration options for tekcoin</source>
+        <source>Modify configuration options for mudcoin</source>
         <translation>设置选项</translation>
     </message>
     <message>
@@ -470,7 +470,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-186"/>
-        <source>tekcoin</source>
+        <source>mudcoin</source>
         <translation>赏金币</translation>
     </message>
     <message>
@@ -480,7 +480,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+168"/>
-        <source>&amp;About tekcoin</source>
+        <source>&amp;About mudcoin</source>
         <translation>&amp;关于赏金币</translation>
     </message>
     <message>
@@ -522,12 +522,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>tekcoin client</source>
+        <source>mudcoin client</source>
         <translation>赏金币客户端</translation>
     </message>
     <message numerus="yes">
         <location line="+69"/>
-        <source>%n active connection(s) to tekcoin network</source>
+        <source>%n active connection(s) to mudcoin network</source>
         <translation>
 	<numerusform>%n 个到赏金币网络的活动连接</numerusform>
 	</translation>
@@ -622,7 +622,7 @@ Address: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid tekcoin address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid mudcoin address or malformed URI parameters.</source>
         <translation>URI无法解析! 可能是因为赏金币地址无效或URI参数不正确。</translation>
     </message>
     <message>
@@ -656,8 +656,8 @@ Address: %4
         <translation>备份钱包到其它文件夹失败.</translation>
     </message>
     <message>
-        <location filename="../tekcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. tekcoin can no longer continue safely and will quit.</source>
+        <location filename="../mudcoin.cpp" line="+109"/>
+        <source>A fatal error occurred. mudcoin can no longer continue safely and will quit.</source>
         <translation>发生致命错误. 赏金币客户端的安全存在问题，将退出.</translation>
     </message>
 </context>
@@ -724,7 +724,7 @@ Address: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>The entered address &quot;%1&quot; is not a valid tekcoin address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid mudcoin address.</source>
         <translation>您输入的 &quot;%1&quot; 不是合法的赏金币地址.</translation>
     </message>
     <message>
@@ -743,8 +743,8 @@ Address: %4
     <message>
         <location filename="../guiutil.cpp" line="+419"/>
         <location line="+12"/>
-        <source>tekcoin-Qt</source>
-        <translation>tekcoin-Qt</translation>
+        <source>mudcoin-Qt</source>
+        <translation>mudcoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -806,12 +806,12 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start tekcoin after logging in to the system.</source>
+        <source>Automatically start mudcoin after logging in to the system.</source>
         <translation>系统启动后自动运行赏金币客户端软件.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start tekcoin on system login</source>
+        <source>&amp;Start mudcoin on system login</source>
         <translation>启动时&amp;运行</translation>
     </message>
     <message>
@@ -831,7 +831,7 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the tekcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the mudcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>在路由器上自动打开赏金币端口——只有在您的路由器支持UPnP并且已经开启UPnP的情况下可用。</translation>
         
     </message>
@@ -842,7 +842,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the tekcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the mudcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation>使用SOCKS代理链接赏金币网络(例如. 当使用Tor连接赏金币网络时).</translation>
     </message>
     <message>
@@ -917,7 +917,7 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting tekcoin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting mudcoin.</source>
         <translation>此处设置界面语言重启客户端后生效.</translation>
     </message>
     <message>
@@ -932,7 +932,7 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show tekcoin addresses in the transaction list or not.</source>
+        <source>Whether to show mudcoin addresses in the transaction list or not.</source>
         <translation>交易列表中是否显示赏金币地址.</translation>
     </message>
     <message>
@@ -969,7 +969,7 @@ Address: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting tekcoin.</source>
+        <source>This setting will take effect after restarting mudcoin.</source>
         <translation>重启赏金币客户端后生效.</translation>
     </message>
     <message>
@@ -988,7 +988,7 @@ Address: %4
     <message>
         <location line="+33"/>
         <location line="+183"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the tekcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the mudcoin network after a connection is established, but this process has not completed yet.</source>
         <translation>显示的信息可能过期。，当客户端与赏金币网络建立连接后，会自动进行同步，现在同步过程还没有完成。</translation>
     </message>
     <message>
@@ -1204,7 +1204,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the tekcoin-Qt help message to get a list with possible tekcoin command-line options.</source>
+        <source>Show the mudcoin-Qt help message to get a list with possible mudcoin command-line options.</source>
         <translation>显示赏金币帮助消息，获得赏金币命令行命令.</translation>
     </message>
     <message>
@@ -1224,12 +1224,12 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>tekcoin - Debug window</source>
+        <source>mudcoin - Debug window</source>
         <translation>赏金币 - 调试窗口</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>tekcoin Core</source>
+        <source>mudcoin Core</source>
         <translation>赏金币核心信息</translation>
     </message>
     <message>
@@ -1239,7 +1239,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the tekcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the mudcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>打开当前数据文件夹下的调试日志，若调试日志文件很大，可能花费较长时间。</translation>
     </message>
     <message>
@@ -1249,7 +1249,7 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the tekcoin RPC console.</source>
+        <source>Welcome to the mudcoin RPC console.</source>
         <translation>欢迎使用赏金币RPC控制台</translation>
     </message>
     <message>
@@ -1433,7 +1433,7 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a valid tekcoin address</source>
+        <source>Enter a valid mudcoin address</source>
         <translation>输入有效的赏金币地址</translation>
     </message>
 </context>
@@ -1494,7 +1494,7 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this tekcoin address</source>
+        <source>Sign the message to prove you own this mudcoin address</source>
         <translation>签名该消息以证明你拥有这个赏金币地址</translation>
     </message>
     <message>
@@ -1526,7 +1526,7 @@ Address: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified tekcoin address</source>
+        <source>Verify the message to ensure it was signed with the specified mudcoin address</source>
         <translation>验证该消息是否由特定的赏金币地址签名的</translation>
     </message>
     <message>
@@ -1537,7 +1537,7 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a valid tekcoin address</source>
+        <source>Enter a valid mudcoin address</source>
         <translation>输入有效的赏金币地址</translation>
     </message>
     <message>
@@ -1547,7 +1547,7 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter tekcoin signature</source>
+        <source>Enter mudcoin signature</source>
         <translation>输入赏金币签名</translation>
     </message>
     <message>
@@ -2110,10 +2110,10 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>tekcoin-core</name>
+    <name>mudcoin-core</name>
     <message>
-        <location filename="../tekcoinstrings.cpp" line="+82"/>
-        <source>tekcoin version</source>
+        <location filename="../mudcoinstrings.cpp" line="+82"/>
+        <source>mudcoin version</source>
         <translation>赏金币版本</translation>
     </message>
     <message>
@@ -2123,8 +2123,8 @@ Address: %4
     </message>
     <message>
         <location line="-25"/>
-        <source>Send command to -server or tekcoind</source>
-        <translation>发送命令到-server或tekcoind</translation>
+        <source>Send command to -server or mudcoind</source>
+        <translation>发送命令到-server或mudcoind</translation>
     </message>
     <message>
         <location line="-19"/>
@@ -2143,13 +2143,13 @@ Address: %4
     </message>
     <message>
         <location line="+23"/>
-        <source>Specify configuration file (default: tekcoin.conf)</source>
-        <translation>制定配置文件(默认: tekcoin.conf)</translation>
+        <source>Specify configuration file (default: mudcoin.conf)</source>
+        <translation>制定配置文件(默认: mudcoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: tekcoind.pid)</source>
-        <translation>指定pid文件(默认: tekcoind.pid)</translation>
+        <source>Specify pid file (default: mudcoind.pid)</source>
+        <translation>指定pid文件(默认: mudcoind.pid)</translation>
     </message>
     <message>
         <location line="-47"/>
@@ -2303,8 +2303,8 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong tekcoin will not work properly.</source>
-        <translation>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong tekcoin will not work properly.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong mudcoin will not work properly.</source>
+        <translation>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong mudcoin will not work properly.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2383,8 +2383,8 @@ Address: %4
     </message>
     <message>
         <location line="+4"/>
-        <source>SSL options: (see the tekcoin Wiki for SSL setup instructions)</source>
-        <translation>SSL options: (see the tekcoin Wiki for SSL setup instructions)</translation>
+        <source>SSL options: (see the mudcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL options: (see the mudcoin Wiki for SSL setup instructions)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2538,13 +2538,13 @@ Address: %4
     </message>
     <message>
         <location line="-131"/>
-        <source>Cannot obtain a lock on data directory %s.  tekcoin is probably already running.</source>
-        <translation>Cannot obtain a lock on data directory %s.  tekcoin is probably already running.</translation>
+        <source>Cannot obtain a lock on data directory %s.  mudcoin is probably already running.</source>
+        <translation>Cannot obtain a lock on data directory %s.  mudcoin is probably already running.</translation>
     </message>
     <message>
         <location line="+57"/>
-        <source>tekcoin</source>
-        <translation>tekcoin</translation>
+        <source>mudcoin</source>
+        <translation>mudcoin</translation>
     </message>
     <message>
         <location line="+77"/>
@@ -2578,13 +2578,13 @@ Address: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of tekcoin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of mudcoin</source>
         <translation>加载钱包文件wallet.dat失败: 钱包需要新版本的客户端才能运行</translation>
     </message>
     <message>
         <location line="+73"/>
-        <source>Wallet needed to be rewritten: restart tekcoin to complete</source>
-        <translation>Wallet needed to be rewritten: restart tekcoin to complete</translation>
+        <source>Wallet needed to be rewritten: restart mudcoin to complete</source>
+        <translation>Wallet needed to be rewritten: restart mudcoin to complete</translation>
     </message>
     <message>
         <location line="-75"/>
@@ -2653,8 +2653,8 @@ Address: %4
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. tekcoin is probably already running.</source>
-        <translation>Unable to bind to %s on this computer. tekcoin is probably already running.</translation>
+        <source>Unable to bind to %s on this computer. mudcoin is probably already running.</source>
+        <translation>Unable to bind to %s on this computer. mudcoin is probably already running.</translation>
     </message>
     <message>
         <location line="+55"/>
@@ -2706,7 +2706,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=tekcoinrpc
+rpcuser=mudcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 If the file does not exist, create it with owner-readable-only file permissions.
@@ -2714,7 +2714,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=tekcoinrpc
+rpcuser=mudcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 If the file does not exist, create it with owner-readable-only file permissions.

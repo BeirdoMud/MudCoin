@@ -1,9 +1,9 @@
-// Copyright (c) 2003 tekcoin Developer
+// Copyright (c) 2003 mudcoin Developer
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "net.h"
-#include "tekcoinrpc.h"
+#include "mudcoinrpc.h"
 #include "alert.h"
 #include "wallet.h"
 #include "db.h"
@@ -81,9 +81,9 @@ Value sendalert(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 6)
         throw runtime_error(
-            "sendalert <message> <privatekey> <minver> <maxver> <priority> <id> [cancelupto]\n"
+            "sendalert <message> <privamudey> <minver> <maxver> <priority> <id> [cancelupto]\n"
             "<message> is the alert text message\n"
-            "<privatekey> is hex string of alert master private key\n"
+            "<privamudey> is hex string of alert master private key\n"
             "<minver> is the minimum applicable internal client version\n"
             "<maxver> is the maximum applicable internal client version\n"
             "<priority> is integer priority number\n"

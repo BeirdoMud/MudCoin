@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2013-2015 The TEKcoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef tekcoin_WALLETDB_H
-#define tekcoin_WALLETDB_H
+#ifndef mudcoin_WALLETDB_H
+#define mudcoin_WALLETDB_H
 
 #include "db.h"
 #include "base58.h"
@@ -200,4 +201,4 @@ public:
     static bool Recover(CDBEnv& dbenv, std::string filename);
 };
 
-#endif // tekcoin_WALLETDB_H
+#endif // mudcoin_WALLETDB_H

@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About tekcoin</source>
-        <translation>Informatio de tekcoin</translation>
+        <source>About mudcoin</source>
+        <translation>Informatio de mudcoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;tekcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;tekcoin&lt;/b&gt; versio</translation>
+        <source>&lt;b&gt;mudcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;mudcoin&lt;/b&gt; versio</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -66,8 +66,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your tekcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Haec sunt inscriptiones tekcoin tuae pro accipendo pensitationes.  Cupias variam ad quemque mittentem dare ut melius scias quem tibi pensare.</translation>
+        <source>These are your mudcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Haec sunt inscriptiones mudcoin tuae pro accipendo pensitationes.  Cupias variam ad quemque mittentem dare ut melius scias quem tibi pensare.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -81,8 +81,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a tekcoin address</source>
-        <translation>Signa nuntium ut demonstres inscriptionem tekcoin a te possessam esse</translation>
+        <source>Sign a message to prove you own a mudcoin address</source>
+        <translation>Signa nuntium ut demonstres inscriptionem mudcoin a te possessam esse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -106,8 +106,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified tekcoin address</source>
-        <translation>Verifica nuntium ut cures signatum esse cum specificata inscriptione tekcoin</translation>
+        <source>Verify a message to ensure it was signed with a specified mudcoin address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specificata inscriptione mudcoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -121,7 +121,7 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your tekcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your mudcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Hae sunt inscriptiones mittendi pensitationes.  Semper inspice quantitatem et inscriptionem accipiendi antequam nummos mittis.</translation>
     </message>
     <message>
@@ -247,7 +247,7 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR tekcoinS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR mudcoinS&lt;/b&gt;!</source>
         <translation>Monitio: Si cassidile tuum cifras et tesseram amittis, tu &lt;b&gt;AMITTES OMNES TUOS NUMMOS MEGAOS&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -274,8 +274,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-56"/>
-        <source>tekcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your tekcoins from being stolen by malware infecting your computer.</source>
-        <translation>tekcoin iam desinet ut finiat actionem cifrandi.  Memento cassidile cifrare non posse cuncte curare ne tui nummi clepantur ab malis programatibus in tuo computatro.</translation>
+        <source>mudcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your mudcoins from being stolen by malware infecting your computer.</source>
+        <translation>mudcoin iam desinet ut finiat actionem cifrandi.  Memento cassidile cifrare non posse cuncte curare ne tui nummi clepantur ab malis programatibus in tuo computatro.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -320,9 +320,9 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
 </context>
 <context>
-    <name>tekcoinGUI</name>
+    <name>mudcoinGUI</name>
     <message>
-        <location filename="../tekcoingui.cpp" line="+233"/>
+        <location filename="../mudcoingui.cpp" line="+233"/>
         <source>Sign &amp;message...</source>
         <translation>Signa &amp;nuntium...</translation>
     </message>
@@ -373,8 +373,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about tekcoin</source>
-        <translation>Monstra informationem de tekcoin</translation>
+        <source>Show information about mudcoin</source>
+        <translation>Monstra informationem de mudcoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -418,13 +418,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a tekcoin address</source>
-        <translation>Mitte nummos ad inscriptionem tekcoin</translation>
+        <source>Send coins to a mudcoin address</source>
+        <translation>Mitte nummos ad inscriptionem mudcoin</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for tekcoin</source>
-        <translation>Muta configurationis optiones pro tekcoin</translation>
+        <source>Modify configuration options for mudcoin</source>
+        <translation>Muta configurationis optiones pro mudcoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -454,8 +454,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>tekcoin</source>
-        <translation>tekcoin</translation>
+        <source>mudcoin</source>
+        <translation>mudcoin</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -479,8 +479,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About tekcoin</source>
-        <translation>&amp;Informatio de tekcoin</translation>
+        <source>&amp;About mudcoin</source>
+        <translation>&amp;Informatio de mudcoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -499,13 +499,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your tekcoin addresses to prove you own them</source>
-        <translation>Signa nuntios cum tuis inscriptionibus tekcoin ut demonstres te eas possidere</translation>
+        <source>Sign messages with your mudcoin addresses to prove you own them</source>
+        <translation>Signa nuntios cum tuis inscriptionibus mudcoin ut demonstres te eas possidere</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified tekcoin addresses</source>
-        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus tekcoin</translation>
+        <source>Verify messages to ensure they were signed with specified mudcoin addresses</source>
+        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus mudcoin</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -535,13 +535,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+47"/>
-        <source>tekcoin client</source>
-        <translation>tekcoin cliens</translation>
+        <source>mudcoin client</source>
+        <translation>mudcoin cliens</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to tekcoin network</source>
-        <translation><numerusform>%n activa conexio ad rete tekcoin</numerusform><numerusform>%n activae conexiones ad rete tekcoin</numerusform></translation>
+        <source>%n active connection(s) to mudcoin network</source>
+        <translation><numerusform>%n activa conexio ad rete mudcoin</numerusform><numerusform>%n activae conexiones ad rete mudcoin</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -655,8 +655,8 @@ Inscriptio: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid tekcoin address or malformed URI parameters.</source>
-        <translation>URI intellegi non posse!  Huius causa possit inscriptionem tekcoin non validam aut URI parametra maleformata.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid mudcoin address or malformed URI parameters.</source>
+        <translation>URI intellegi non posse!  Huius causa possit inscriptionem mudcoin non validam aut URI parametra maleformata.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -669,9 +669,9 @@ Inscriptio: %4
         <translation>Cassidile &lt;b&gt;cifratum&lt;/b&gt; est et iam nunc &lt;b&gt;seratum&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../tekcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. tekcoin can no longer continue safely and will quit.</source>
-        <translation>Error fatalis accidit.  tekcoin nondum pergere tute potest, et exibit.</translation>
+        <location filename="../mudcoin.cpp" line="+111"/>
+        <source>A fatal error occurred. mudcoin can no longer continue safely and will quit.</source>
+        <translation>Error fatalis accidit.  mudcoin nondum pergere tute potest, et exibit.</translation>
     </message>
 </context>
 <context>
@@ -736,8 +736,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid tekcoin address.</source>
-        <translation>Inscriptio inserta &quot;%1&quot; non valida inscriptio tekcoin est.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid mudcoin address.</source>
+        <translation>Inscriptio inserta &quot;%1&quot; non valida inscriptio mudcoin est.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -755,8 +755,8 @@ Inscriptio: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>tekcoin-Qt</source>
-        <translation>tekcoin-Qt</translation>
+        <source>mudcoin-Qt</source>
+        <translation>mudcoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -818,13 +818,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start tekcoin after logging in to the system.</source>
-        <translation>Pelle tekcoin per se postquam in systema inire.</translation>
+        <source>Automatically start mudcoin after logging in to the system.</source>
+        <translation>Pelle mudcoin per se postquam in systema inire.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start tekcoin on system login</source>
-        <translation>&amp;Pelle tekcoin cum inire systema</translation>
+        <source>&amp;Start mudcoin on system login</source>
+        <translation>&amp;Pelle mudcoin cum inire systema</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -843,8 +843,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the tekcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Aperi per se portam clientis tekcoin in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
+        <source>Automatically open the mudcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Aperi per se portam clientis mudcoin in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -853,8 +853,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the tekcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connecte ad rete tekcoin per SOCKS vicarium (e.g. quando conectens per Tor).</translation>
+        <source>Connect to the mudcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Connecte ad rete mudcoin per SOCKS vicarium (e.g. quando conectens per Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -928,8 +928,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting tekcoin.</source>
-        <translation>Lingua monstranda utenti hic constitui potest.  Haec configuratio effectiva erit postquam tekcoin iterum initiatum erit.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting mudcoin.</source>
+        <translation>Lingua monstranda utenti hic constitui potest.  Haec configuratio effectiva erit postquam mudcoin iterum initiatum erit.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -943,8 +943,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show tekcoin addresses in the transaction list or not.</source>
-        <translation>Num monstrare inscriptiones tekcoin in enumeratione transactionum.</translation>
+        <source>Whether to show mudcoin addresses in the transaction list or not.</source>
+        <translation>Num monstrare inscriptiones mudcoin in enumeratione transactionum.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -995,8 +995,8 @@ Inscriptio: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting tekcoin.</source>
-        <translation>Haec configuratio effectiva erit postquam tekcoin iterum initiatum erit.</translation>
+        <source>This setting will take effect after restarting mudcoin.</source>
+        <translation>Haec configuratio effectiva erit postquam mudcoin iterum initiatum erit.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1014,8 +1014,8 @@ Inscriptio: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the tekcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete tekcoin postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the mudcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete mudcoin postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1068,8 +1068,8 @@ Inscriptio: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start tekcoin: click-to-pay handler</source>
-        <translation>tekcoin incipere non potest: cliccare-ad-pensandum handler</translation>
+        <source>Cannot start mudcoin: click-to-pay handler</source>
+        <translation>mudcoin incipere non potest: cliccare-ad-pensandum handler</translation>
     </message>
 </context>
 <context>
@@ -1218,8 +1218,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the tekcoin-Qt help message to get a list with possible tekcoin command-line options.</source>
-        <translation>Monstra nuntium auxilii tekcoin-Qt ut videas enumerationem possibilium optionum tekcoin mandati initiantis.</translation>
+        <source>Show the mudcoin-Qt help message to get a list with possible mudcoin command-line options.</source>
+        <translation>Monstra nuntium auxilii mudcoin-Qt ut videas enumerationem possibilium optionum mudcoin mandati initiantis.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1238,13 +1238,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>tekcoin - Debug window</source>
-        <translation>tekcoin - Fenestra debug</translation>
+        <source>mudcoin - Debug window</source>
+        <translation>mudcoin - Fenestra debug</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>tekcoin Core</source>
-        <translation>tekcoin Nucleus</translation>
+        <source>mudcoin Core</source>
+        <translation>mudcoin Nucleus</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1253,8 +1253,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the tekcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Aperi plicam catalogi de tekcoin debug ex activo indice datorum.  Hoc possit pauca secunda pro plicis magnis catalogi.</translation>
+        <source>Open the mudcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Aperi plicam catalogi de mudcoin debug ex activo indice datorum.  Hoc possit pauca secunda pro plicis magnis catalogi.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1263,8 +1263,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the tekcoin RPC console.</source>
-        <translation>Bene ventio in terminale RPC de tekcoin.</translation>
+        <source>Welcome to the mudcoin RPC console.</source>
+        <translation>Bene ventio in terminale RPC de mudcoin.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1447,8 +1447,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a tekcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Insero inscriptionem tekcoin (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a mudcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Insero inscriptionem mudcoin (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
@@ -1512,8 +1512,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this tekcoin address</source>
-        <translation>Signa nuntium ut demonstres hanc inscriptionem tekcoin a te possessa esse</translation>
+        <source>Sign the message to prove you own this mudcoin address</source>
+        <translation>Signa nuntium ut demonstres hanc inscriptionem mudcoin a te possessa esse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1548,8 +1548,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified tekcoin address</source>
-        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione tekcoin</translation>
+        <source>Verify the message to ensure it was signed with the specified mudcoin address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione mudcoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1564,8 +1564,8 @@ Inscriptio: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a tekcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Insere inscriptionem tekcoin (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a mudcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Insere inscriptionem mudcoin (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1574,8 +1574,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter tekcoin signature</source>
-        <translation>Insere signationem tekcoin</translation>
+        <source>Enter mudcoin signature</source>
+        <translation>Insere signationem mudcoin</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2183,11 +2183,11 @@ Inscriptio: %4
     </message>
 </context>
 <context>
-    <name>tekcoin-core</name>
+    <name>mudcoin-core</name>
     <message>
-        <location filename="../tekcoinstrings.cpp" line="+94"/>
-        <source>tekcoin version</source>
-        <translation>Versio de tekcoin</translation>
+        <location filename="../mudcoinstrings.cpp" line="+94"/>
+        <source>mudcoin version</source>
+        <translation>Versio de mudcoin</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2196,8 +2196,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or tekcoind</source>
-        <translation>Mitte mandatum ad -server vel tekcoind</translation>
+        <source>Send command to -server or mudcoind</source>
+        <translation>Mitte mandatum ad -server vel mudcoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2216,13 +2216,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: tekcoin.conf)</source>
-        <translation>Specifica configurationis plicam (praedefinitum: tekcoin.conf)</translation>
+        <source>Specify configuration file (default: mudcoin.conf)</source>
+        <translation>Specifica configurationis plicam (praedefinitum: mudcoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: tekcoind.pid)</source>
-        <translation>Specifica pid plicam (praedefinitum: tekcoin.pid)</translation>
+        <source>Specify pid file (default: mudcoind.pid)</source>
+        <translation>Specifica pid plicam (praedefinitum: mudcoin.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2299,24 +2299,24 @@ Inscriptio: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=tekcoinrpc
+rpcuser=mudcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;tekcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;mudcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, necesse est te rpcpassword constituere in plica configurationis:
 %s
 Hortatur te hanc fortuitam tesseram uti:
-rpcuser=tekcoinrpc
+rpcuser=mudcoinrpc
 rpcpassword=%s
 (non est necesse te hanc tesseram meminisse)
 Nomen usoris et tessera eadem esse NON POSSUNT.
 Si plica non existit, eam crea cum permissionibus ut eius dominus tantum sinitur id legere.
 Quoque hortatur alertnotify constituere ut tu notificetur de problematibus;
-exempli gratia: alertnotify=echo %%s | mail -s &quot;tekcoin Notificatio&quot; admin@foo.com
+exempli gratia: alertnotify=echo %%s | mail -s &quot;mudcoin Notificatio&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2331,8 +2331,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;tekcoin Notificatio&quot; a
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. tekcoin is probably already running.</source>
-        <translation>Non posse serare datorum indicem %s.  tekcoin probabiliter iam operatur.</translation>
+        <source>Cannot obtain a lock on data directory %s. mudcoin is probably already running.</source>
+        <translation>Non posse serare datorum indicem %s.  mudcoin probabiliter iam operatur.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2376,8 +2376,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;tekcoin Notificatio&quot; a
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong tekcoin will not work properly.</source>
-        <translation>Monitio: Sodes cura ut dies tempusque computatri tui recti sunt!  Si horologium tuum pravum est, tekcoin non proprie fungetur.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong mudcoin will not work properly.</source>
+        <translation>Monitio: Sodes cura ut dies tempusque computatri tui recti sunt!  Si horologium tuum pravum est, mudcoin non proprie fungetur.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2626,8 +2626,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;tekcoin Notificatio&quot; a
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the tekcoin Wiki for SSL setup instructions)</source>
-        <translation>Optiones SSL: (vide vici de tekcoin pro instructionibus SSL configurationis)</translation>
+        <source>SSL options: (see the mudcoin Wiki for SSL setup instructions)</source>
+        <translation>Optiones SSL: (vide vici de mudcoin pro instructionibus SSL configurationis)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2816,13 +2816,13 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;tekcoin Notificatio&quot; a
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of tekcoin</source>
-        <translation>Error legendi wallet.dat: Cassidili necesse est recentior versio tekcoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of mudcoin</source>
+        <translation>Error legendi wallet.dat: Cassidili necesse est recentior versio mudcoin</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart tekcoin to complete</source>
-        <translation>Cassidili necesse erat rescribi: Repelle tekcoin ut compleas</translation>
+        <source>Wallet needed to be rewritten: restart mudcoin to complete</source>
+        <translation>Cassidili necesse erat rescribi: Repelle mudcoin ut compleas</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2881,8 +2881,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;tekcoin Notificatio&quot; a
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. tekcoin is probably already running.</source>
-        <translation>Non posse conglutinare ad %s in hoc cumputatro.  tekcoin probabiliter iam operatur.</translation>
+        <source>Unable to bind to %s on this computer. mudcoin is probably already running.</source>
+        <translation>Non posse conglutinare ad %s in hoc cumputatro.  mudcoin probabiliter iam operatur.</translation>
     </message>
     <message>
         <location line="+64"/>

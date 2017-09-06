@@ -1,5 +1,5 @@
-#ifndef tekcoinFIELD_H
-#define tekcoinFIELD_H
+#ifndef mudcoinFIELD_H
+#define mudcoinFIELD_H
 
 #include <QWidget>
 
@@ -8,14 +8,14 @@ class QDoubleSpinBox;
 class QValueComboBox;
 QT_END_NAMESPACE
 
-/** Widget for entering tekcoin amounts.
+/** Widget for entering mudcoin amounts.
   */
-class tekcoinAmountField: public QWidget
+class mudcoinAmountField: public QWidget
 {
     Q_OBJECT
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY textChanged USER true)
 public:
-    explicit tekcoinAmountField(QWidget *parent = 0);
+    explicit mudcoinAmountField(QWidget *parent = 0);
 
     qint64 value(bool *valid=0) const;
     void setValue(qint64 value);
@@ -57,4 +57,4 @@ private slots:
 };
 
 
-#endif // tekcoinFIELD_H
+#endif // mudcoinFIELD_H

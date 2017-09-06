@@ -13,7 +13,7 @@ class QDateTime;
 class QTimer;
 QT_END_NAMESPACE
 
-/** Model for tekcoin network client. */
+/** Model for mudcoin network client. */
 class ClientModel : public QObject
 {
     Q_OBJECT

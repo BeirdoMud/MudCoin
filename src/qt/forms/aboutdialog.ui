@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>About tekcoin</string>
+   <string>About mudcoin</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_2">
    <item>
@@ -23,7 +23,7 @@
       </sizepolicy>
      </property>
      <property name="pixmap">
-      <pixmap resource="../tekcoin.qrc">:/images/about</pixmap>
+      <pixmap resource="../mudcoin.qrc">:/images/about</pixmap>
      </property>
     </widget>
    </item>
@@ -50,7 +50,7 @@
           <cursorShape>IBeamCursor</cursorShape>
          </property>
          <property name="text">
-          <string>&lt;b&gt;TEKcoin&lt;/b&gt;</string>
+          <string>&lt;b&gt;MudCoin&lt;/b&gt;</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -91,7 +91,7 @@
         <cursorShape>IBeamCursor</cursorShape>
        </property>
        <property name="text">
-        <string>Copyright © 2013-2016 The TEKcoin Foundation</string>
+        <string>Copyright © 2017 MudCoin Developers</string>
        </property>
        <property name="textInteractionFlags">
         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -105,7 +105,7 @@
        </property>
        <property name="text">
         <string>
-This is experimental software. If you don't treat it as such, you're likely to put an eye out!  The Tekcoin Development Team assumes no responsibility for losses that may occur.
+This is experimental software. If you don't treat it as such, you're likely to put an eye out!  The MudCoin Development Team assumes no responsibility for losses that may occur.
 
 Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -147,7 +147,7 @@ This product includes software developed by the OpenSSL Project for use in the O
   </layout>
  </widget>
  <resources>
-  <include location="../tekcoin.qrc"/>
+  <include location="../mudcoin.qrc"/>
  </resources>
  <connections>
   <connection>

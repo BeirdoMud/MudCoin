@@ -138,10 +138,10 @@ std::string getOutputs(std::string txid)
 			
         double buffer = convertCoins(txout.nValue);
         std::string amount = boost::to_string(buffer);
-		str.append(CtekcoinAddress(address).ToString());
+		str.append(CmudcoinAddress(address).ToString());
         str.append(": ");
         str.append(amount);
-        str.append(" TEK");
+        str.append(" MUD");
         str.append("\n");
     }
 
@@ -176,10 +176,10 @@ std::string getInputs(std::string txid)
 
         double buffer = convertCoins(wtxPrev.vout[vin.prevout.n].nValue);
         std::string amount = boost::to_string(buffer);
-        str.append(CtekcoinAddress(address).ToString());
+        str.append(CmudcoinAddress(address).ToString());
         str.append(": ");
         str.append(amount);
-        str.append("TEK");
+        str.append("MUD");
         str.append("\n");
     }
 
@@ -264,11 +264,11 @@ void BlockBrowser::updateExplorer(bool block)
     
     else {
         std::string txid = ui->txBox->text().toUtf8().constData();
-        ui->valueBox->setText(QString::number(getTxTotalValue(txid), 'f', 6) + " TEK"); 
+        ui->valueBox->setText(QString::number(getTxTotalValue(txid), 'f', 6) + " MUD"); 
         ui->txID->setText(QString::fromUtf8(txid.c_str())); 
         ui->outputBox->setText(QString::fromUtf8(getOutputs(txid).c_str())); 
         ui->inputBox->setText(QString::fromUtf8(getInputs(txid).c_str())); 
-        ui->feesBox->setText(QString::number(getTxFees(txid), 'f', 6) + " TEK"); 
+        ui->feesBox->setText(QString::number(getTxFees(txid), 'f', 6) + " MUD"); 
     }
 }
 

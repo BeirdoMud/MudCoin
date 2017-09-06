@@ -15,7 +15,7 @@ QT_BEGIN_NAMESPACE
 class QUrl;
 QT_END_NAMESPACE
 
-/** Dialog for sending tekcoins */
+/** Dialog for sending mudcoins */
 class SendCoinsDialog : public QDialog
 {
     Q_OBJECT

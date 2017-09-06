@@ -1,5 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2013-2015  The Tekcoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -410,7 +411,7 @@ bool GetMyExternalIP(CNetAddr& ipRet)
 void ThreadGetMyExternalIP(void* parg)
 {
     // Make this thread recognisable as the external IP detection thread
-    RenameThread("tekcoin-ext-ip");
+    RenameThread("mudcoin-ext-ip");
 
     CNetAddr addrLocalHost;
     if (GetMyExternalIP(addrLocalHost))
@@ -754,7 +755,7 @@ void SocketSendData(CNode *pnode)
 void ThreadSocketHandler(void* parg)
 {
     // Make this thread recognisable as the networking thread
-    RenameThread("tekcoin-net");
+    RenameThread("mudcoin-net");
 
     try
     {
@@ -1093,7 +1094,7 @@ void ThreadSocketHandler2(void* parg)
 void ThreadMapPort(void* parg)
 {
     // Make this thread recognisable as the UPnP thread
-    RenameThread("tekcoin-UPnP");
+    RenameThread("mudcoin-UPnP");
 
     try
     {
@@ -1154,7 +1155,7 @@ void ThreadMapPort2(void* parg)
             }
         }
 
-        string strDesc = "tekcoin " + FormatFullVersion();
+        string strDesc = "mudcoin " + FormatFullVersion();
 #ifndef UPNPDISCOVER_SUCCESS
         /* miniupnpc 1.5 */
         r = UPNP_AddPortMapping(urls.controlURL, data.first.servicetype,
@@ -1242,17 +1243,17 @@ void MapPort()
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
-    {"node1", "node1.tekcoin.uk"},
-    {"node2", "node2.tekcoin.uk"},
-    {"node3", "node3.tekcoin.uk"},
-    {"node4", "node4.tekcoin.uk"},
-    {"node5", "node5.tekcoin.uk"},
+    {"node1", "node1.mudcoin.uk"},
+    {"node2", "node2.mudcoin.uk"},
+    {"node3", "node3.mudcoin.uk"},
+    {"node4", "node4.mudcoin.uk"},
+    {"node5", "node5.mudcoin.uk"},
 };
 
 void ThreadDNSAddressSeed(void* parg)
 {
     // Make this thread recognisable as the DNS seeding thread
-    RenameThread("tekcoin-dnsseed");
+    RenameThread("mudcoin-dnsseed");
 
     try
     {
@@ -1347,7 +1348,7 @@ void ThreadDumpAddress2(void* parg)
 void ThreadDumpAddress(void* parg)
 {
     // Make this thread recognisable as the address dumping thread
-    RenameThread("tekcoin-adrdump");
+    RenameThread("mudcoin-adrdump");
 
     try
     {
@@ -1362,7 +1363,7 @@ void ThreadDumpAddress(void* parg)
 void ThreadOpenConnections(void* parg)
 {
     // Make this thread recognisable as the connection opening thread
-    RenameThread("tekcoin-opencon");
+    RenameThread("mudcoin-opencon");
 
     try
     {
@@ -1398,7 +1399,7 @@ void static ProcessOneShot()
     }
 }
 
-// tekcoin: stake minter thread
+// mudcoin: stake minter thread
 void static ThreadStakeMinter(void* parg)
 {
     while(!fShutdown) {
@@ -1408,7 +1409,7 @@ void static ThreadStakeMinter(void* parg)
     try
     {
         vnThreadsRunning[THREAD_MINTER]++;
-        tekcoinMiner(pwallet, true);
+        mudcoinMiner(pwallet, true);
         vnThreadsRunning[THREAD_MINTER]--;
     }
     catch (std::exception& e) {
@@ -1552,7 +1553,7 @@ void ThreadOpenConnections2(void* parg)
 void ThreadOpenAddedConnections(void* parg)
 {
     // Make this thread recognisable as the connection opening thread
-    RenameThread("tekcoin-opencon");
+    RenameThread("mudcoin-opencon");
 
     try
     {
@@ -1683,7 +1684,7 @@ bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant *grantOu
 void ThreadMessageHandler(void* parg)
 {
     // Make this thread recognisable as the message handling thread
-    RenameThread("tekcoin-msghand");
+    RenameThread("mudcoin-msghand");
 
     try
     {
@@ -1855,7 +1856,7 @@ bool BindListenPort(const CService &addrBind, string& strError)
     {
         int nErr = WSAGetLastError();
         if (nErr == WSAEADDRINUSE)
-            strError = strprintf(_("Unable to bind to %s on this computer. tekcoin is probably already running."), addrBind.ToString().c_str());
+            strError = strprintf(_("Unable to bind to %s on this computer. mudcoin is probably already running."), addrBind.ToString().c_str());
         else
             strError = strprintf(_("Unable to bind to %s on this computer (bind returned error %d, %s)"), addrBind.ToString().c_str(), nErr, strerror(nErr));
         printf("%s\n", strError.c_str());
@@ -1938,7 +1939,7 @@ void static Discover()
 void StartNode(void* parg)
 {
     // Make this thread recognisable as the startup thread
-    RenameThread("tekcoin-start");
+    RenameThread("mudcoin-start");
 
     if (semOutbound == NULL) {
         // initialize semaphore
@@ -2004,7 +2005,7 @@ void StartNode(void* parg)
         printf("Error: NewThread(ThreadStakeMinter) failed\n");
 
     // Generate coins in the background
-    Generatetekcoins(GetBoolArg("-gen", false), pwalletMain);
+    Generatemudcoins(GetBoolArg("-gen", false), pwalletMain);
 
     // Trusted NTP server, it's localhost by default.
     strTrustedUpstream = GetArg("-ntp", "localhost");
@@ -2037,7 +2038,7 @@ bool StopNode()
     if (vnThreadsRunning[THREAD_SOCKETHANDLER] > 0) printf("ThreadSocketHandler still running\n");
     if (vnThreadsRunning[THREAD_OPENCONNECTIONS] > 0) printf("ThreadOpenConnections still running\n");
     if (vnThreadsRunning[THREAD_MESSAGEHANDLER] > 0) printf("ThreadMessageHandler still running\n");
-    if (vnThreadsRunning[THREAD_MINER] > 0) printf("ThreadtekcoinMiner still running\n");
+    if (vnThreadsRunning[THREAD_MINER] > 0) printf("ThreadmudcoinMiner still running\n");
     if (vnThreadsRunning[THREAD_RPCLISTENER] > 0) printf("ThreadRPCListener still running\n");
     if (vnThreadsRunning[THREAD_RPCHANDLER] > 0) printf("ThreadsRPCServer still running\n");
 #ifdef USE_UPNP

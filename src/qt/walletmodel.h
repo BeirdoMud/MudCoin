@@ -17,7 +17,7 @@ class COutput;
 class COutPoint;
 class uint256;
 class CCoinControl; //presstab e
-class CtekcoinAddress;
+class CmudcoinAddress;
 
 QT_BEGIN_NAMESPACE
 class QTimer;
@@ -31,7 +31,7 @@ public:
     qint64 amount;
 };
 
-/** Interface to tekcoin wallet from Qt view code. */
+/** Interface to mudcoin wallet from Qt view code. */
 class WalletModel : public QObject
 {
     Q_OBJECT
@@ -138,7 +138,7 @@ public:
     void unlockCoin(COutPoint& output);
     void listLockedCoins(std::vector<COutPoint>& vOutpts); 
 	//presstab e
-    bool isMine(const CtekcoinAddress &address);
+    bool isMine(const CmudcoinAddress &address);
 private:
     CWallet *wallet;
 

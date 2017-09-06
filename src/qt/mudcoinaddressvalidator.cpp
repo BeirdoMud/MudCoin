@@ -1,4 +1,4 @@
-#include "tekcoinaddressvalidator.h"
+#include "mudcoinaddressvalidator.h"
 
 /* Base58 characters are:
      "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
@@ -13,12 +13,12 @@
   - '0' and 'O' to 'o'
 */
 
-tekcoinAddressValidator::tekcoinAddressValidator(QObject *parent) :
+mudcoinAddressValidator::mudcoinAddressValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State tekcoinAddressValidator::validate(QString &input, int &pos) const
+QValidator::State mudcoinAddressValidator::validate(QString &input, int &pos) const
 {
     // Correction
     for(int idx=0; idx<input.size();)

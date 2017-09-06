@@ -1,12 +1,13 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2013-2015 The TEKcoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "main.h"
 #include "db.h"
 #include "init.h"
-#include "tekcoinrpc.h"
+#include "mudcoinrpc.h"
 
 using namespace json_spirit;
 using namespace std;
@@ -43,7 +44,7 @@ Value setgenerate(const Array& params, bool fHelp)
     }
     mapArgs["-gen"] = (fGenerate ? "1" : "0");
 
-    Generatetekcoins(fGenerate, pwalletMain);
+    Generatemudcoins(fGenerate, pwalletMain);
     return Value::null;
 }
 
@@ -130,10 +131,10 @@ Value getworkex(const Array& params, bool fHelp)
         );
 
     if (vNodes.empty())
-        throw JSONRPCError(-9, "tekcoin is not connected!");
+        throw JSONRPCError(-9, "mudcoin is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(-10, "tekcoin is downloading blocks...");
+        throw JSONRPCError(-10, "mudcoin is downloading blocks...");
 
     typedef map<uint256, pair<CBlock*, CScript> > mapNewBlock_t;
     static mapNewBlock_t mapNewBlock;
@@ -264,10 +265,10 @@ Value getwork(const Array& params, bool fHelp)
             "If [data] is specified, tries to solve the block and returns true if it was successful.");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "tekcoin is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "mudcoin is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "tekcoin is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "mudcoin is downloading blocks...");
 
     typedef map<uint256, pair<CBlock*, CScript> > mapNewBlock_t;
     static mapNewBlock_t mapNewBlock;    // FIXME: thread safety
@@ -408,10 +409,10 @@ Value getblocktemplate(const Array& params, bool fHelp)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid mode");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "tekcoin is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "mudcoin is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "tekcoin is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "mudcoin is downloading blocks...");
 
     static CReserveKey reservekey(pwalletMain);
 

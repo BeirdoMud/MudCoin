@@ -1,5 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2013-2015 The TEKcoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -69,7 +70,7 @@ map<uint256, map<uint256, CDataStream*> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "tekcoin Signed Message:\n";
+const string strMessageMagic = "mudcoin Signed Message:\n";
 
 double dHashesPerSec;
 int64 nHPSTimerStart;
@@ -978,7 +979,7 @@ int64 GetProofOfStakeReward(int64 nCoinAge, unsigned int nBits, unsigned int nTi
     CBigNum bnTargetLimit = GetProofOfStakeLimit(15001, nTime);
     bnTargetLimit.SetCompact(bnTargetLimit.GetCompact());
 
-    // tekcoin: reward for coin-year is cut in half every 64x multiply of PoS difficulty
+    // mudcoin: reward for coin-year is cut in half every 64x multiply of PoS difficulty
     // A reasonably continuous curve is used to avoid shock to market
     // (nRewardCoinYearLimit / nRewardCoinYear) ** 4 == bnProofOfStakeLimit / bnTarget
     //
@@ -1335,7 +1336,7 @@ bool CTransaction::ConnectInputs(CTxDB& txdb, MapPrevTx inputs,
 {
     // Take over previous transactions' spent pointers
     // fBlock is true when this is called from AcceptBlock when a new best-block is added to the blockchain
-    // fMiner is true when called from the internal tekcoin miner
+    // fMiner is true when called from the internal mudcoin miner
     // ... both are false when called from CTransaction::AcceptToMemoryPool
     if (!IsCoinBase())
     {
@@ -1534,8 +1535,8 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
     // Now that the whole chain is irreversibly beyond that time it is applied to all blocks except the
     // two in the chain that violate it. This prevents exploiting the issue against nodes in their
     // initial block download.
-    bool fEnforceBIP30 = true; // Always active in tekcoin
-    bool fStrictPayToScriptHash = true; // Always active in tekcoin
+    bool fEnforceBIP30 = true; // Always active in mudcoin
+    bool fStrictPayToScriptHash = true; // Always active in mudcoin
 
     //// issue here: it doesn't know the version
     unsigned int nTxPos;
@@ -2460,7 +2461,7 @@ bool CheckDiskSpace(uint64 nAdditionalBytes)
         string strMessage = _("Warning: Disk space is low!");
         strMiscWarning = strMessage;
         printf("*** %s\n", strMessage.c_str());
-        uiInterface.ThreadSafeMessageBox(strMessage, "TEKcoin", CClientUIInterface::MSG_WARNING);
+        uiInterface.ThreadSafeMessageBox(strMessage, "MudCoin", CClientUIInterface::MSG_WARNING);
         StartShutdown();
         return false;
     }
@@ -2549,7 +2550,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
 
         // Genesis block
-        const char* pszTimestamp = "tekcoin - yea he did.";
+        const char* pszTimestamp = "mudcoin - yea he did.";
         CTransaction txNew;
         txNew.nTime = nChainStartTime;
         txNew.vin.resize(1);
@@ -2557,7 +2558,7 @@ bool LoadBlockIndex(bool fAllowNew)
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(9999) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].SetEmpty();
         //txNew.vout[0].scriptPubKey = CScript() << ParseHex(pszMainKey) << OP_CHECKSIG;
-        txNew.strTxComment = "text:tekcoin genesis block";
+        txNew.strTxComment = "text:mudcoin genesis block";
 
 
         CBlock block;
@@ -3851,7 +3852,7 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// tekcoinMiner
+// mudcoinMiner
 //
 
 int static FormatHashBlocks(void* pbuffer, unsigned int len)
@@ -4330,10 +4331,10 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     uint256 hashTarget = CBigNum().SetCompact(pblock->nBits).getuint256();
 
     if (hash > hashTarget && pblock->IsProofOfWork())
-        return error("tekcoinMiner : proof-of-work not meeting target");
+        return error("mudcoinMiner : proof-of-work not meeting target");
 
     //// debug print
-    printf("tekcoinMiner:\n");
+    printf("mudcoinMiner:\n");
     printf("new block found  \n  hash: %s  \ntarget: %s\n", hash.GetHex().c_str(), hashTarget.GetHex().c_str());
     pblock->print();
     printf("generated %s\n", FormatMoney(pblock->vtx[0].vout[0].nValue).c_str());
@@ -4342,7 +4343,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != hashBestChain)
-            return error("tekcoinMiner : generated block is stale");
+            return error("mudcoinMiner : generated block is stale");
 
         // Remove key from key pool
         reservekey.KeepKey();
@@ -4355,31 +4356,31 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
 
         // Process this block the same as if we had received it from another node
         if (!ProcessBlock(NULL, pblock))
-            return error("tekcoinMiner : ProcessBlock, block not accepted");
+            return error("mudcoinMiner : ProcessBlock, block not accepted");
     }
 
     return true;
 }
 
-void static ThreadtekcoinMiner(void* parg);
+void static ThreadmudcoinMiner(void* parg);
 
-static bool fGeneratetekcoins = false;
+static bool fGeneratemudcoins = false;
 static bool fLimitProcessors = false;
 static int nLimitProcessors = -1;
 
-void tekcoinMiner(CWallet *pwallet, bool fProofOfStake)
+void mudcoinMiner(CWallet *pwallet, bool fProofOfStake)
 {
     printf("CPUMiner started for proof-of-%s\n", fProofOfStake? "stake" : "work");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("tekcoin-miner");
+    RenameThread("mudcoin-miner");
 	
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);
     unsigned int nExtraNonce = 0;
 
-    while (fGeneratetekcoins || (fProofOfStake && fStaking))
+    while (fGeneratemudcoins || (fProofOfStake && fStaking))
     {
         if (fShutdown)
             return;
@@ -4388,7 +4389,7 @@ void tekcoinMiner(CWallet *pwallet, bool fProofOfStake)
             Sleep(1000);
             if (fShutdown)
                 return;
-            if ((!fGeneratetekcoins) && !fProofOfStake)
+            if ((!fGeneratemudcoins) && !fProofOfStake)
                 return;
         }
 
@@ -4430,7 +4431,7 @@ void tekcoinMiner(CWallet *pwallet, bool fProofOfStake)
             continue;
         }
 
-        printf("Running tekcoinMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
+        printf("Running mudcoinMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //
@@ -4513,7 +4514,7 @@ void tekcoinMiner(CWallet *pwallet, bool fProofOfStake)
             // Check for stop or if block needs to be rebuilt
             if (fShutdown)
                 return;
-            if (!fGeneratetekcoins)
+            if (!fGeneratemudcoins)
                 return;
             if (fLimitProcessors && vnThreadsRunning[THREAD_MINER] > nLimitProcessors)
                 return;
@@ -4538,35 +4539,35 @@ void tekcoinMiner(CWallet *pwallet, bool fProofOfStake)
     }
 }
 
-void static ThreadtekcoinMiner(void* parg)
+void static ThreadmudcoinMiner(void* parg)
 {
     CWallet* pwallet = (CWallet*)parg;
     try
     {
         vnThreadsRunning[THREAD_MINER]++;
-        tekcoinMiner(pwallet, false);
+        mudcoinMiner(pwallet, false);
         vnThreadsRunning[THREAD_MINER]--;
     }
     catch (std::exception& e) {
         vnThreadsRunning[THREAD_MINER]--;
-        PrintException(&e, "ThreadtekcoinMiner()");
+        PrintException(&e, "ThreadmudcoinMiner()");
     } catch (...) {
         vnThreadsRunning[THREAD_MINER]--;
-        PrintException(NULL, "ThreadtekcoinMiner()");
+        PrintException(NULL, "ThreadmudcoinMiner()");
     }
     nHPSTimerStart = 0;
     if (vnThreadsRunning[THREAD_MINER] == 0)
         dHashesPerSec = 0;
-    printf("ThreadtekcoinMiner exiting, %d threads remaining\n", vnThreadsRunning[THREAD_MINER]);
+    printf("ThreadmudcoinMiner exiting, %d threads remaining\n", vnThreadsRunning[THREAD_MINER]);
 }
 
 
-void Generatetekcoins(bool fGenerate, CWallet* pwallet)
+void Generatemudcoins(bool fGenerate, CWallet* pwallet)
 {
-    fGeneratetekcoins = fGenerate;
+    fGeneratemudcoins = fGenerate;
     nLimitProcessors = GetArg("-genproclimit", -1);
     if (nLimitProcessors == 0)
-        fGeneratetekcoins = false;
+        fGeneratemudcoins = false;
     fLimitProcessors = (nLimitProcessors != -1);
 
     if (fGenerate)
@@ -4578,11 +4579,11 @@ void Generatetekcoins(bool fGenerate, CWallet* pwallet)
         if (fLimitProcessors && nProcessors > nLimitProcessors)
             nProcessors = nLimitProcessors;
         int nAddThreads = nProcessors - vnThreadsRunning[THREAD_MINER];
-        printf("Starting %d tekcoinMiner threads\n", nAddThreads);
+        printf("Starting %d mudcoinMiner threads\n", nAddThreads);
         for (int i = 0; i < nAddThreads; i++)
         {
-            if (!NewThread(ThreadtekcoinMiner, pwallet))
-                printf("Error: NewThread(ThreadtekcoinMiner) failed\n");
+            if (!NewThread(ThreadmudcoinMiner, pwallet))
+                printf("Error: NewThread(ThreadmudcoinMiner) failed\n");
             Sleep(10);
         }
     }

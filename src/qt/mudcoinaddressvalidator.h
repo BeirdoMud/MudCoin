@@ -1,16 +1,16 @@
-#ifndef tekcoinADDRESSVALIDATOR_H
-#define tekcoinADDRESSVALIDATOR_H
+#ifndef mudcoinADDRESSVALIDATOR_H
+#define mudcoinADDRESSVALIDATOR_H
 
 #include <QRegExpValidator>
 
 /** Base48 entry widget validator.
    Corrects near-miss characters and refuses characters that are no part of base48.
  */
-class tekcoinAddressValidator : public QValidator
+class mudcoinAddressValidator : public QValidator
 {
     Q_OBJECT
 public:
-    explicit tekcoinAddressValidator(QObject *parent = 0);
+    explicit mudcoinAddressValidator(QObject *parent = 0);
 
     State validate(QString &input, int &pos) const;
 
@@ -21,4 +21,4 @@ public slots:
 
 };
 
-#endif // tekcoinADDRESSVALIDATOR_H
+#endif // mudcoinADDRESSVALIDATOR_H

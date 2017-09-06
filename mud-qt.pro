@@ -17,7 +17,7 @@ win32 {
 }
 QT       += network
 TEMPLATE = app
-TARGET = Tekcoin-qt
+TARGET = MudCoin-qt
 VERSION = 1.0.0
 INCLUDEPATH += src src/json src/qt
 win32 {
@@ -174,7 +174,7 @@ QMAKE_CXXFLAGS_WARN_ON = -fdiagnostics-show-option -Wall -Wextra -Wformat -Wform
 
 # Input
 DEPENDPATH += src src/json src/qt
-HEADERS += src/qt/tekcoingui.h \
+HEADERS += src/qt/mudcoingui.h \
     src/qt/transactiontablemodel.h \
     src/qt/addresstablemodel.h \
     src/qt/optionsdialog.h \
@@ -185,7 +185,7 @@ HEADERS += src/qt/tekcoingui.h \
     src/qt/signverifymessagedialog.h \
     src/qt/aboutdialog.h \
     src/qt/editaddressdialog.h \
-    src/qt/tekcoinaddressvalidator.h \
+    src/qt/mudcoinaddressvalidator.h \
     src/alert.h \
     src/addrman.h \
     src/base58.h \
@@ -225,19 +225,19 @@ HEADERS += src/qt/tekcoingui.h \
     src/qt/monitoreddatamapper.h \
     src/qt/transactiondesc.h \
     src/qt/transactiondescdialog.h \
-    src/qt/tekcoinamountfield.h \
+    src/qt/mudcoinamountfield.h \
     src/wallet.h \
     src/keystore.h \
     src/qt/transactionfilterproxy.h \
     src/qt/transactionview.h \
     src/qt/walletmodel.h \
-    src/tekcoinrpc.h \
+    src/mudcoinrpc.h \
     src/qt/overviewpage.h \
     src/qt/csvmodelwriter.h \
     src/crypter.h \
     src/qt/sendcoinsentry.h \
     src/qt/qvalidatedlineedit.h \
-    src/qt/tekcoinunits.h \
+    src/qt/mudcoinunits.h \
     src/qt/qvaluecombobox.h \
     src/qt/askpassphrasedialog.h \
     src/protocol.h \
@@ -251,7 +251,7 @@ HEADERS += src/qt/tekcoingui.h \
     src/ntp.h \
 	src/qt/blockbrowser.h
 
-SOURCES += src/qt/tekcoin.cpp src/qt/tekcoingui.cpp \
+SOURCES += src/qt/mudcoin.cpp src/qt/mudcoingui.cpp \
     src/qt/transactiontablemodel.cpp \
     src/qt/addresstablemodel.cpp \
     src/qt/optionsdialog.cpp \
@@ -262,7 +262,7 @@ SOURCES += src/qt/tekcoin.cpp src/qt/tekcoingui.cpp \
     src/qt/signverifymessagedialog.cpp \
     src/qt/aboutdialog.cpp \
     src/qt/editaddressdialog.cpp \
-    src/qt/tekcoinaddressvalidator.cpp \
+    src/qt/mudcoinaddressvalidator.cpp \
     src/alert.cpp \
     src/version.cpp \
     src/sync.cpp \
@@ -286,14 +286,14 @@ SOURCES += src/qt/tekcoin.cpp src/qt/tekcoingui.cpp \
     src/qt/monitoreddatamapper.cpp \
     src/qt/transactiondesc.cpp \
     src/qt/transactiondescdialog.cpp \
-    src/qt/tekcoinstrings.cpp \
-    src/qt/tekcoinamountfield.cpp \
+    src/qt/mudcoinstrings.cpp \
+    src/qt/mudcoinamountfield.cpp \
     src/wallet.cpp \
     src/keystore.cpp \
     src/qt/transactionfilterproxy.cpp \
     src/qt/transactionview.cpp \
     src/qt/walletmodel.cpp \
-    src/tekcoinrpc.cpp \
+    src/mudcoinrpc.cpp \
     src/rpcdump.cpp \
     src/rpcnet.cpp \
     src/rpcmining.cpp \
@@ -305,7 +305,7 @@ SOURCES += src/qt/tekcoin.cpp src/qt/tekcoingui.cpp \
     src/crypter.cpp \
     src/qt/sendcoinsentry.cpp \
     src/qt/qvalidatedlineedit.cpp \
-    src/qt/tekcoinunits.cpp \
+    src/qt/mudcoinunits.cpp \
     src/qt/qvaluecombobox.cpp \
     src/qt/askpassphrasedialog.cpp \
     src/protocol.cpp \
@@ -317,7 +317,7 @@ SOURCES += src/qt/tekcoin.cpp src/qt/tekcoingui.cpp \
 	src/qt/blockbrowser.cpp
 
 RESOURCES += \
-    src/qt/tekcoin.qrc
+    src/qt/mudcoin.qrc
 
 FORMS += \
     src/qt/forms/sendcoinsdialog.ui \
@@ -412,7 +412,7 @@ isEmpty(BOOST_INCLUDE_PATH) {
 
 # win32:LIBS += -lws2_32 -lshlwapi -lmswsock
 win32:DEFINES += WIN32
-win32:RC_FILE = src/qt/res/tekcoin-qt.rc
+win32:RC_FILE = src/qt/res/MudCoin-qt.rc
 
 win32:!contains(MINGW_THREAD_BUGFIX, 0) {
     # At least qmake's win32-g++-cross profile is missing the -lmingwthrd
@@ -434,7 +434,7 @@ macx:HEADERS += src/qt/macdockiconhandler.h
 macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
-macx:ICON = src/qt/res/icons/tekcoin.icns
+macx:ICON = src/qt/res/icons/mudcoin.icns
 macx:TARGET = "NoirShares Qt"
 
 macx:QMAKE_CFLAGS_THREAD += -pthread

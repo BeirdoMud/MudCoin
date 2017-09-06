@@ -1,5 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2013-2015 The TEKcoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1033,7 +1034,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "tekcoin";
+    const char* pszModule = "mudcoin";
 #endif
     if (pex)
         return strprintf(
@@ -1082,13 +1083,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\tekcoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\tekcoin
-    // Mac: ~/Library/Application Support/tekcoin
-    // Unix: ~/.tekcoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\mudcoin
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\mudcoin
+    // Mac: ~/Library/Application Support/mudcoin
+    // Unix: ~/.mudcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "tekcoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "mudcoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1100,10 +1101,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "tekcoin";
+    return pathRet / "mudcoin";
 #else
     // Unix
-    return pathRet / ".tekcoin";
+    return pathRet / ".mudcoin";
 #endif
 #endif
 }
@@ -1145,7 +1146,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "tekcoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "mudcoin.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1155,14 +1156,14 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good())
-        return; // No tekcoin.conf file is OK
+        return; // No mudcoin.conf file is OK
 
     set<string> setOptions;
     setOptions.insert("*");
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override tekcoin.conf
+        // Don't overwrite existing settings so command line settings override mudcoin.conf
         string strKey = string("-") + it->string_key;
         if (mapSettingsRet.count(strKey) == 0)
         {
@@ -1176,7 +1177,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "tekcoind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "mudcoind.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1332,10 +1333,10 @@ void AddTimeData(const CNetAddr& ip, int64 nTime)
                 if (!fMatch)
                 {
                     fDone = true;
-                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong tekcoin will not work properly.");
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong mudcoin will not work properly.");
                     strMiscWarning = strMessage;
                     printf("*** %s\n", strMessage.c_str());
-                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("TEKcoin"), CClientUIInterface::MSG_WARNING);
+                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("MudCoin"), CClientUIInterface::MSG_WARNING);
                 }
             }
         }

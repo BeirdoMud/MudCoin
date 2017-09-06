@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2013-2015 The TEKcoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef tekcoin_DB_H
-#define tekcoin_DB_H
+#ifndef mudcoin_DB_H
+#define mudcoin_DB_H
 
 #include "main.h"
 
@@ -364,4 +365,4 @@ public:
     bool Read(CAddrMan& addr);
 };
 
-#endif // tekcoin_DB_H
+#endif // mudcoin_DB_H

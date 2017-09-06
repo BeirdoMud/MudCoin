@@ -1,4 +1,4 @@
-IDI_ICON1 ICON DISCARDABLE "icons/tekcoin.ico"
+IDI_ICON1 ICON DISCARDABLE "icons/mudcoin.ico"
 
 #include <windows.h>             // needed for VERSIONINFO
 #include "../../version.h" // holds the needed client version information
@@ -18,14 +18,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "tekcoin"
-            VALUE "FileDescription",    "tekcoin-Qt (OSS GUI client for tekcoin)"
+            VALUE "CompanyName",        "mudcoin"
+            VALUE "FileDescription",    "mudcoin-Qt (OSS GUI client for mudcoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "tekcoin-qt"
-            VALUE "LegalCopyright",     "2009-2012 The Bitcon developers, 2012-2014 The PPCoin developers, 2013-2015 The Tekcoin developers"
+            VALUE "InternalName",       "MudCoin-qt"
+            VALUE "LegalCopyright",     "2009-2012 The Bitcon developers, 2012-2014 The PPCoin developers, 2013-2015 The Tekcoin developers, 2017 MudCoin Developers"
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "tekcoin-qt.exe"
-            VALUE "ProductName",        "tekcoin-Qt"
+            VALUE "OriginalFilename",   "MudCoin-qt.exe"
+            VALUE "ProductName",        "mudcoin-Qt"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

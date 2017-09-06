@@ -1,6 +1,6 @@
-#include "tekcoinamountfield.h"
+#include "mudcoinamountfield.h"
 #include "qvaluecombobox.h"
-#include "tekcoinunits.h"
+#include "mudcoinunits.h"
 
 #include "guiconstants.h"
 
@@ -14,7 +14,7 @@
 #include <QApplication>
 #include <qmath.h>
 
-tekcoinAmountField::tekcoinAmountField(QWidget *parent):
+mudcoinAmountField::mudcoinAmountField(QWidget *parent):
         QWidget(parent), amount(0), currentUnit(-1)
 {
     amount = new QDoubleSpinBox(this);
@@ -27,7 +27,7 @@ tekcoinAmountField::tekcoinAmountField(QWidget *parent):
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->addWidget(amount);
     unit = new QValueComboBox(this);
-    unit->setModel(new tekcoinUnits(this));
+    unit->setModel(new mudcoinUnits(this));
     layout->addWidget(unit);
     layout->addStretch(1);
     layout->setContentsMargins(0,0,0,0);
@@ -45,7 +45,7 @@ tekcoinAmountField::tekcoinAmountField(QWidget *parent):
     unitChanged(unit->currentIndex());
 }
 
-void tekcoinAmountField::setText(const QString &text)
+void mudcoinAmountField::setText(const QString &text)
 {
     if (text.isEmpty())
         amount->clear();
@@ -53,18 +53,18 @@ void tekcoinAmountField::setText(const QString &text)
         amount->setValue(text.toDouble());
 }
 
-void tekcoinAmountField::clear()
+void mudcoinAmountField::clear()
 {
     amount->clear();
     unit->setCurrentIndex(0);
 }
 
-bool tekcoinAmountField::validate()
+bool mudcoinAmountField::validate()
 {
     bool valid = true;
     if (amount->value() == 0.0)
         valid = false;
-    if (valid && !tekcoinUnits::parse(currentUnit, text(), 0))
+    if (valid && !mudcoinUnits::parse(currentUnit, text(), 0))
         valid = false;
 
     setValid(valid);
@@ -72,7 +72,7 @@ bool tekcoinAmountField::validate()
     return valid;
 }
 
-void tekcoinAmountField::setValid(bool valid)
+void mudcoinAmountField::setValid(bool valid)
 {
     if (valid)
         amount->setStyleSheet("");
@@ -80,7 +80,7 @@ void tekcoinAmountField::setValid(bool valid)
         amount->setStyleSheet(STYLE_INVALID);
 }
 
-QString tekcoinAmountField::text() const
+QString mudcoinAmountField::text() const
 {
     if (amount->text().isEmpty())
         return QString();
@@ -88,7 +88,7 @@ QString tekcoinAmountField::text() const
         return amount->text();
 }
 
-bool tekcoinAmountField::eventFilter(QObject *object, QEvent *event)
+bool mudcoinAmountField::eventFilter(QObject *object, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn)
     {
@@ -109,16 +109,16 @@ bool tekcoinAmountField::eventFilter(QObject *object, QEvent *event)
     return QWidget::eventFilter(object, event);
 }
 
-QWidget *tekcoinAmountField::setupTabChain(QWidget *prev)
+QWidget *mudcoinAmountField::setupTabChain(QWidget *prev)
 {
     QWidget::setTabOrder(prev, amount);
     return amount;
 }
 
-qint64 tekcoinAmountField::value(bool *valid_out) const
+qint64 mudcoinAmountField::value(bool *valid_out) const
 {
     qint64 val_out = 0;
-    bool valid = tekcoinUnits::parse(currentUnit, text(), &val_out);
+    bool valid = mudcoinUnits::parse(currentUnit, text(), &val_out);
     if(valid_out)
     {
         *valid_out = valid;
@@ -126,18 +126,18 @@ qint64 tekcoinAmountField::value(bool *valid_out) const
     return val_out;
 }
 
-void tekcoinAmountField::setValue(qint64 value)
+void mudcoinAmountField::setValue(qint64 value)
 {
-    setText(tekcoinUnits::format(currentUnit, value));
+    setText(mudcoinUnits::format(currentUnit, value));
 }
 
-void tekcoinAmountField::unitChanged(int idx)
+void mudcoinAmountField::unitChanged(int idx)
 {
     // Use description tooltip for current unit for the combobox
     unit->setToolTip(unit->itemData(idx, Qt::ToolTipRole).toString());
 
     // Determine new unit ID
-    int newUnit = unit->itemData(idx, tekcoinUnits::UnitRole).toInt();
+    int newUnit = unit->itemData(idx, mudcoinUnits::UnitRole).toInt();
 
     // Parse current value and convert to new unit
     bool valid = false;
@@ -146,8 +146,8 @@ void tekcoinAmountField::unitChanged(int idx)
     currentUnit = newUnit;
 
     // Set max length after retrieving the value, to prevent truncation
-    amount->setDecimals(tekcoinUnits::decimals(currentUnit));
-    amount->setMaximum(qPow(10, tekcoinUnits::amountDigits(currentUnit)) - qPow(10, -amount->decimals()));
+    amount->setDecimals(mudcoinUnits::decimals(currentUnit));
+    amount->setMaximum(qPow(10, mudcoinUnits::amountDigits(currentUnit)) - qPow(10, -amount->decimals()));
 
     if(valid)
     {
@@ -162,7 +162,7 @@ void tekcoinAmountField::unitChanged(int idx)
     setValid(true);
 }
 
-void tekcoinAmountField::setDisplayUnit(int newUnit)
+void mudcoinAmountField::setDisplayUnit(int newUnit)
 {
     unit->setValue(newUnit);
 }

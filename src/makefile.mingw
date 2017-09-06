@@ -69,7 +69,7 @@ OBJS= \
     obj/main.o \
     obj/net.o \
     obj/protocol.o \
-    obj/tekcoinrpc.o \
+    obj/mudcoinrpc.o \
     obj/rpcdump.o \
     obj/rpcnet.o \
     obj/rpcmining.o \
@@ -84,15 +84,15 @@ OBJS= \
     obj/noui.o \
     obj/kernel.o
 
-all: tekcoind.exe
+all: mudcoind.exe
 
-test check: test_tekcoin.exe FORCE
-	test_tekcoin.exe
+test check: test_mudcoin.exe FORCE
+	test_mudcoin.exe
 
 obj/%.o: %.cpp $(HEADERS)
 	g++ -c $(CFLAGS) -o $@ $<
 
-tekcoind.exe: $(OBJS:obj/%=obj/%)
+mudcoind.exe: $(OBJS:obj/%=obj/%)
 	g++ $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -100,11 +100,11 @@ TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
 obj-test/%.o: test/%.cpp $(HEADERS)
 	g++ -c $(TESTDEFS) $(CFLAGS) -o $@ $<
 
-test_tekcoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_mudcoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	g++ $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework $(LIBS)
 
 clean:
-	-del /Q tekcoind test_tekcoin
+	-del /Q mudcoind test_mudcoin
 	-del /Q obj\*
 	-del /Q obj-test\*
 

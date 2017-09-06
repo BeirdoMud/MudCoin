@@ -1,10 +1,11 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2013-2015 The TEKcoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef _tekcoinRPC_H_
-#define _tekcoinRPC_H_ 1
+#ifndef _mudcoinRPC_H_
+#define _mudcoinRPC_H_ 1
 
 #include <string>
 #include <list>
@@ -30,7 +31,7 @@ enum HTTPStatusCode
     HTTP_INTERNAL_SERVER_ERROR = 500,
 };
 
-// tekcoin RPC error codes
+// mudcoin RPC error codes
 enum RPCErrorCode
 {
     // Standard JSON-RPC 2.0 errors
@@ -51,7 +52,7 @@ enum RPCErrorCode
     RPC_DESERIALIZATION_ERROR       = -22, // Error parsing or validating structure in raw format
 
     // P2P client errors
-    RPC_CLIENT_NOT_CONNECTED        = -9,  // tekcoin is not connected
+    RPC_CLIENT_NOT_CONNECTED        = -9,  // mudcoin is not connected
     RPC_CLIENT_IN_INITIAL_DOWNLOAD  = -10, // Still downloading initial blocks
 
     // Wallet errors
@@ -100,7 +101,7 @@ public:
 };
 
 /**
- * tekcoin RPC command dispatcher.
+ * mudcoin RPC command dispatcher.
  */
 class CRPCTable
 {

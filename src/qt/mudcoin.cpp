@@ -1,7 +1,7 @@
 /*
  * W.J. van der Laan 2011-2012
  */
-#include "tekcoingui.h"
+#include "mudcoingui.h"
 #include "clientmodel.h"
 #include "walletmodel.h"
 #include "optionsmodel.h"
@@ -22,8 +22,8 @@
 #include <QSplashScreen>
 #include <QLibraryInfo>
 
-#if defined(tekcoin_NEED_QT_PLUGINS) && !defined(_tekcoin_QT_PLUGINS_INCLUDED)
-#define _tekcoin_QT_PLUGINS_INCLUDED
+#if defined(mudcoin_NEED_QT_PLUGINS) && !defined(_mudcoin_QT_PLUGINS_INCLUDED)
+#define _mudcoin_QT_PLUGINS_INCLUDED
 #define __INSURE__
 #include <QtPlugin>
 Q_IMPORT_PLUGIN(qcncodecs)
@@ -34,7 +34,7 @@ Q_IMPORT_PLUGIN(qtaccessiblewidgets)
 #endif
 
 // Need a global reference for the notifications to find the GUI
-static tekcoinGUI *guiref;
+static mudcoinGUI *guiref;
 static QSplashScreen *splashref;
 
 static void ThreadSafeMessageBox(const std::string& message, const std::string& caption, int style)
@@ -100,7 +100,7 @@ static void QueueShutdown()
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("tekcoin-core", psz).toStdString();
+    return QCoreApplication::translate("mudcoin-core", psz).toStdString();
 }
 
 /* Handle runaway exceptions. Shows a message box with the problem and quits the program.
@@ -108,11 +108,11 @@ static std::string Translate(const char* psz)
 static void handleRunawayException(std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
-    QMessageBox::critical(0, "Runaway exception", tekcoinGUI::tr("A fatal error occurred. tekcoin can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
+    QMessageBox::critical(0, "Runaway exception", mudcoinGUI::tr("A fatal error occurred. mudcoin can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
     exit(1);
 }
 
-#ifndef tekcoin_QT_TEST
+#ifndef mudcoin_QT_TEST
 int main(int argc, char *argv[])
 {
     // Do this early as we don't want to bother initializing if we are just calling IPC
@@ -124,7 +124,7 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForCStrings(QTextCodec::codecForTr());
 	#endif
 
-    Q_INIT_RESOURCE(tekcoin);
+    Q_INIT_RESOURCE(mudcoin);
     QApplication app(argc, argv);
 
     // Install global event filter that makes sure that long tooltips can be word-wrapped
@@ -133,12 +133,12 @@ int main(int argc, char *argv[])
     // Command-line options take precedence:
     ParseParameters(argc, argv);
 	
-    // ... then tekcoin.conf:
+    // ... then mudcoin.conf:
     if (!boost::filesystem::is_directory(GetDataDir(false)))
     {
         // This message can not be translated, as translation is not initialized yet
-        // (which not yet possible because lang=XX can be overridden in tekcoin.conf in the data directory)
-        QMessageBox::critical(0, "tekcoin",
+        // (which not yet possible because lang=XX can be overridden in mudcoin.conf in the data directory)
+        QMessageBox::critical(0, "mudcoin",
                               QString("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return 1;
     }
@@ -146,12 +146,12 @@ int main(int argc, char *argv[])
 
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
-    app.setOrganizationName("tekcoin");
-    app.setOrganizationDomain("tekcoin.su");
+    app.setOrganizationName("mudcoin");
+    app.setOrganizationDomain("mudcoin.su");
     if(GetBoolArg("-testnet")) // Separate UI settings for testnet
-        app.setApplicationName("tekcoin-Qt-testnet");
+        app.setApplicationName("mudcoin-Qt-testnet");
     else
-        app.setApplicationName("tekcoin-Qt");
+        app.setApplicationName("mudcoin-Qt");
 
     // ... then GUI settings:
     OptionsModel optionsModel;
@@ -175,11 +175,11 @@ int main(int argc, char *argv[])
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         app.installTranslator(&qtTranslator);
 
-    // Load e.g. tekcoin_de.qm (shortcut "de" needs to be defined in tekcoin.qrc)
+    // Load e.g. mudcoin_de.qm (shortcut "de" needs to be defined in mudcoin.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         app.installTranslator(&translatorBase);
 
-    // Load e.g. tekcoin_de_DE.qm (shortcut "de_DE" needs to be defined in tekcoin.qrc)
+    // Load e.g. mudcoin_de_DE.qm (shortcut "de_DE" needs to be defined in mudcoin.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         app.installTranslator(&translator);
 
@@ -218,7 +218,7 @@ int main(int argc, char *argv[])
         if (GUIUtil::GetStartOnSystemStartup())
             GUIUtil::SetStartOnSystemStartup(true);
 
-        tekcoinGUI window;
+        mudcoinGUI window;
         guiref = &window;
         if(AppInit2())
         {
@@ -257,7 +257,7 @@ int main(int argc, char *argv[])
                 window.setWalletModel(0);
                 guiref = 0;
             }
-            // Shutdown the core and its threads, but don't exit tekcoin-Qt here
+            // Shutdown the core and its threads, but don't exit mudcoin-Qt here
             Shutdown(NULL);
         }
         else
@@ -271,4 +271,4 @@ int main(int argc, char *argv[])
     }
     return 0;
 }
-#endif // tekcoin_QT_TEST
+#endif // mudcoin_QT_TEST

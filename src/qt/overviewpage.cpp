@@ -2,7 +2,7 @@
 #include "ui_overviewpage.h"
 
 #include "walletmodel.h"
-#include "tekcoinunits.h"
+#include "mudcoinunits.h"
 #include "optionsmodel.h"
 #include "transactiontablemodel.h"
 #include "transactionfilterproxy.h"
@@ -19,7 +19,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate(): QAbstractItemDelegate(), unit(tekcoinUnits::BTC)
+    TxViewDelegate(): QAbstractItemDelegate(), unit(mudcoinUnits::BTC)
     {
 
     }
@@ -71,7 +71,7 @@ public:
             foreground = option.palette.color(QPalette::Text);
         }
         painter->setPen(foreground);
-        QString amountText = tekcoinUnits::formatWithUnit(unit, amount, true);
+        QString amountText = mudcoinUnits::formatWithUnit(unit, amount, true);
         if(!confirmed)
         {
             amountText = QString("[") + amountText + QString("]");
@@ -120,7 +120,7 @@ OverviewPage::OverviewPage(QWidget *parent) :
 
     QPalette  p;
     p.setColor(QPalette::WindowText,Qt::red);
-    ui->label_tekcoin_Intro->setPalette(p);
+    ui->label_mudcoin_Intro->setPalette(p);
 
 
     // start with displaying the "out of sync" warnings
@@ -145,17 +145,17 @@ void OverviewPage::setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBa
     currentStake = stake;
     currentUnconfirmedBalance = unconfirmedBalance;
     currentImmatureBalance = immatureBalance;
-    ui->labelBalance->setText(tekcoinUnits::formatWithUnit(unit, balance));
-    ui->labelStake->setText(tekcoinUnits::formatWithUnit(unit, stake));
-    ui->labelUnconfirmed->setText(tekcoinUnits::formatWithUnit(unit, unconfirmedBalance));
-    ui->labelImmature->setText(tekcoinUnits::formatWithUnit(unit, immatureBalance));
+    ui->labelBalance->setText(mudcoinUnits::formatWithUnit(unit, balance));
+    ui->labelStake->setText(mudcoinUnits::formatWithUnit(unit, stake));
+    ui->labelUnconfirmed->setText(mudcoinUnits::formatWithUnit(unit, unconfirmedBalance));
+    ui->labelImmature->setText(mudcoinUnits::formatWithUnit(unit, immatureBalance));
 
     // only show immature (newly mined) balance if it's non-zero, so as not to complicate things
     // for the non-mining users
     bool showImmature = immatureBalance != 0;
     ui->labelImmature->setVisible(showImmature);
     ui->labelImmatureText->setVisible(showImmature);
-    ui->labelTotal->setText(tekcoinUnits::formatWithUnit(unit, (balance + stake + unconfirmedBalance + immatureBalance)));
+    ui->labelTotal->setText(mudcoinUnits::formatWithUnit(unit, (balance + stake + unconfirmedBalance + immatureBalance)));
 }
 
 void OverviewPage::setNumTransactions(int count)

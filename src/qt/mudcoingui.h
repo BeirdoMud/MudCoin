@@ -1,5 +1,5 @@
-#ifndef tekcoinGUI_H
-#define tekcoinGUI_H
+#ifndef mudcoinGUI_H
+#define mudcoinGUI_H
 
 #include <QMainWindow>
 #include <QSystemTrayIcon>
@@ -30,22 +30,22 @@ class QUrl;
 QT_END_NAMESPACE
 
 /**
-  tekcoin GUI main class. This class represents the main window of the tekcoin UI. It communicates with both the client and
+  mudcoin GUI main class. This class represents the main window of the mudcoin UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
-class tekcoinGUI : public QMainWindow
+class mudcoinGUI : public QMainWindow
 {
     Q_OBJECT
 public:
-    explicit tekcoinGUI(QWidget *parent = 0);
-    ~tekcoinGUI();
+    explicit mudcoinGUI(QWidget *parent = 0);
+    ~mudcoinGUI();
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
     */
     void setClientModel(ClientModel *clientModel);
     /** Set the wallet model.
-        The wallet model represents a tekcoin wallet, and offers access to the list of transactions, address book and sending
+        The wallet model represents a mudcoin wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
     void setWalletModel(WalletModel *walletModel);

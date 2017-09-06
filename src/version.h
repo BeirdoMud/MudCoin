@@ -1,8 +1,9 @@
 // Copyright (c) 2013-2015  The Tekcoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef tekcoin_VERSION_H
-#define tekcoin_VERSION_H
+#ifndef mudcoin_VERSION_H
+#define mudcoin_VERSION_H
 
 #include "string.h"
 

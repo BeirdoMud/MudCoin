@@ -1,23 +1,23 @@
-#include "tekcoinunits.h"
+#include "mudcoinunits.h"
 
 #include <QStringList>
 
-tekcoinUnits::tekcoinUnits(QObject *parent):
+mudcoinUnits::mudcoinUnits(QObject *parent):
         QAbstractListModel(parent),
         unitlist(availableUnits())
 {
 }
 
-QList<tekcoinUnits::Unit> tekcoinUnits::availableUnits()
+QList<mudcoinUnits::Unit> mudcoinUnits::availableUnits()
 {
-    QList<tekcoinUnits::Unit> unitlist;
+    QList<mudcoinUnits::Unit> unitlist;
     unitlist.append(BTC);
     unitlist.append(mBTC);
     unitlist.append(uBTC);
     return unitlist;
 }
 
-bool tekcoinUnits::valid(int unit)
+bool mudcoinUnits::valid(int unit)
 {
     switch(unit)
     {
@@ -30,29 +30,29 @@ bool tekcoinUnits::valid(int unit)
     }
 }
 
-QString tekcoinUnits::name(int unit)
+QString mudcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("TEK");
-    case mBTC: return QString("mTEK");
-    case uBTC: return QString::fromUtf8("μTEK");
+    case BTC: return QString("MUD");
+    case mBTC: return QString("mMUD");
+    case uBTC: return QString::fromUtf8("μMUD");
     default: return QString("???");
     }
 }
 
-QString tekcoinUnits::description(int unit)
+QString mudcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("tekcoins");
-    case mBTC: return QString("Milli-tekcoins (1 / 1,000)");
-    case uBTC: return QString("Micro-tekcoins (1 / 1,000,000)");
+    case BTC: return QString("mudcoins");
+    case mBTC: return QString("Milli-mudcoins (1 / 1,000)");
+    case uBTC: return QString("Micro-mudcoins (1 / 1,000,000)");
     default: return QString("???");
     }
 }
 
-qint64 tekcoinUnits::factor(int unit)
+qint64 mudcoinUnits::factor(int unit)
 {
     switch(unit)
     {
@@ -63,7 +63,7 @@ qint64 tekcoinUnits::factor(int unit)
     }
 }
 
-int tekcoinUnits::amountDigits(int unit)
+int mudcoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
@@ -74,7 +74,7 @@ int tekcoinUnits::amountDigits(int unit)
     }
 }
 
-int tekcoinUnits::decimals(int unit)
+int mudcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
@@ -85,7 +85,7 @@ int tekcoinUnits::decimals(int unit)
     }
 }
 
-QString tekcoinUnits::format(int unit, qint64 n, bool fPlus)
+QString mudcoinUnits::format(int unit, qint64 n, bool fPlus)
 {
     // Note: not using straight sprintf here because we do NOT want
     // localized number formatting.
@@ -112,7 +112,7 @@ QString tekcoinUnits::format(int unit, qint64 n, bool fPlus)
     return quotient_str + QString(".") + remainder_str;
 }
 
-QString tekcoinUnits::formatAge(int unit, qint64 n, bool fPlus) 
+QString mudcoinUnits::formatAge(int unit, qint64 n, bool fPlus) 
 { 
     // Note: not using straight sprintf here because we do NOT want 
     // localized number formatting. 
@@ -138,12 +138,12 @@ QString tekcoinUnits::formatAge(int unit, qint64 n, bool fPlus)
     return quotient_str + QString(".") + remainder_str; 
 } 
 
-QString tekcoinUnits::formatWithUnit(int unit, qint64 amount, bool plussign)
+QString mudcoinUnits::formatWithUnit(int unit, qint64 amount, bool plussign)
 {
     return format(unit, amount, plussign) + QString(" ") + name(unit);
 }
 
-bool tekcoinUnits::parse(int unit, const QString &value, qint64 *val_out)
+bool mudcoinUnits::parse(int unit, const QString &value, qint64 *val_out)
 {
     if(!valid(unit) || value.isEmpty())
         return false; // Refuse to parse invalid unit or empty string
@@ -180,13 +180,13 @@ bool tekcoinUnits::parse(int unit, const QString &value, qint64 *val_out)
     return ok;
 }
 
-int tekcoinUnits::rowCount(const QModelIndex &parent) const
+int mudcoinUnits::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return unitlist.size();
 }
 
-QVariant tekcoinUnits::data(const QModelIndex &index, int role) const
+QVariant mudcoinUnits::data(const QModelIndex &index, int role) const
 {
     int row = index.row();
     if(row >= 0 && row < unitlist.size())

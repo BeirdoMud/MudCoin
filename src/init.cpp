@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2013-2015 The TEKcoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #include "db.h"
 #include "walletdb.h"
-#include "tekcoinrpc.h"
+#include "mudcoinrpc.h"
 #include "net.h"
 #include "init.h"
 #include "util.h"
@@ -45,7 +46,7 @@ void ExitTimeout(void* parg)
 void StartShutdown()
 {
 #ifdef QT_GUI
-    // ensure we leave the Qt main loop for a clean GUI exit (Shutdown() is called in tekcoin.cpp afterwards)
+    // ensure we leave the Qt main loop for a clean GUI exit (Shutdown() is called in mudcoin.cpp afterwards)
     uiInterface.QueueShutdown();
 #else
     // Without UI, Shutdown() can simply be started in a new thread
@@ -59,7 +60,7 @@ void Shutdown(void* parg)
     static bool fTaken;
 
     // Make this thread recognisable as the shutdown thread
-    RenameThread("tekcoin-shutoff");
+    RenameThread("mudcoin-shutoff");
 
     bool fFirstThread = false;
     {
@@ -83,10 +84,10 @@ void Shutdown(void* parg)
         delete pwalletMain;
         NewThread(ExitTimeout, NULL);
         Sleep(50);
-        printf("tekcoin exited\n\n");
+        printf("mudcoin exited\n\n");
         fExit = true;
 #ifndef QT_GUI
-        // ensure non-UI client gets exited here, but let tekcoin-Qt reach 'return 0;' in tekcoin.cpp
+        // ensure non-UI client gets exited here, but let mudcoin-Qt reach 'return 0;' in mudcoin.cpp
         exit(0);
 #endif
     }
@@ -126,7 +127,7 @@ bool AppInit(int argc, char* argv[])
         //
         // Parameters
         //
-        // If Qt is used, parameters/tekcoin.conf are parsed in qt/tekcoin.cpp's main()
+        // If Qt is used, parameters/mudcoin.conf are parsed in qt/mudcoin.cpp's main()
         ParseParameters(argc, argv);
         if (!boost::filesystem::is_directory(GetDataDir(false)))
         {
@@ -137,13 +138,13 @@ bool AppInit(int argc, char* argv[])
 
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
-            // First part of help message is specific to tekcoind / RPC client
-            std::string strUsage = _("tekcoin version") + " " + FormatFullVersion() + "\n\n" +
+            // First part of help message is specific to mudcoind / RPC client
+            std::string strUsage = _("mudcoin version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  tekcoind [options]                     " + "\n" +
-                  "  tekcoind [options] <command> [params]  " + _("Send command to -server or tekcoind") + "\n" +
-                  "  tekcoind [options] help                " + _("List commands") + "\n" +
-                  "  tekcoind [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  mudcoind [options]                     " + "\n" +
+                  "  mudcoind [options] <command> [params]  " + _("Send command to -server or mudcoind") + "\n" +
+                  "  mudcoind [options] help                " + _("List commands") + "\n" +
+                  "  mudcoind [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -153,7 +154,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "tekcoin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "mudcoin:"))
                 fCommandLine = true;
 
         if (fCommandLine)
@@ -179,7 +180,7 @@ int main(int argc, char* argv[])
 {
     bool fRet = false;
 
-    // Connect tekcoind signal handlers
+    // Connect mudcoind signal handlers
     noui_connect();
 
     fRet = AppInit(argc, argv);
@@ -193,13 +194,13 @@ int main(int argc, char* argv[])
 
 bool static InitError(const std::string &str)
 {
-    uiInterface.ThreadSafeMessageBox(str, _("TEKcoin"), CClientUIInterface::MSG_ERROR);
+    uiInterface.ThreadSafeMessageBox(str, _("MudCoin"), CClientUIInterface::MSG_ERROR);
     return false;
 }
 
 bool static InitWarning(const std::string &str)
 {
-    uiInterface.ThreadSafeMessageBox(str, _("TEKcoin"), CClientUIInterface::MSG_WARNING);
+    uiInterface.ThreadSafeMessageBox(str, _("MudCoin"), CClientUIInterface::MSG_WARNING);
     return true;
 }
 
@@ -221,8 +222,8 @@ std::string HelpMessage()
 {
     string strUsage = _("Options:") + "\n" +
         "  -?                     " + _("This help message") + "\n" +
-        "  -conf=<file>           " + _("Specify configuration file (default: tekcoin.conf)") + "\n" +
-        "  -pid=<file>            " + _("Specify pid file (default: tekcoind.pid)") + "\n" +
+        "  -conf=<file>           " + _("Specify configuration file (default: mudcoin.conf)") + "\n" +
+        "  -pid=<file>            " + _("Specify pid file (default: mudcoind.pid)") + "\n" +
         "  -gen                   " + _("Generate coins") + "\n" +
         "  -gen=0                 " + _("Don't generate coins") + "\n" +
         "  -staking=<n>          " + _("Generate coin stakes (default: 1 = enabled)") + "\n" +
@@ -296,16 +297,16 @@ std::string HelpMessage()
         "  -blockmaxsize=<n>      "   + _("Set maximum block size in bytes (default: 250000)") + "\n" +
         "  -blockprioritysize=<n> "   + _("Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)") + "\n" +
 
-        "\n" + _("SSL options: (see the tekcoin Wiki for SSL setup instructions)") + "\n" +
+        "\n" + _("SSL options: (see the mudcoin Wiki for SSL setup instructions)") + "\n" +
         "  -rpcssl                                  " + _("Use OpenSSL (https) for JSON-RPC connections") + "\n" +
         "  -rpcsslcertificatechainfile=<file.cert>  " + _("Server certificate file (default: server.cert)") + "\n" +
-        "  -rpcsslprivatekeyfile=<file.pem>         " + _("Server private key (default: server.pem)") + "\n" +
+        "  -rpcsslprivamudeyfile=<file.pem>         " + _("Server private key (default: server.pem)") + "\n" +
         "  -rpcsslciphers=<ciphers>                 " + _("Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)") + "\n";
 
     return strUsage;
 }
 
-/** Initialize tekcoin.
+/** Initialize mudcoin.
  *  @pre Parameters should be parsed and config file should be read.
  */
 bool AppInit2()
@@ -469,13 +470,13 @@ bool AppInit2()
     if (strWalletFileName != boost::filesystem::basename(strWalletFileName) + boost::filesystem::extension(strWalletFileName))
         return InitError(strprintf(_("Wallet %s resides outside data directory %s."), strWalletFileName.c_str(), strDataDir.c_str()));
 
-    // Make sure only a single tekcoin process is using the data directory.
+    // Make sure only a single mudcoin process is using the data directory.
     boost::filesystem::path pathLockFile = GetDataDir() / ".lock";
     FILE* file = fopen(pathLockFile.string().c_str(), "a"); // empty lock file; created if it doesn't exist.
     if (file) fclose(file);
     static boost::interprocess::file_lock lock(pathLockFile.string().c_str());
     if (!lock.try_lock())
-        return InitError(strprintf(_("Cannot obtain a lock on data directory %s.  tekcoin is probably already running."), strDataDir.c_str()));
+        return InitError(strprintf(_("Cannot obtain a lock on data directory %s.  mudcoin is probably already running."), strDataDir.c_str()));
 
 #if !defined(WIN32) && !defined(QT_GUI)
     if (fDaemon)
@@ -502,7 +503,7 @@ bool AppInit2()
     if (GetBoolArg("-shrinkdebugfile", !fDebug))
         ShrinkDebugFile();
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    printf("tekcoin version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
+    printf("mudcoin version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
     printf("Using OpenSSL version %s\n", SSLeay_version(SSLEAY_VERSION));
     if (!fLogTimestamps)
         printf("Startup time: %s\n", DateTimeStrFormat("%x %H:%M:%S", GetTime()).c_str());
@@ -511,7 +512,7 @@ bool AppInit2()
     std::ostringstream strErrors;
 
     if (fDaemon)
-        fprintf(stdout, "tekcoin server starting\n");
+        fprintf(stdout, "mudcoin server starting\n");
 
     int64 nStart;
 
@@ -543,7 +544,7 @@ bool AppInit2()
                                      " Original wallet.dat saved as wallet.{timestamp}.bak in %s; if"
                                      " your balance or transactions are incorrect you should"
                                      " restore from a backup."), strDataDir.c_str());
-            uiInterface.ThreadSafeMessageBox(msg, _("TEKcoin"), CClientUIInterface::MSG_WARNING);
+            uiInterface.ThreadSafeMessageBox(msg, _("MudCoin"), CClientUIInterface::MSG_WARNING);
         }
         if (r == CDBEnv::RECOVER_FAIL)
             return InitError(_("wallet.dat corrupt, salvage failed"));
@@ -711,7 +712,7 @@ bool AppInit2()
         return InitError(_("Error loading blkindex.dat"));
 
     // as LoadBlockIndex can take several minutes, it's possible the user
-    // requested to kill tekcoin-qt during the last operation. If so, exit.
+    // requested to kill MudCoin-qt during the last operation. If so, exit.
     // As the program has not fully started yet, Shutdown() is possibly overkill.
     if (fRequestShutdown)
     {
@@ -765,13 +766,13 @@ bool AppInit2()
         {
             string msg(_("Warning: error reading wallet.dat! All keys read correctly, but transaction data"
                          " or address book entries might be missing or incorrect."));
-            uiInterface.ThreadSafeMessageBox(msg, _("TEKcoin"), CClientUIInterface::MSG_WARNING);
+            uiInterface.ThreadSafeMessageBox(msg, _("MudCoin"), CClientUIInterface::MSG_WARNING);
         }
         else if (nLoadWalletRet == DB_TOO_NEW)
-            strErrors << _("Error loading wallet.dat: Wallet requires newer version of tekcoin") << "\n";
+            strErrors << _("Error loading wallet.dat: Wallet requires newer version of mudcoin") << "\n";
         else if (nLoadWalletRet == DB_NEED_REWRITE)
         {
-            strErrors << _("Wallet needed to be rewritten: restart tekcoin to complete") << "\n";
+            strErrors << _("Wallet needed to be rewritten: restart mudcoin to complete") << "\n";
             printf("%s", strErrors.str().c_str());
             return InitError(strErrors.str());
         }

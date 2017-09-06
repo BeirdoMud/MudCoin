@@ -1,18 +1,18 @@
-#ifndef tekcoinUNITS_H
-#define tekcoinUNITS_H
+#ifndef mudcoinUNITS_H
+#define mudcoinUNITS_H
 
 #include <QString>
 #include <QAbstractListModel>
 
-/** tekcoin unit definitions. Encapsulates parsing and formatting
+/** mudcoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class tekcoinUnits: public QAbstractListModel
+class mudcoinUnits: public QAbstractListModel
 {
 public:
-    explicit tekcoinUnits(QObject *parent);
+    explicit mudcoinUnits(QObject *parent);
 
-    /** tekcoin units.
+    /** mudcoin units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
@@ -61,8 +61,8 @@ public:
     QVariant data(const QModelIndex &index, int role) const;
     ///@}
 private:
-    QList<tekcoinUnits::Unit> unitlist;
+    QList<mudcoinUnits::Unit> unitlist;
 };
-typedef tekcoinUnits::Unit tekcoinUnit;
+typedef mudcoinUnits::Unit mudcoinUnit;
 
-#endif // tekcoinUNITS_H
+#endif // mudcoinUNITS_H

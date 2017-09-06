@@ -1,5 +1,5 @@
 ---
-name: "tekcoin"
+name: "mudcoin"
 suites:
 - "precise"
 architectures:
@@ -16,8 +16,8 @@ remotes: []
 files:
 - "qt-win32-4.8.6-gitian-r7.zip"
 - "boost-win32-1.55.0-gitian-r6.zip"
-- "tekcoin-deps-win32-gitian-r12.zip"
-- "tekcoin.zip"
+- "mudcoin-deps-win32-gitian-r12.zip"
+- "mudcoin.zip"
 script: |
   #
   STAGING=$HOME/staging
@@ -27,12 +27,12 @@ script: |
   cd $STAGING
   unzip ../build/qt-win32-4.8.6-gitian-r7.zip
   unzip ../build/boost-win32-1.55.0-gitian-r6.zip
-  unzip ../build/tekcoin-deps-win32-gitian-r12.zip
-  unzip ../build/tekcoin.zip -d $HOME/build/
+  unzip ../build/mudcoin-deps-win32-gitian-r12.zip
+  unzip ../build/mudcoin.zip -d $HOME/build/
   cd $HOME/build/
   #
 
-  cd tekcoin
+  cd mudcoin
   export PATH=$STAGING/host/bin:$PATH
   mkdir -p $OUTDIR/src
   git archive HEAD | tar -x -C $OUTDIR/src
@@ -41,19 +41,19 @@ script: |
   export FAKETIME=$REFERENCE_DATETIME
   export TZ=UTC
   ln -s $STAGING $HOME/qt
-  $HOME/staging/host/bin/qmake -spec unsupported/win32-g++-cross MINIUPNPC_LIB_PATH=$STAGING MINIUPNPC_INCLUDE_PATH=$STAGING BDB_LIB_PATH=$STAGING BDB_INCLUDE_PATH=$STAGING BOOST_LIB_PATH=$STAGING BOOST_INCLUDE_PATH=$STAGING BOOST_LIB_SUFFIX=-mt-s BOOST_THREAD_LIB_SUFFIX=_win32-mt-s OPENSSL_LIB_PATH=$STAGING OPENSSL_INCLUDE_PATH=$STAGING QRENCODE_LIB_PATH=$STAGING QRENCODE_INCLUDE_PATH=$STAGING USE_QRCODE=1 INCLUDEPATH=$STAGING DEFINES=BOOST_THREAD_USE_LIB BITCOIN_NEED_QT_PLUGINS=1 QMAKE_LRELEASE=lrelease QMAKE_CXXFLAGS=-frandom-seed=tekcoin USE_BUILD_INFO=1 USE_SSE2=1
+  $HOME/staging/host/bin/qmake -spec unsupported/win32-g++-cross MINIUPNPC_LIB_PATH=$STAGING MINIUPNPC_INCLUDE_PATH=$STAGING BDB_LIB_PATH=$STAGING BDB_INCLUDE_PATH=$STAGING BOOST_LIB_PATH=$STAGING BOOST_INCLUDE_PATH=$STAGING BOOST_LIB_SUFFIX=-mt-s BOOST_THREAD_LIB_SUFFIX=_win32-mt-s OPENSSL_LIB_PATH=$STAGING OPENSSL_INCLUDE_PATH=$STAGING QRENCODE_LIB_PATH=$STAGING QRENCODE_INCLUDE_PATH=$STAGING USE_QRCODE=1 INCLUDEPATH=$STAGING DEFINES=BOOST_THREAD_USE_LIB BITCOIN_NEED_QT_PLUGINS=1 QMAKE_LRELEASE=lrelease QMAKE_CXXFLAGS=-frandom-seed=mudcoin USE_BUILD_INFO=1 USE_SSE2=1
   make $MAKEOPTS
-  $HOST-strip release/tekcoin-qt.exe
-  cp release/tekcoin-qt.exe $OUTDIR/
+  $HOST-strip release/MudCoin-qt.exe
+  cp release/MudCoin-qt.exe $OUTDIR/
   #
 #  cd src
 #  export LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1
 #   export FAKETIME=$REFERENCE_DATETIME
 #   export TZ=UTC
-#   make -f makefile.linux-mingw $MAKEOPTS DEPSDIR=$STAGING tekcoind.exe USE_UPNP=0 DEBUGFLAGS="-frandom-seed=tekcoin" USE_SSE2=1
-#   $HOST-strip tekcoind.exe
+#   make -f makefile.linux-mingw $MAKEOPTS DEPSDIR=$STAGING mudcoind.exe USE_UPNP=0 DEBUGFLAGS="-frandom-seed=mudcoin" USE_SSE2=1
+#   $HOST-strip mudcoind.exe
 #   mkdir $OUTDIR/daemon
-#   cp tekcoind.exe $OUTDIR/daemon
+#   cp mudcoind.exe $OUTDIR/daemon
 # cd ..
 #  mkdir nsis
 #  git archive HEAD | tar -x -C nsis
@@ -62,4 +62,4 @@ script: |
 #  cp ../../release/* ../release/
 #  cp ../../src/*.exe .
 #  makensis ../share/setup.nsi
-#  cp ../share/tekcoin-*-win32-setup.exe $OUTDIR/
+#  cp ../share/mudcoin-*-win32-setup.exe $OUTDIR/

@@ -15,7 +15,7 @@ class QAbstractItemView;
 QT_END_NAMESPACE
 class SendCoinsRecipient;
 
-/** Utility functions used by the tekcoin Qt UI.
+/** Utility functions used by the mudcoin Qt UI.
  */
 namespace GUIUtil
 {
@@ -23,17 +23,17 @@ namespace GUIUtil
     QString dateTimeStr(const QDateTime &datetime);
     QString dateTimeStr(qint64 nTime);
 
-    // Render tekcoin addresses in monospace font
-    QFont tekcoinAddressFont();
+    // Render mudcoin addresses in monospace font
+    QFont mudcoinAddressFont();
 
     // Set up widgets for address and amounts
     void setupAddressWidget(QLineEdit *widget, QWidget *parent);
     void setupAmountWidget(QLineEdit *widget, QWidget *parent);
 
-    // Parse "tekcoin:" URI into recipient object, return true on successful parsing
-    // See tekcoin URI definition discussion here: https://bitcointalk.org/index.php?topic=33490.0
-    bool parsetekcoinURI(const QUrl &uri, SendCoinsRecipient *out);
-    bool parsetekcoinURI(QString uri, SendCoinsRecipient *out);
+    // Parse "mudcoin:" URI into recipient object, return true on successful parsing
+    // See mudcoin URI definition discussion here: https://bitcointalk.org/index.php?topic=33490.0
+    bool parsemudcoinURI(const QUrl &uri, SendCoinsRecipient *out);
+    bool parsemudcoinURI(QString uri, SendCoinsRecipient *out);
 
     // HTML escaping for rich text controls
     QString HtmlEscape(const QString& str, bool fMultiLine=false);
@@ -95,7 +95,7 @@ namespace GUIUtil
     bool GetStartOnSystemStartup();
     bool SetStartOnSystemStartup(bool fAutoStart);
 
-    /** Help message for tekcoin-Qt, shown with --help. */
+    /** Help message for mudcoin-Qt, shown with --help. */
     class HelpMessageBox : public QMessageBox
     {
         Q_OBJECT
