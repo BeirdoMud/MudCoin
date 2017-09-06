@@ -25,19 +25,18 @@ class CInv;
 class CRequestTracker;
 class CNode;
 
-static const unsigned int MAX_BLOCK_SIZE = 1000000;
+static const unsigned int MAX_BLOCK_SIZE = 10000000;
 static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/2;
 static const unsigned int MAX_BLOCK_SIGOPS = MAX_BLOCK_SIZE/50;
 static const unsigned int MAX_ORPHAN_TRANSACTIONS = MAX_BLOCK_SIZE/100;
 static const unsigned int MAX_INV_SZ = 50000;
-static const int64 MIN_TX_FEE = 0.0001 * COIN;
+static const int64 MIN_TX_FEE = 0.00001 * COIN;
 static const int64 MIN_RELAY_TX_FEE = MIN_TX_FEE;
-static const int64 MAX_MONEY = 100000000 * COIN;//100 million
+static const int64 MAX_MONEY = 5000000000 * COIN; //10 billion
 static const int64 MAX_MINT_PROOF_OF_WORK = 100 * COIN;	//100 Coin per block
-static const int64 MAX_MINT_PROOF_OF_STAKE = 0.05 * MAX_MINT_PROOF_OF_WORK;	//5% annual interest
+static const int64 MAX_MINT_PROOF_OF_STAKE = 0.5 * MAX_MINT_PROOF_OF_WORK;	// 50% annual interest
 static const int64 MIN_TXOUT_AMOUNT = MIN_TX_FEE;
 static const unsigned int MAX_TX_COMMENT_LEN = 268; // mudcoin: 256 bytes + 12 little extra
-static const int64 HARDFORK_1 = 506500;
 static const int64 TARGETS_SWITCH_TIME =  1409078040;
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 // Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp.

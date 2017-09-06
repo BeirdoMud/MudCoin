@@ -948,20 +948,14 @@ CBigNum inline GetProofOfStakeLimit(int nHeight, unsigned int nTime)
 {
     if(fTestNet) // separate proof of stake target limit for testnet
         return bnProofOfStakeLimit;
-    if(nTime > TARGETS_SWITCH_TIME || nHeight >= HARDFORK_1) // 18 bits since 20 July 2013
-        return bnProofOfStakeLimitV2;
-    if(nHeight + 1 > 15000) // 24 bits since block 15000
-        return bnProofOfStakeLimit;
-    if(nHeight + 1 > 14060) // 31 bits since block 14060 until 15000
-        return bnProofOfStakeHardLimit;
 
-    return bnProofOfStakeLimit; // return bnProofOfWorkLimit of none matched
+    return bnProofOfStakeLimitV2; // 18 bits
 }
 
 // miner's coin base reward based on nBits
 int64 GetProofOfWorkReward(int nHeight, int64 nFees, uint256 prevHash)
 {
-	int64 nSubsidy = 1 * COIN;
+	int64 nSubsidy = 100 * COIN;
 
 	return nSubsidy + nFees;
 }
@@ -973,7 +967,7 @@ int64 GetProofOfStakeReward(int64 nCoinAge, unsigned int nBits, unsigned int nTi
 
     // Stage 2 of emission process is PoS-based. It will be active on mainNet since 20 Jun 2013.
 
-    CBigNum bnRewardCoinYearLimit = MAX_MINT_PROOF_OF_STAKE; // Base stake mint rate, 100% year interest
+    CBigNum bnRewardCoinYearLimit = MAX_MINT_PROOF_OF_STAKE; // Base stake mint rate, 50% year interest
     CBigNum bnTarget;
     bnTarget.SetCompact(nBits);
     CBigNum bnTargetLimit = GetProofOfStakeLimit(15001, nTime);
@@ -1081,11 +1075,8 @@ unsigned int static GetNextTargetRequired(const CBlockIndex* pindexLast, bool fP
 	if(fProofOfStake)
     {
 
-         if (pindexLast->nHeight >= HARDFORK_1){
-                if (nActualSpacing < 0)
-                nActualSpacing = nStakeTargetSpacing;
-        }
-
+        if (nActualSpacing < 0)
+            nActualSpacing = nStakeTargetSpacing;
    }
 	
     CBigNum bnNew;
