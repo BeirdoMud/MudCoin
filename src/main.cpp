@@ -956,6 +956,9 @@ CBigNum inline GetProofOfStakeLimit(int nHeight, unsigned int nTime)
 int64 GetProofOfWorkReward(int nHeight, int64 nFees, uint256 prevHash)
 {
 	int64 nSubsidy = 100 * COIN;
+	if (nHeight == 1) {
+           nSubsidy = 1000000 * COIN;
+        }
 
 	return nSubsidy + nFees;
 }
@@ -2383,7 +2386,6 @@ bool CBlock::SignBlock(const CKeyStore& keystore)
         }
     }
 
-    printf("Sign failed\n");
     return false;
 }
 
