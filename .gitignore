@@ -13,10 +13,16 @@ Makefile
 *.pro.user
 #mac specific
 .DS_Store
-build
+build/
 *.plist
 *.xcodeproj
 PortIndex*
 dist
 *.app
 *.dmg
+release/
+.qmake.stash
+Makefile.Debug
+Makefile.Release
+MudCoin-qt
+object_script.MudCoin-qt.*
