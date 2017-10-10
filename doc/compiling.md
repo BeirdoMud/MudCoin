@@ -130,6 +130,6 @@ make install DLLWRAP=i686-w64-mingw32.static-dllwrap CC=i686-w64-mingw32.static-
 export PATH=/<to>/mxe/usr/bin:$PATH
 git clone https://github.com/Beirdo/MudCoin.git
 cd MudCoin
-i686-w64-mingw32.static-qmake-qt5
+i686-w64-mingw32.static-qmake-qt5 MudCoin-qt.pro
 make -j4
 ```
