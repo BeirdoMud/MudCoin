@@ -1,6 +1,8 @@
+# For building 64-bit windows builds from Linux using MXE
+
 TEMPLATE = app
-TARGET = ppcoin-qt
-VERSION = 0.6.3.0
+TARGET = MudCoin-qt
+VERSION = 0.6.3.0-MudCoin
 INCLUDEPATH += src src/json src/qt
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
@@ -72,6 +74,8 @@ contains(BITCOIN_NEED_QT_PLUGINS, 1) {
     DEFINES += BITCOIN_NEED_QT_PLUGINS
     QTPLUGIN += qcncodecs qjpcodecs qtwcodecs qkrcodecs qtaccessiblewidgets
 }
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 !windows {
     # for extra security against potential buffer overflows
@@ -260,8 +264,7 @@ CODECFORTR = UTF-8
 TRANSLATIONS = $$files(src/qt/locale/bitcoin_*.ts)
 
 isEmpty(QMAKE_LRELEASE) {
-    win32:QMAKE_LRELEASE = $$[QT_INSTALL_BINS]\\lrelease.exe
-    else:QMAKE_LRELEASE = $$[QT_INSTALL_BINS]/lrelease
+    QMAKE_LRELEASE = $$[QT_INSTALL_BINS]/lrelease
 }
 isEmpty(TS_DIR):TS_DIR = src/qt/locale
 # automatically build translations, so they can be included in resource file
@@ -280,7 +283,7 @@ OTHER_FILES += \
 # platform specific defaults, if not overridden on command line
 isEmpty(BOOST_LIB_SUFFIX) {
     macx:BOOST_LIB_SUFFIX = -mt
-    windows:BOOST_LIB_SUFFIX = -mgw44-mt-1_43
+    windows:BOOST_LIB_SUFFIX = -mt
 }
 
 isEmpty(BOOST_THREAD_LIB_SUFFIX) {
@@ -306,6 +309,18 @@ isEmpty(BOOST_LIB_PATH) {
 isEmpty(BOOST_INCLUDE_PATH) {
     macx:BOOST_INCLUDE_PATH = /opt/local/include
 }
+
+MXE_PATH=/opt/mxe
+BOOST_INCLUDE_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/include
+BOOST_LIB_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/lib
+BDB_INCLUDE_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/include
+BDB_LIB_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/lib
+OPENSSL_INCLUDE_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/include
+OPENSSL_LIB_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/lib
+MINIUPNPC_INCLUDE_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/include
+MINIUPNPC_LIB_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/lib
+QRENCODE_INCLUDE_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/include
+QRENCODE_LIB_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/lib
 
 windows:LIBS += -lws2_32 -lshlwapi
 windows:DEFINES += WIN32
@@ -340,7 +355,7 @@ LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB
 LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
 # -lgdi32 has to happen after -lcrypto (see  #681)
 windows:LIBS += -lole32 -luuid -lgdi32
-LIBS += -lboost_system$$BOOST_LIB_SUFFIX -lboost_filesystem$$BOOST_LIB_SUFFIX -lboost_program_options$$BOOST_LIB_SUFFIX -lboost_thread$$BOOST_THREAD_LIB_SUFFIX
+LIBS += -lboost_system$$BOOST_LIB_SUFFIX -lboost_filesystem$$BOOST_LIB_SUFFIX -lboost_program_options$$BOOST_LIB_SUFFIX -lboost_thread_win32$$BOOST_THREAD_LIB_SUFFIX
 
 contains(RELEASE, 1) {
     !windows:!macx {

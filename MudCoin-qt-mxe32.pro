@@ -1,8 +1,8 @@
-# For building 64-bit windows builds from Linux using MXE
+# For building 32-bit windows builds from Linux using MXE
 
 TEMPLATE = app
-TARGET = ppcoin-qt
-VERSION = 0.6.3.0
+TARGET = MudCoin-qt
+VERSION = 0.6.3.0-MudCoin
 INCLUDEPATH += src src/json src/qt
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
@@ -311,16 +311,16 @@ isEmpty(BOOST_INCLUDE_PATH) {
 }
 
 MXE_PATH=/opt/mxe
-BOOST_INCLUDE_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/include
-BOOST_LIB_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/lib
-BDB_INCLUDE_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/include
-BDB_LIB_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/lib
-OPENSSL_INCLUDE_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/include
-OPENSSL_LIB_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/lib
-MINIUPNPC_INCLUDE_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/include
-MINIUPNPC_LIB_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/lib
-QRENCODE_INCLUDE_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/include
-QRENCODE_LIB_PATH=${MXE_PATH}/usr/x86_64-w64-mingw32.static/lib
+BOOST_INCLUDE_PATH=${MXE_PATH}/usr/i686-w64-mingw32.static/include
+BOOST_LIB_PATH=${MXE_PATH}/usr/i686-w64-mingw32.static/lib
+BDB_INCLUDE_PATH=${MXE_PATH}/usr/i686-w64-mingw32.static/include
+BDB_LIB_PATH=${MXE_PATH}/usr/i686-w64-mingw32.static/lib
+OPENSSL_INCLUDE_PATH=${MXE_PATH}/usr/i686-w64-mingw32.static/include
+OPENSSL_LIB_PATH=${MXE_PATH}/usr/i686-w64-mingw32.static/lib
+MINIUPNPC_INCLUDE_PATH=${MXE_PATH}/usr/i686-w64-mingw32.static/include
+MINIUPNPC_LIB_PATH=${MXE_PATH}/usr/i686-w64-mingw32.static/lib
+QRENCODE_INCLUDE_PATH=${MXE_PATH}/usr/i686-w64-mingw32.static/include
+QRENCODE_LIB_PATH=${MXE_PATH}/usr/i686-w64-mingw32.static/lib
 
 windows:LIBS += -lws2_32 -lshlwapi
 windows:DEFINES += WIN32
