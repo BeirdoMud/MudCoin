@@ -1,4 +1,5 @@
 // Copyright (c) 2012 The Bitcoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #include <string>
@@ -6,12 +7,12 @@
 #include "version.h"
 
 // Name of client reported in the 'version' message. Report the same name
-// for both bitcoind and bitcoin-qt, to make it harder for attackers to
+// for both mudcoind and mudcoin-qt, to make it harder for attackers to
 // target servers or GUI users specifically.
 const std::string CLIENT_NAME("Satoshi");
 
 // Client version number
-#define CLIENT_VERSION_SUFFIX   "-beta"
+#define CLIENT_VERSION_SUFFIX   "-MudCoin"
 
 
 // The following part of the code determines the CLIENT_BUILD variable.
@@ -49,9 +50,9 @@ const std::string CLIENT_NAME("Satoshi");
 
 #ifndef BUILD_DESC
 #    ifdef GIT_COMMIT_ID
-#        define BUILD_DESC BUILD_DESC_FROM_COMMIT(PPCOIN_VERSION_MAJOR, PPCOIN_VERSION_MINOR, PPCOIN_VERSION_REVISION, PPCOIN_VERSION_BUILD, GIT_COMMIT_ID)
+#        define BUILD_DESC BUILD_DESC_FROM_COMMIT(MUDCOIN_VERSION_MAJOR, MUDCOIN_VERSION_MINOR, MUDCOIN_VERSION_REVISION, MUDCOIN_VERSION_BUILD, GIT_COMMIT_ID)
 #    else
-#        define BUILD_DESC BUILD_DESC_FROM_UNKNOWN(PPCOIN_VERSION_MAJOR, PPCOIN_VERSION_MINOR, PPCOIN_VERSION_REVISION, PPCOIN_VERSION_BUILD)
+#        define BUILD_DESC BUILD_DESC_FROM_UNKNOWN(MUDCOIN_VERSION_MAJOR, MUDCOIN_VERSION_MINOR, MUDCOIN_VERSION_REVISION, MUDCOIN_VERSION_BUILD)
 #    endif
 #endif
 
