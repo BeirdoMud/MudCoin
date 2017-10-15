@@ -939,7 +939,7 @@ Value getreceivedbyaddress(const Array& params, bool fHelp)
     CMudcoinAddress address = CMudcoinAddress(params[0].get_str());
     CScript scriptPubKey;
     if (!address.IsValid())
-        throw JSONRPCError(-5, "Invalid Peercoin address");
+        throw JSONRPCError(-5, "Invalid MudCoin address");
     scriptPubKey.SetDestination(address.Get());
     if (!IsMine(*pwalletMain,scriptPubKey))
         return (double)0.0;
