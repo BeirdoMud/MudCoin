@@ -778,7 +778,7 @@ void MudcoinGUI::handleURI(QString strURI)
     showNormalIfMinimized();
 }
 
-void MuMudinGUI::setEncryptionStatus(int status)
+void MudcoinGUI::setEncryptionStatus(int status)
 {
     switch(status)
     {
