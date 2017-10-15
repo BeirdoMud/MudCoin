@@ -16,10 +16,10 @@
 #include <string>
 #include "uint256.h"
 
-#define MUDCOIN_PORT  9901
-#define RPC_PORT     9902
-#define TESTNET_PORT 9903
-#define TESTNET_RPC_PORT 9904
+#define MUDCOIN_PORT  8462
+#define RPC_PORT     18462
+#define TESTNET_PORT 8562
+#define TESTNET_RPC_PORT 18562
 
 extern bool fTestNet;
 

@@ -278,10 +278,10 @@ class CMudcoinAddress : public CBase58Data
 public:
     enum
     {
-        PUBKEY_ADDRESS = 55,  // mudcoin: addresses begin with 'P'
-        SCRIPT_ADDRESS = 117, // mudcoin: addresses begin with 'p'
-        PUBKEY_ADDRESS_TEST = 111,
-        SCRIPT_ADDRESS_TEST = 196,
+        PUBKEY_ADDRESS = 50,  // mudcoin: addresses begin with 'M'
+        SCRIPT_ADDRESS = 63, // mudcoin: addresses begin with 'm'
+        PUBKEY_ADDRESS_TEST = 110, // S
+        SCRIPT_ADDRESS_TEST = 125, // s
     };
 
     bool Set(const CKeyID &id) {
