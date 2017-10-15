@@ -1,4 +1,4 @@
-#define BITCOINURI_QUEUE_NAME "BitcoinURI"
+#define MUDCOINURI_QUEUE_NAME "MudcoinURI"
 
 void ipcInit();
 void ipcShutdown();

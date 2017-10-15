@@ -2,7 +2,7 @@
 #include "ui_overviewpage.h"
 
 #include "walletmodel.h"
-#include "bitcoinunits.h"
+#include "mudcoinunits.h"
 #include "optionsmodel.h"
 #include "transactiontablemodel.h"
 #include "transactionfilterproxy.h"
@@ -20,7 +20,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate(): QAbstractItemDelegate(), unit(BitcoinUnits::BTC)
+    TxViewDelegate(): QAbstractItemDelegate(), unit(MudcoinUnits::MUD)
     {
 
     }
@@ -67,7 +67,7 @@ public:
             foreground = option.palette.color(QPalette::Text);
         }
         painter->setPen(foreground);
-        QString amountText = BitcoinUnits::formatWithUnit(unit, amount, true);
+        QString amountText = MudcoinUnits::formatWithUnit(unit, amount, true);
         if(!confirmed)
         {
             amountText = QString("[") + amountText + QString("]");
@@ -105,7 +105,7 @@ OverviewPage::OverviewPage(QWidget *parent) :
     ui->labelBalance->setToolTip(tr("Your current balance"));
     ui->labelBalance->setTextInteractionFlags(Qt::TextSelectableByMouse|Qt::TextSelectableByKeyboard);
 
-    // ppcoin: stake: <stake>
+    // mudcoin: stake: <stake>
     ui->labelStake->setFont(QFont("Monospace", -1, QFont::Bold));
     ui->labelStake->setToolTip(tr("Your current stake"));
     ui->labelStake->setTextInteractionFlags(Qt::TextSelectableByMouse|Qt::TextSelectableByKeyboard);
@@ -139,9 +139,9 @@ void OverviewPage::setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBa
     currentBalance = balance;
     currentStake = stake;
     currentUnconfirmedBalance = unconfirmedBalance;
-    ui->labelBalance->setText(BitcoinUnits::formatWithUnit(unit, balance));
-    ui->labelStake->setText(BitcoinUnits::formatWithUnit(unit, stake));
-    ui->labelUnconfirmed->setText(BitcoinUnits::formatWithUnit(unit, unconfirmedBalance));
+    ui->labelBalance->setText(MudcoinUnits::formatWithUnit(unit, balance));
+    ui->labelStake->setText(MudcoinUnits::formatWithUnit(unit, stake));
+    ui->labelUnconfirmed->setText(MudcoinUnits::formatWithUnit(unit, unconfirmedBalance));
 }
 
 void OverviewPage::setNumTransactions(int count)

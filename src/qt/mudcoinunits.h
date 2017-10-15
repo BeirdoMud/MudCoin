@@ -1,25 +1,25 @@
-#ifndef BITCOINUNITS_H
-#define BITCOINUNITS_H
+#ifndef MUDCOINUNITS_H
+#define MUDCOINUNITS_H
 
 #include <QString>
 #include <QAbstractListModel>
 
-/** Bitcoin unit definitions. Encapsulates parsing and formatting
+/** Mudcoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for dropdown selection boxes.
 */
-class BitcoinUnits: public QAbstractListModel
+class MudcoinUnits: public QAbstractListModel
 {
 public:
-    explicit BitcoinUnits(QObject *parent);
+    explicit MudcoinUnits(QObject *parent);
 
-    /** Bitcoin units.
-      @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
+    /** Mudcoin units.
+      @note Source: https://en.mudcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {
-        BTC,
-        mBTC,
-        uBTC
+        MUD,
+        mMUD,
+        uMUD
     };
 
     //! @name Static API
@@ -59,8 +59,8 @@ public:
     QVariant data(const QModelIndex &index, int role) const;
     ///@}
 private:
-    QList<BitcoinUnits::Unit> unitlist;
+    QList<MudcoinUnits::Unit> unitlist;
 };
-typedef BitcoinUnits::Unit BitcoinUnit;
+typedef MudcoinUnits::Unit MudcoinUnit;
 
-#endif // BITCOINUNITS_H
+#endif // MUDCOINUNITS_H

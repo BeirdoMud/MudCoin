@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2011-2012 The PPCoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -777,7 +778,7 @@ void FormatException(char* pszMessage, std::exception* pex, const char* pszThrea
     pszModule[0] = '\0';
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "ppcoin";
+    const char* pszModule = "mudcoin";
 #endif
     if (pex)
         snprintf(pszMessage, 1000,
@@ -852,12 +853,12 @@ boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
 
-    // Windows: C:\Documents and Settings\username\Application Data\PPCoin
-    // Mac: ~/Library/Application Support/PPCoin
-    // Unix: ~/.ppcoin
+    // Windows: C:\Documents and Settings\username\Application Data\MudCoin
+    // Mac: ~/Library/Application Support/MudCoin
+    // Unix: ~/.MudCoin
 #ifdef WIN32
     // Windows
-    return MyGetSpecialFolderPath(CSIDL_APPDATA, true) / "PPCoin";
+    return MyGetSpecialFolderPath(CSIDL_APPDATA, true) / "MudCoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -869,10 +870,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "PPCoin";
+    return pathRet / "MudCoin";
 #else
     // Unix
-    return pathRet / ".ppcoin";
+    return pathRet / ".MudCoin";
 #endif
 #endif
 }
@@ -916,7 +917,7 @@ boost::filesystem::path GetConfigFile()
 {
     namespace fs = boost::filesystem;
 
-    fs::path pathConfigFile(GetArg("-conf", "ppcoin.conf"));
+    fs::path pathConfigFile(GetArg("-conf", "MudCoin.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -929,14 +930,14 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
     fs::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good())
-        return; // No bitcoin.conf file is OK
+        return; // No MudCoin.conf file is OK
 
     set<string> setOptions;
     setOptions.insert("*");
 
     for (pod::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override bitcoin.conf
+        // Don't overwrite existing settings so command line settings override MudCoin.conf
         string strKey = string("-") + it->string_key;
         if (mapSettingsRet.count(strKey) == 0)
         {
@@ -952,7 +953,7 @@ boost::filesystem::path GetPidFile()
 {
     namespace fs = boost::filesystem;
 
-    fs::path pathPidFile(GetArg("-pid", "ppcoind.pid"));
+    fs::path pathPidFile(GetArg("-pid", "MudCoind.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1071,10 +1072,10 @@ void AddTimeData(const CNetAddr& ip, int64 nTime)
                 if (!fMatch)
                 {
                     fDone = true;
-                    string strMessage = _("Warning: Please check that your computer's date and time are correct.  If your clock is wrong PPCoin will not work properly.");
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct.  If your clock is wrong MudCoin will not work properly.");
                     strMiscWarning = strMessage;
                     printf("*** %s\n", strMessage.c_str());
-                    ThreadSafeMessageBox(strMessage+" ", string("PPCoin"), wxOK | wxICON_EXCLAMATION);
+                    ThreadSafeMessageBox(strMessage+" ", string("MudCoin"), wxOK | wxICON_EXCLAMATION);
                 }
             }
         }
@@ -1107,7 +1108,7 @@ string FormatFullVersion()
     return CLIENT_BUILD;
 }
 
-// Format the subversion field according to BIP 14 spec (https://en.bitcoin.it/wiki/BIP_0014)
+// Format the subversion field according to BIP 14 spec (https://en.mudcoin.it/wiki/BIP_0014)
 std::string FormatSubVersion(const std::string& name, int nClientVersion, const std::vector<std::string>& comments)
 {
     std::ostringstream ss;
@@ -1124,7 +1125,7 @@ std::string FormatSubVersion(const std::string& name, int nClientVersion, const 
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return MyGetSpecialFolderPath(CSIDL_STARTUP, true) / "PPCoin.lnk";
+    return MyGetSpecialFolderPath(CSIDL_STARTUP, true) / "MudCoin.lnk";
 }
 
 bool GetStartOnSystemStartup()
@@ -1205,7 +1206,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "ppcoin.desktop";
+    return GetAutostartDir() / "mudcoin.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -1243,10 +1244,10 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         boost::filesystem::ofstream optionFile(GetAutostartFilePath(), ios_base::out|ios_base::trunc);
         if (!optionFile.good())
             return false;
-        // Write a bitcoin.desktop file to the autostart directory:
+        // Write a mudcoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=PPCoin\n";
+        optionFile << "Name=MudCoin\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

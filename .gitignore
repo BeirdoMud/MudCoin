@@ -1,7 +1,7 @@
 src/*.exe
-src/ppcoin
-src/ppcoind
-src/test_ppcoin
+src/MudCoin
+src/MudCoind
+src/test_MudCoin
 src/build.h
 .*.swp
 *.*~*
@@ -10,11 +10,11 @@ src/build.h
 *.orig
 *.o
 *.patch
-.ppcoin
+.MudCoin
 #compilation and Qt preprocessor part
 *.qm
 Makefile
-ppcoin-qt
+MudCoin-qt
 #resources cpp
 qrc_*.cpp
 #qt creator

@@ -20,7 +20,7 @@ QRCodeDialog::QRCodeDialog(const QString &addr, const QString &label, bool enabl
     ui->chkReqPayment->setVisible(enableReq);
     ui->lnReqAmount->setVisible(enableReq);
     ui->lblAmount->setVisible(enableReq);
-    ui->lblBTC->setVisible(enableReq);
+    ui->lblMUD->setVisible(enableReq);
 
     ui->lnLabel->setText(label);
 
@@ -66,7 +66,7 @@ void QRCodeDialog::genCode()
 
 QString QRCodeDialog::getURI()
 {
-    QString ret = QString("ppcoin:%1").arg(address);
+    QString ret = QString("mudcoin:%1").arg(address);
 
     int paramCount = 0;
     if (ui->chkReqPayment->isChecked() && !ui->lnReqAmount->text().isEmpty())

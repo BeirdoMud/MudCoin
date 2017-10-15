@@ -1,9 +1,9 @@
-Building Bitcoin
+Building MudCoin
 
-See doc/readme-qt.rst for instructions on building Bitcoin QT,
+See doc/readme-qt.rst for instructions on building MudCoin QT,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of Bitcoin.
+implementation of MudCoin.
 
-See doc/build-*.txt for instructions on building bitcoind,
+See doc/build-*.txt for instructions on building MudCoind,
 the intended-for-services, no-graphical-interface, reference
-implementation of Bitcoin.
+implementation of MudCoin.

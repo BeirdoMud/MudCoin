@@ -4,24 +4,24 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="14"/>
-        <source>About PPCoin</source>
-        <translation>O PPCoinu</translation>
+        <source>About MudCoin</source>
+        <translation>O MudCoinu</translation>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="53"/>
-        <source>&lt;b&gt;PPCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;PPCoin&lt;/b&gt; verze</translation>
+        <source>&lt;b&gt;MudCoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;MudCoin&lt;/b&gt; verze</translation>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="85"/>
-        <source>Copyright © 2011-2013 PPCoin Developers
+        <source>Copyright © 2017 MudCoin Developers
 
 This is experimental software.
 
 Distributed under the MIT/X11 software license, see the accompanying file license.txt or http://www.opensource.org/licenses/mit-license.php.
 
 This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</source>
-        <translation>Copyright © 2011-2013 Vývojáři PPCoinu
+        <translation>Copyright © 2017 Vývojáři MudCoinu
 
 Tohle je experimentální program.
 
@@ -39,8 +39,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="20"/>
-        <source>These are your PPCoin addresses for receiving payments.  You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Tohle jsou tvé PPCoinové adresy pro příjem plateb.  Můžeš pokaždé dát každému odesílateli jinou adresu, abys věděl, kdo ti kdy kolik platil.</translation>
+        <source>These are your MudCoin addresses for receiving payments.  You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Tohle jsou tvé MudCoinové adresy pro příjem plateb.  Můžeš pokaždé dát každému odesílateli jinou adresu, abys věděl, kdo ti kdy kolik platil.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="33"/>
@@ -226,9 +226,9 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="102"/>
-        <source>WARNING: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PPCoinS&lt;/b&gt;!
+        <source>WARNING: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MudCoinS&lt;/b&gt;!
 Are you sure you wish to encrypt your wallet?</source>
-        <translation>VAROVÁNÍ: Pokud zašifruješ peněženku a ztratíš či zapomeneš heslo, &lt;b&gt;PŘIJDEŠ O VŠECHNY PPCoinY&lt;/b&gt;!
+        <translation>VAROVÁNÍ: Pokud zašifruješ peněženku a ztratíš či zapomeneš heslo, &lt;b&gt;PŘIJDEŠ O VŠECHNY MudCoinY&lt;/b&gt;!
 Jsi si jistý, že chceš peněženku zašifrovat?</translation>
     </message>
     <message>
@@ -239,8 +239,8 @@ Jsi si jistý, že chceš peněženku zašifrovat?</translation>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="112"/>
-        <source>PPCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PPCoins from being stolen by malware infecting your computer.</source>
-        <translation>PPCoin se teď ukončí, aby dokončil zašifrování. Pamatuj však, že pouhé zašifrování peněženky úplně nezabraňuje krádeži tvých PPCoinů malwarem, kterým se může počítač nakazit.</translation>
+        <source>MudCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MudCoins from being stolen by malware infecting your computer.</source>
+        <translation>MudCoin se teď ukončí, aby dokončil zašifrování. Pamatuj však, že pouhé zašifrování peněženky úplně nezabraňuje krádeži tvých MudCoinů malwarem, kterým se může počítač nakazit.</translation>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="208"/>
@@ -291,280 +291,280 @@ Jsi si jistý, že chceš peněženku zašifrovat?</translation>
     </message>
 </context>
 <context>
-    <name>PPCoinGUI</name>
+    <name>MudCoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="69"/>
-        <source>PPCoin Wallet</source>
-        <translation>PPCoinová peněženka</translation>
+        <location filename="../mudcoingui.cpp" line="69"/>
+        <source>MudCoin Wallet</source>
+        <translation>MudCoinová peněženka</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="142"/>
-        <location filename="../bitcoingui.cpp" line="464"/>
+        <location filename="../mudcoingui.cpp" line="142"/>
+        <location filename="../mudcoingui.cpp" line="464"/>
         <source>Synchronizing with network...</source>
         <translation>Synchronizuji se sítí...</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="145"/>
+        <location filename="../mudcoingui.cpp" line="145"/>
         <source>Block chain synchronization in progress</source>
         <translation>Provádí se synchronizace řetězce bloků</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="176"/>
+        <location filename="../mudcoingui.cpp" line="176"/>
         <source>&amp;Overview</source>
         <translation>&amp;Přehled</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="177"/>
+        <location filename="../mudcoingui.cpp" line="177"/>
         <source>Show general overview of wallet</source>
         <translation>Zobraz celkový přehled peněženky</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="182"/>
+        <location filename="../mudcoingui.cpp" line="182"/>
         <source>&amp;Transactions</source>
         <translation>&amp;Transakce</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="183"/>
+        <location filename="../mudcoingui.cpp" line="183"/>
         <source>Browse transaction history</source>
         <translation>Procházet historii transakcí</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="188"/>
+        <location filename="../mudcoingui.cpp" line="188"/>
         <source>&amp;Address Book</source>
         <translation>&amp;Adresář</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="189"/>
+        <location filename="../mudcoingui.cpp" line="189"/>
         <source>Edit the list of stored addresses and labels</source>
         <translation>Uprav seznam uložených adres a jejich označení</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="194"/>
+        <location filename="../mudcoingui.cpp" line="194"/>
         <source>&amp;Receive coins</source>
         <translation>Pří&amp;jem mincí</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="195"/>
+        <location filename="../mudcoingui.cpp" line="195"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation>Zobraz seznam adres pro příjem plateb</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="200"/>
+        <location filename="../mudcoingui.cpp" line="200"/>
         <source>&amp;Send coins</source>
         <translation>P&amp;oslání mincí</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="201"/>
-        <source>Send coins to a PPCoin address</source>
-        <translation>Pošli mince na PPCoinovou adresu</translation>
+        <location filename="../mudcoingui.cpp" line="201"/>
+        <source>Send coins to a MudCoin address</source>
+        <translation>Pošli mince na MudCoinovou adresu</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="206"/>
+        <location filename="../mudcoingui.cpp" line="206"/>
         <source>Sign &amp;message</source>
         <translation>Po&amp;depiš zprávu</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="207"/>
+        <location filename="../mudcoingui.cpp" line="207"/>
         <source>Prove you control an address</source>
         <translation>Prokaž vlastnictví adresy</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="226"/>
+        <location filename="../mudcoingui.cpp" line="226"/>
         <source>E&amp;xit</source>
         <translation>&amp;Konec</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="227"/>
+        <location filename="../mudcoingui.cpp" line="227"/>
         <source>Quit application</source>
         <translation>Ukončit aplikaci</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="230"/>
+        <location filename="../mudcoingui.cpp" line="230"/>
         <source>&amp;About %1</source>
         <translation>&amp;O %1</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="231"/>
-        <source>Show information about PPCoin</source>
-        <translation>Zobraz informace o PPCoinu</translation>
+        <location filename="../mudcoingui.cpp" line="231"/>
+        <source>Show information about MudCoin</source>
+        <translation>Zobraz informace o MudCoinu</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="233"/>
+        <location filename="../mudcoingui.cpp" line="233"/>
         <source>About &amp;Qt</source>
         <translation>O &amp;Qt</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="234"/>
+        <location filename="../mudcoingui.cpp" line="234"/>
         <source>Show information about Qt</source>
         <translation>Zobraz informace o Qt</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="236"/>
+        <location filename="../mudcoingui.cpp" line="236"/>
         <source>&amp;Options...</source>
         <translation>&amp;Možnosti...</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="237"/>
-        <source>Modify configuration options for PPCoin</source>
-        <translation>Uprav nastavení PPCoinu</translation>
+        <location filename="../mudcoingui.cpp" line="237"/>
+        <source>Modify configuration options for MudCoin</source>
+        <translation>Uprav nastavení MudCoinu</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="239"/>
-        <source>Open &amp;PPCoin</source>
-        <translation>Otevři &amp;PPCoin</translation>
+        <location filename="../mudcoingui.cpp" line="239"/>
+        <source>Open &amp;MudCoin</source>
+        <translation>Otevři &amp;MudCoin</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="240"/>
-        <source>Show the PPCoin window</source>
-        <translation>Zobraz okno PPCoinu</translation>
+        <location filename="../mudcoingui.cpp" line="240"/>
+        <source>Show the MudCoin window</source>
+        <translation>Zobraz okno MudCoinu</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="241"/>
+        <location filename="../mudcoingui.cpp" line="241"/>
         <source>&amp;Export...</source>
         <translation>&amp;Export...</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="242"/>
+        <location filename="../mudcoingui.cpp" line="242"/>
         <source>Export the data in the current tab to a file</source>
         <translation>Exportovat data z tohoto panelu do souboru</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="243"/>
+        <location filename="../mudcoingui.cpp" line="243"/>
         <source>&amp;Encrypt Wallet</source>
         <translation>Zaši&amp;fruj peněženku</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="244"/>
+        <location filename="../mudcoingui.cpp" line="244"/>
         <source>Encrypt or decrypt wallet</source>
         <translation>Zašifruj nebo dešifruj peněženku</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="246"/>
+        <location filename="../mudcoingui.cpp" line="246"/>
         <source>&amp;Backup Wallet</source>
         <translation>&amp;Zazálohovat peněženku</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="247"/>
+        <location filename="../mudcoingui.cpp" line="247"/>
         <source>Backup wallet to another location</source>
         <translation>Zazálohuj peněženku na jiné místo</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="248"/>
+        <location filename="../mudcoingui.cpp" line="248"/>
         <source>&amp;Change Passphrase</source>
         <translation>Změň &amp;heslo</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="249"/>
+        <location filename="../mudcoingui.cpp" line="249"/>
         <source>Change the passphrase used for wallet encryption</source>
         <translation>Změň heslo k šifrování peněženky</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="272"/>
+        <location filename="../mudcoingui.cpp" line="272"/>
         <source>&amp;File</source>
         <translation>&amp;Soubor</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="281"/>
+        <location filename="../mudcoingui.cpp" line="281"/>
         <source>&amp;Settings</source>
         <translation>&amp;Nastavení</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="287"/>
+        <location filename="../mudcoingui.cpp" line="287"/>
         <source>&amp;Help</source>
         <translation>Ná&amp;pověda</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="294"/>
+        <location filename="../mudcoingui.cpp" line="294"/>
         <source>Tabs toolbar</source>
         <translation>Panel s listy</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="305"/>
+        <location filename="../mudcoingui.cpp" line="305"/>
         <source>Actions toolbar</source>
         <translation>Panel akcí</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="317"/>
+        <location filename="../mudcoingui.cpp" line="317"/>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="407"/>
-        <source>PPCoin-qt</source>
-        <translation>PPCoin-qt</translation>
+        <location filename="../mudcoingui.cpp" line="407"/>
+        <source>MudCoin-qt</source>
+        <translation>MudCoin-qt</translation>
     </message>
     <message numerus="yes">
-        <location filename="../bitcoingui.cpp" line="449"/>
-        <source>%n active connection(s) to PPCoin network</source>
-        <translation><numerusform>%n aktivní spojení do PPCoinové sítě</numerusform><numerusform>%n aktivní spojení do PPCoinové sítě</numerusform><numerusform>%n aktivních spojení do PPCoinové sítě</numerusform></translation>
+        <location filename="../mudcoingui.cpp" line="449"/>
+        <source>%n active connection(s) to MudCoin network</source>
+        <translation><numerusform>%n aktivní spojení do MudCoinové sítě</numerusform><numerusform>%n aktivní spojení do MudCoinové sítě</numerusform><numerusform>%n aktivních spojení do MudCoinové sítě</numerusform></translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="475"/>
+        <location filename="../mudcoingui.cpp" line="475"/>
         <source>Downloaded %1 of %2 blocks of transaction history.</source>
         <translation>Staženo %1 z %2 bloků transakční historie.</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="487"/>
+        <location filename="../mudcoingui.cpp" line="487"/>
         <source>Downloaded %1 blocks of transaction history.</source>
         <translation>Staženo %1 bloků transakční historie.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../bitcoingui.cpp" line="502"/>
+        <location filename="../mudcoingui.cpp" line="502"/>
         <source>%n second(s) ago</source>
         <translation><numerusform>před vteřinou</numerusform><numerusform>před %n vteřinami</numerusform><numerusform>před %n vteřinami</numerusform></translation>
     </message>
     <message numerus="yes">
-        <location filename="../bitcoingui.cpp" line="506"/>
+        <location filename="../mudcoingui.cpp" line="506"/>
         <source>%n minute(s) ago</source>
         <translation><numerusform>před minutou</numerusform><numerusform>před %n minutami</numerusform><numerusform>před %n minutami</numerusform></translation>
     </message>
     <message numerus="yes">
-        <location filename="../bitcoingui.cpp" line="510"/>
+        <location filename="../mudcoingui.cpp" line="510"/>
         <source>%n hour(s) ago</source>
         <translation><numerusform>před hodinou</numerusform><numerusform>před %n hodinami</numerusform><numerusform>před %n hodinami</numerusform></translation>
     </message>
     <message numerus="yes">
-        <location filename="../bitcoingui.cpp" line="514"/>
+        <location filename="../mudcoingui.cpp" line="514"/>
         <source>%n day(s) ago</source>
         <translation><numerusform>včera</numerusform><numerusform>před %n dny</numerusform><numerusform>před %n dny</numerusform></translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="520"/>
+        <location filename="../mudcoingui.cpp" line="520"/>
         <source>Up to date</source>
         <translation>aktuální</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="525"/>
+        <location filename="../mudcoingui.cpp" line="525"/>
         <source>Catching up...</source>
         <translation>Stahuji...</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="533"/>
+        <location filename="../mudcoingui.cpp" line="533"/>
         <source>Last received block was generated %1.</source>
         <translation>Poslední stažený blok byl vygenerován %1.</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="597"/>
+        <location filename="../mudcoingui.cpp" line="597"/>
         <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
         <translation>Tahle transakce přesahuje velikostní limit.  I tak ji ale můžeš poslat, pokud za ni zaplatíš poplatek %1, který půjde uzlům, které tvou transakci zpracují, a navíc tak podpoříš síť.  Chceš zaplatit poplatek?</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="602"/>
+        <location filename="../mudcoingui.cpp" line="602"/>
         <source>Sending...</source>
         <translation>Posílám...</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="629"/>
+        <location filename="../mudcoingui.cpp" line="629"/>
         <source>Sent transaction</source>
         <translation>Odeslané transakce</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="630"/>
+        <location filename="../mudcoingui.cpp" line="630"/>
         <source>Incoming transaction</source>
         <translation>Příchozí transakce</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="631"/>
+        <location filename="../mudcoingui.cpp" line="631"/>
         <source>Date: %1
 Amount: %2
 Type: %3
@@ -577,32 +577,32 @@ Adresa: %4
 </translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="751"/>
+        <location filename="../mudcoingui.cpp" line="751"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Peněženka je &lt;b&gt;zašifrovaná&lt;/b&gt; a momentálně &lt;b&gt;odemčená&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="759"/>
+        <location filename="../mudcoingui.cpp" line="759"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
         <translation>Peněženka je &lt;b&gt;zašifrovaná&lt;/b&gt; a momentálně &lt;b&gt;zamčená&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="782"/>
+        <location filename="../mudcoingui.cpp" line="782"/>
         <source>Backup Wallet</source>
         <translation>Záloha peněženky</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="782"/>
+        <location filename="../mudcoingui.cpp" line="782"/>
         <source>Wallet Data (*.dat)</source>
         <translation>Data peněženky (*.dat)</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="785"/>
+        <location filename="../mudcoingui.cpp" line="785"/>
         <source>Backup Failed</source>
         <translation>Zálohování selhalo</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="785"/>
+        <location filename="../mudcoingui.cpp" line="785"/>
         <source>There was an error trying to save the wallet data to the new location.</source>
         <translation>Při ukládání peněženky na nové místo se přihodila nějaká chyba.</translation>
     </message>
@@ -679,8 +679,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../editaddressdialog.cpp" line="96"/>
-        <source>The entered address &quot;%1&quot; is not a valid PPCoin address.</source>
-        <translation>Zadaná adresa &quot;%1&quot; není platná PPCoinová adresa.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid MudCoin address.</source>
+        <translation>Zadaná adresa &quot;%1&quot; není platná MudCoinová adresa.</translation>
     </message>
     <message>
         <location filename="../editaddressdialog.cpp" line="101"/>
@@ -697,13 +697,13 @@ Adresa: %4
     <name>MainOptionsPage</name>
     <message>
         <location filename="../optionsdialog.cpp" line="170"/>
-        <source>&amp;Start PPCoin on window system startup</source>
-        <translation>&amp;Spustit PPCoin při startu systému</translation>
+        <source>&amp;Start MudCoin on window system startup</source>
+        <translation>&amp;Spustit MudCoin při startu systému</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="171"/>
-        <source>Automatically start PPCoin after the computer is turned on</source>
-        <translation>Automaticky spustí PPCoin po zapnutí počítače</translation>
+        <source>Automatically start MudCoin after the computer is turned on</source>
+        <translation>Automaticky spustí MudCoin po zapnutí počítače</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="175"/>
@@ -722,7 +722,7 @@ Adresa: %4
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="181"/>
-        <source>Automatically open the PPCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the MudCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Automaticky otevře potřebný port na routeru. Tohle funguje jen za předpokladu, že tvůj router podporuje UPnP a že je UPnP povolené.</translation>
     </message>
     <message>
@@ -743,7 +743,7 @@ Adresa: %4
     <message>
         <location filename="../optionsdialog.cpp" line="191"/>
         <source>Connect to the Bitcon network through a SOCKS4 proxy (e.g. when connecting through Tor)</source>
-        <translation>Připojí se do PPCoinové sítě přes SOCKS4 proxy (např. když se připojuje přes Tor)</translation>
+        <translation>Připojí se do MudCoinové sítě přes SOCKS4 proxy (např. když se připojuje přes Tor)</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="196"/>
@@ -903,8 +903,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="47"/>
-        <source>123.456 BTC</source>
-        <translation>123.456 BTC</translation>
+        <source>123.456 MUD</source>
+        <translation>123.456 MUD</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="54"/>
@@ -923,8 +923,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="75"/>
-        <source>0 BTC</source>
-        <translation>0 BTC</translation>
+        <source>0 MUD</source>
+        <translation>0 MUD</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="82"/>
@@ -984,8 +984,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../forms/qrcodedialog.ui" line="102"/>
-        <source>BTC</source>
-        <translation>BTC</translation>
+        <source>MUD</source>
+        <translation>MUD</translation>
     </message>
     <message>
         <location filename="../forms/qrcodedialog.ui" line="118"/>
@@ -1054,8 +1054,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="113"/>
-        <source>123.456 BTC</source>
-        <translation>123.456 BTC</translation>
+        <source>123.456 MUD</source>
+        <translation>123.456 MUD</translation>
     </message>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="144"/>
@@ -1183,8 +1183,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="25"/>
-        <source>Enter a PPCoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Zadej PPCoinovou adresu (např. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a MudCoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Zadej MudCoinovou adresu (např. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
@@ -1632,346 +1632,346 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
-    <name>PPCoin-core</name>
+    <name>MudCoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="3"/>
-        <source>PPCoin version</source>
-        <translation>Verze PPCoinu</translation>
+        <location filename="../mudcoinstrings.cpp" line="3"/>
+        <source>MudCoin version</source>
+        <translation>Verze MudCoinu</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="4"/>
+        <location filename="../mudcoinstrings.cpp" line="4"/>
         <source>Usage:</source>
         <translation>Užití:</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="5"/>
-        <source>Send command to -server or ppcoind</source>
-        <translation>Poslat příkaz pro -server nebo ppcoind</translation>
+        <location filename="../mudcoinstrings.cpp" line="5"/>
+        <source>Send command to -server or MudCoind</source>
+        <translation>Poslat příkaz pro -server nebo MudCoind</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="6"/>
+        <location filename="../mudcoinstrings.cpp" line="6"/>
         <source>List commands</source>
         <translation>Výpis příkazů</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="7"/>
+        <location filename="../mudcoinstrings.cpp" line="7"/>
         <source>Get help for a command</source>
         <translation>Získat nápovědu pro příkaz</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="8"/>
+        <location filename="../mudcoinstrings.cpp" line="8"/>
         <source>Options:</source>
         <translation>Možnosti:</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="9"/>
-        <source>Specify configuration file (default: PPCoin.conf)</source>
-        <translation>Konfigurační soubor (výchozí: PPCoin.conf)</translation>
+        <location filename="../mudcoinstrings.cpp" line="9"/>
+        <source>Specify configuration file (default: MudCoin.conf)</source>
+        <translation>Konfigurační soubor (výchozí: MudCoin.conf)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="10"/>
-        <source>Specify pid file (default: ppcoind.pid)</source>
-        <translation>PID soubor (výchozí: ppcoind.pid)</translation>
+        <location filename="../mudcoinstrings.cpp" line="10"/>
+        <source>Specify pid file (default: MudCoind.pid)</source>
+        <translation>PID soubor (výchozí: MudCoind.pid)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="11"/>
+        <location filename="../mudcoinstrings.cpp" line="11"/>
         <source>Generate coins</source>
         <translation>Generovat mince</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="12"/>
+        <location filename="../mudcoinstrings.cpp" line="12"/>
         <source>Don&apos;t generate coins</source>
         <translation>Negenerovat mince</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="13"/>
+        <location filename="../mudcoinstrings.cpp" line="13"/>
         <source>Start minimized</source>
         <translation>Startovat minimalizovaně</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="14"/>
+        <location filename="../mudcoinstrings.cpp" line="14"/>
         <source>Specify data directory</source>
         <translation>Adresář pro data</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="15"/>
+        <location filename="../mudcoinstrings.cpp" line="15"/>
         <source>Specify connection timeout (in milliseconds)</source>
         <translation>Zadej časový limit spojení (v milisekundách)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="16"/>
+        <location filename="../mudcoinstrings.cpp" line="16"/>
         <source>Connect through socks4 proxy</source>
         <translation>Připojovat se přes socks4 proxy</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="17"/>
+        <location filename="../mudcoinstrings.cpp" line="17"/>
         <source>Allow DNS lookups for addnode and connect</source>
         <translation>Povolit DNS dotazy pro addnode (přidání uzlu) a connect (připojení)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="18"/>
+        <location filename="../mudcoinstrings.cpp" line="18"/>
         <source>Listen for connections on &lt;port&gt; (default: 8333 or testnet: 18333)</source>
         <translation>Čekat na spojení na &lt;portu&gt; (výchozí: 8333 nebo testnet: 18333)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="19"/>
+        <location filename="../mudcoinstrings.cpp" line="19"/>
         <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
         <translation>Povol nejvýše &lt;n&gt; připojení k uzlům (výchozí: 125)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="20"/>
+        <location filename="../mudcoinstrings.cpp" line="20"/>
         <source>Add a node to connect to</source>
         <translation>Přidat uzel, ke kterému se připojit</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="21"/>
+        <location filename="../mudcoinstrings.cpp" line="21"/>
         <source>Connect only to the specified node</source>
         <translation>Připojovat se pouze k udanému uzlu</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="22"/>
+        <location filename="../mudcoinstrings.cpp" line="22"/>
         <source>Don&apos;t accept connections from outside</source>
         <translation>Nepřijímat připojení zvenčí</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="23"/>
+        <location filename="../mudcoinstrings.cpp" line="23"/>
         <source>Don&apos;t bootstrap list of peers using DNS</source>
         <translation>Nenačítat seznam uzlů z DNS</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="24"/>
+        <location filename="../mudcoinstrings.cpp" line="24"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
         <translation>Práh pro odpojování nesprávně se chovajících uzlů (výchozí: 100)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="25"/>
+        <location filename="../mudcoinstrings.cpp" line="25"/>
         <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
         <translation>Doba ve vteřinách, po kterou se nebudou moci nesprávně se chovající uzly znovu připojit (výchozí: 86400)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="28"/>
+        <location filename="../mudcoinstrings.cpp" line="28"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 10000)</source>
         <translation>Maximální velikost přijímacího bufferu pro každé spojení, &lt;n&gt;*1000 bytů (výchozí: 10000)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="29"/>
+        <location filename="../mudcoinstrings.cpp" line="29"/>
         <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 10000)</source>
         <translation>Maximální velikost odesílacího bufferu pro každé spojení, &lt;n&gt;*1000 bytů (výchozí: 10000)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="30"/>
+        <location filename="../mudcoinstrings.cpp" line="30"/>
         <source>Don&apos;t attempt to use UPnP to map the listening port</source>
         <translation>Nesnažit se použít UPnP k namapování naslouchacího portu</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="31"/>
+        <location filename="../mudcoinstrings.cpp" line="31"/>
         <source>Attempt to use UPnP to map the listening port</source>
         <translation>Snažit se použít UPnP k namapování naslouchacího portu</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="32"/>
+        <location filename="../mudcoinstrings.cpp" line="32"/>
         <source>Fee per kB to add to transactions you send</source>
         <translation>Poplatek za kB, který se přidá ke každé odeslané transakci</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="33"/>
+        <location filename="../mudcoinstrings.cpp" line="33"/>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Akceptovat příkazy z příkazové řádky a přes JSON-RPC</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="34"/>
+        <location filename="../mudcoinstrings.cpp" line="34"/>
         <source>Run in the background as a daemon and accept commands</source>
         <translation>Běžet na pozadí jako démon a akceptovat příkazy</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="35"/>
+        <location filename="../mudcoinstrings.cpp" line="35"/>
         <source>Use the test network</source>
         <translation>Použít testovací síť (testnet)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="36"/>
+        <location filename="../mudcoinstrings.cpp" line="36"/>
         <source>Output extra debugging information</source>
         <translation>Tisknout speciální ladící informace</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="37"/>
+        <location filename="../mudcoinstrings.cpp" line="37"/>
         <source>Prepend debug output with timestamp</source>
         <translation>Připojit před ladící výstup časové razítko</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="38"/>
+        <location filename="../mudcoinstrings.cpp" line="38"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Posílat stopovací/ladící informace do konzole místo do souboru debug.log</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="39"/>
+        <location filename="../mudcoinstrings.cpp" line="39"/>
         <source>Send trace/debug info to debugger</source>
         <translation>Posílat stopovací/ladící informace do debuggeru</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="40"/>
+        <location filename="../mudcoinstrings.cpp" line="40"/>
         <source>Username for JSON-RPC connections</source>
         <translation>Uživatelské jméno pro JSON-RPC spojení</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="41"/>
+        <location filename="../mudcoinstrings.cpp" line="41"/>
         <source>Password for JSON-RPC connections</source>
         <translation>Heslo pro JSON-RPC spojení</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="42"/>
+        <location filename="../mudcoinstrings.cpp" line="42"/>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332)</source>
         <translation>Čekat na JSON-RPC spojení na &lt;portu&gt; (výchozí: 8332)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="43"/>
+        <location filename="../mudcoinstrings.cpp" line="43"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
         <translation>Povolit JSON-RPC spojení ze specifikované IP adresy</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="44"/>
+        <location filename="../mudcoinstrings.cpp" line="44"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
         <translation>Posílat příkazy uzlu běžícím na &lt;ip&gt; (výchozí: 127.0.0.1)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="45"/>
+        <location filename="../mudcoinstrings.cpp" line="45"/>
         <source>Set key pool size to &lt;n&gt; (default: 100)</source>
         <translation>Nastavit zásobník klíčů na velikost &lt;n&gt; (výchozí: 100)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="46"/>
+        <location filename="../mudcoinstrings.cpp" line="46"/>
         <source>Rescan the block chain for missing wallet transactions</source>
         <translation>Přeskenovat řetězec bloků na chybějící transakce tvé pěněženky</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="47"/>
+        <location filename="../mudcoinstrings.cpp" line="47"/>
         <source>
-SSL options: (see the PPCoin Wiki for SSL setup instructions)</source>
+SSL options: (see the MudCoin Wiki for SSL setup instructions)</source>
         <translation>
-Možnosti SSL: (viz instrukce nastavení SSL v PPCoin Wiki)</translation>
+Možnosti SSL: (viz instrukce nastavení SSL v MudCoin Wiki)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="50"/>
+        <location filename="../mudcoinstrings.cpp" line="50"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
         <translation>Použít OpenSSL (https) pro JSON-RPC spojení</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="51"/>
+        <location filename="../mudcoinstrings.cpp" line="51"/>
         <source>Server certificate file (default: server.cert)</source>
         <translation>Soubor se serverovým certifikátem (výchozí: server.cert)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="52"/>
+        <location filename="../mudcoinstrings.cpp" line="52"/>
         <source>Server private key (default: server.pem)</source>
         <translation>Soubor se serverovým soukromým klíčem (výchozí: server.pem)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="53"/>
+        <location filename="../mudcoinstrings.cpp" line="53"/>
         <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
         <translation>Akceptovatelné šifry (výchozí: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="56"/>
+        <location filename="../mudcoinstrings.cpp" line="56"/>
         <source>This help message</source>
         <translation>Tato nápověda</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="57"/>
-        <source>Cannot obtain a lock on data directory %s.  PPCoin is probably already running.</source>
-        <translation>Nedaří se mi získat zámek na datový adresář %s. PPCoin pravděpodobně už jednou běží.</translation>
+        <location filename="../mudcoinstrings.cpp" line="57"/>
+        <source>Cannot obtain a lock on data directory %s.  MudCoin is probably already running.</source>
+        <translation>Nedaří se mi získat zámek na datový adresář %s. MudCoin pravděpodobně už jednou běží.</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="60"/>
+        <location filename="../mudcoinstrings.cpp" line="60"/>
         <source>Loading addresses...</source>
         <translation>Načítám adresy...</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="61"/>
+        <location filename="../mudcoinstrings.cpp" line="61"/>
         <source>Error loading addr.dat</source>
         <translation>Chyba při načítání addr.dat</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="63"/>
+        <location filename="../mudcoinstrings.cpp" line="63"/>
         <source>Error loading blkindex.dat</source>
         <translation>Chyba při načítání blkindex.dat</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="65"/>
+        <location filename="../mudcoinstrings.cpp" line="65"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
         <translation>Chyba při načítání wallet.dat: peněženka je poškozená</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="66"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of PPCoin</source>
-        <translation>Chyba při načítání wallet.dat: peněženka vyžaduje novější verzi PPCoinu</translation>
+        <location filename="../mudcoinstrings.cpp" line="66"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of MudCoin</source>
+        <translation>Chyba při načítání wallet.dat: peněženka vyžaduje novější verzi MudCoinu</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="67"/>
-        <source>Wallet needed to be rewritten: restart PPCoin to complete</source>
-        <translation>Soubor s peněženkou potřeboval přepsat: restartuj PPCoin, aby se operace dokončila</translation>
+        <location filename="../mudcoinstrings.cpp" line="67"/>
+        <source>Wallet needed to be rewritten: restart MudCoin to complete</source>
+        <translation>Soubor s peněženkou potřeboval přepsat: restartuj MudCoin, aby se operace dokončila</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="68"/>
+        <location filename="../mudcoinstrings.cpp" line="68"/>
         <source>Error loading wallet.dat</source>
         <translation>Chyba při načítání wallet.dat</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="62"/>
+        <location filename="../mudcoinstrings.cpp" line="62"/>
         <source>Loading block index...</source>
         <translation>Načítám index bloků...</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="64"/>
+        <location filename="../mudcoinstrings.cpp" line="64"/>
         <source>Loading wallet...</source>
         <translation>Načítám peněženku...</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="69"/>
+        <location filename="../mudcoinstrings.cpp" line="69"/>
         <source>Rescanning...</source>
         <translation>Přeskenovávám...</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="70"/>
+        <location filename="../mudcoinstrings.cpp" line="70"/>
         <source>Done loading</source>
         <translation>Načítání dokončeno</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="71"/>
+        <location filename="../mudcoinstrings.cpp" line="71"/>
         <source>Invalid -proxy address</source>
         <translation>Neplatná -proxy adresa</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="72"/>
+        <location filename="../mudcoinstrings.cpp" line="72"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;</source>
         <translation>Neplatná částka pro -paytxfee=&lt;částka&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="73"/>
+        <location filename="../mudcoinstrings.cpp" line="73"/>
         <source>Warning: -paytxfee is set very high.  This is the transaction fee you will pay if you send a transaction.</source>
         <translation>Upozornění: -paytxfee je nastaveno velmi vysoko.  Toto je transakční poplatek, který zaplatíš za každou poslanou transakci.</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="76"/>
+        <location filename="../mudcoinstrings.cpp" line="76"/>
         <source>Error: CreateThread(StartNode) failed</source>
         <translation>Chyba: Selhalo CreateThread(StartNode)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="77"/>
+        <location filename="../mudcoinstrings.cpp" line="77"/>
         <source>Warning: Disk space is low  </source>
         <translation>Upozornění: Na disku je málo místa  </translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="78"/>
-        <source>Unable to bind to port %d on this computer.  PPCoin is probably already running.</source>
-        <translation>Nedaří se mi připojit na port %d na tomhle počítači.  PPCoin už pravděpodobně jednou běží.</translation>
+        <location filename="../mudcoinstrings.cpp" line="78"/>
+        <source>Unable to bind to port %d on this computer.  MudCoin is probably already running.</source>
+        <translation>Nedaří se mi připojit na port %d na tomhle počítači.  MudCoin už pravděpodobně jednou běží.</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="81"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct.  If your clock is wrong PPCoin will not work properly.</source>
-        <translation>Upozornění: Zkontroluj, že máš v počítači správně nastavený datum a čas.  Pokud jsou nastaveny špatně, PPCoin nebude fungovat správně.</translation>
+        <location filename="../mudcoinstrings.cpp" line="81"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct.  If your clock is wrong MudCoin will not work properly.</source>
+        <translation>Upozornění: Zkontroluj, že máš v počítači správně nastavený datum a čas.  Pokud jsou nastaveny špatně, MudCoin nebude fungovat správně.</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="84"/>
+        <location filename="../mudcoinstrings.cpp" line="84"/>
         <source>beta</source>
         <translation>beta</translation>
     </message>

@@ -1,11 +1,12 @@
 /*
- * Qt4 ppcoin GUI.
+ * Qt4 GUI.
  *
- * W.J. van der Laan 2011-2012
- * The Bitcoin Developers 2011-2012
- * The PPCoin Developers 2011-2013
+ * Copyright (c) 2011-2012 W.J. van der Laan
+ * Copyright (c) 2011-2012 The Bitcoin Developers
+ * Copyright (c) 2011-2013 The PPCoin Developers
+ * Copyright (c) 2017 MudCoin Developers
  */
-#include "bitcoingui.h"
+#include "mudcoingui.h"
 #include "transactiontablemodel.h"
 #include "addressbookpage.h"
 #include "sendcoinsdialog.h"
@@ -20,7 +21,7 @@
 #include "addresstablemodel.h"
 #include "transactionview.h"
 #include "overviewpage.h"
-#include "bitcoinunits.h"
+#include "mudcoinunits.h"
 #include "guiconstants.h"
 #include "askpassphrasedialog.h"
 #include "notificator.h"
@@ -60,7 +61,7 @@
 
 #include <iostream>
 
-BitcoinGUI::BitcoinGUI(QWidget *parent):
+MudcoinGUI::MudcoinGUI(QWidget *parent):
     QMainWindow(parent),
     clientModel(0),
     walletModel(0),
@@ -72,9 +73,9 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     rpcConsole(0)
 {
     resize(850, 550);
-    setWindowTitle(tr("Peercoin (PPCoin) Wallet"));
+    setWindowTitle(tr("MudCoin Wallet"));
 #ifndef Q_WS_MAC
-    setWindowIcon(QIcon(":icons/ppcoin"));
+    setWindowIcon(QIcon(":icons/mudcoin"));
 #else
     setUnifiedTitleAndToolBarOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
@@ -169,14 +170,14 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     gotoOverviewPage();
 }
 
-BitcoinGUI::~BitcoinGUI()
+MudcoinGUI::~MudcoinGUI()
 {
 #ifdef Q_WS_MAC
     delete appMenuBar;
 #endif
 }
 
-void BitcoinGUI::createActions()
+void MudcoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
@@ -205,7 +206,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(receiveCoinsAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send coins"), this);
-    sendCoinsAction->setToolTip(tr("Send coins to a ppcoin address"));
+    sendCoinsAction->setToolTip(tr("Send coins to a mudcoin address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
@@ -234,17 +235,17 @@ void BitcoinGUI::createActions()
     quitAction->setToolTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/ppcoin"), tr("&About %1").arg(qApp->applicationName()), this);
-    aboutAction->setToolTip(tr("Show information about PPCoin"));
+    aboutAction = new QAction(QIcon(":/icons/mudcoin"), tr("&About %1").arg(qApp->applicationName()), this);
+    aboutAction->setToolTip(tr("Show information about MudCoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setToolTip(tr("Modify configuration options for ppcoin"));
+    optionsAction->setToolTip(tr("Modify configuration options for mudcoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
-    toggleHideAction = new QAction(QIcon(":/icons/ppcoin"), tr("Show/Hide &PPCoin"), this);
-    toggleHideAction->setToolTip(tr("Show or hide the PPCoin window"));
+    toggleHideAction = new QAction(QIcon(":/icons/mudcoin"), tr("Show/Hide &MudCoin"), this);
+    toggleHideAction->setToolTip(tr("Show or hide the MudCoin window"));
     exportAction = new QAction(QIcon(":/icons/export"), tr("&Export..."), this);
     exportAction->setToolTip(tr("Export the data in the current tab to a file"));
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet"), this);
@@ -267,7 +268,7 @@ void BitcoinGUI::createActions()
     connect(changePassphraseAction, SIGNAL(triggered()), this, SLOT(changePassphrase()));
 }
 
-void BitcoinGUI::createMenuBar()
+void MudcoinGUI::createMenuBar()
 {
 #ifdef Q_WS_MAC
     // Create a decoupled menu bar on Mac which stays even if the window is closed
@@ -300,7 +301,7 @@ void BitcoinGUI::createMenuBar()
     help->addAction(aboutQtAction);
 }
 
-void BitcoinGUI::createToolBars()
+void MudcoinGUI::createToolBars()
 {
     QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
@@ -318,7 +319,7 @@ void BitcoinGUI::createToolBars()
     toolbar2->addAction(exportAction);
 }
 
-void BitcoinGUI::setClientModel(ClientModel *clientModel)
+void MudcoinGUI::setClientModel(ClientModel *clientModel)
 {
     this->clientModel = clientModel;
     if(clientModel)
@@ -328,9 +329,9 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
             QString title_testnet = windowTitle() + QString(" ") + tr("[testnet]");
             setWindowTitle(title_testnet);
 #ifndef Q_WS_MAC
-            setWindowIcon(QIcon(":icons/ppcoin_testnet"));
+            setWindowIcon(QIcon(":icons/mudcoin_testnet"));
 #else
-            MacDockIconHandler::instance()->setIcon(QIcon(":icons/ppcoin_testnet"));
+            MacDockIconHandler::instance()->setIcon(QIcon(":icons/mudcoin_testnet"));
 #endif
             if(trayIcon)
             {
@@ -353,7 +354,7 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
     }
 }
 
-void BitcoinGUI::setWalletModel(WalletModel *walletModel)
+void MudcoinGUI::setWalletModel(WalletModel *walletModel)
 {
     this->walletModel = walletModel;
     if(walletModel)
@@ -382,14 +383,14 @@ void BitcoinGUI::setWalletModel(WalletModel *walletModel)
     }
 }
 
-void BitcoinGUI::createTrayIcon()
+void MudcoinGUI::createTrayIcon()
 {
     QMenu *trayIconMenu;
 #ifndef Q_WS_MAC
     trayIcon = new QSystemTrayIcon(this);
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setToolTip(tr("PPCoin client"));
+    trayIcon->setToolTip(tr("MudCoin client"));
     trayIcon->setIcon(QIcon(":/icons/toolbar"));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
@@ -416,21 +417,21 @@ void BitcoinGUI::createTrayIcon()
     trayIconMenu->addAction(quitAction);
 #endif
 
-    notificator = new Notificator(tr("ppcoin-qt"), trayIcon);
+    notificator = new Notificator(tr("MudCoin-qt"), trayIcon);
 }
 
 #ifndef Q_WS_MAC
-void BitcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
+void MudcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if(reason == QSystemTrayIcon::Trigger)
     {
-        // Click on system tray icon triggers "show/hide bitcoin"
+        // Click on system tray icon triggers "show/hide mudcoin"
         toggleHideAction->trigger();
     }
 }
 #endif
 
-void BitcoinGUI::toggleHidden()
+void MudcoinGUI::toggleHidden()
 {
     // activateWindow() (sometimes) helps with keyboard focus on Windows
     if (isHidden())
@@ -452,7 +453,7 @@ void BitcoinGUI::toggleHidden()
         hide();
 }
 
-void BitcoinGUI::optionsClicked()
+void MudcoinGUI::optionsClicked()
 {
     if(!clientModel || !clientModel->getOptionsModel())
         return;
@@ -461,14 +462,14 @@ void BitcoinGUI::optionsClicked()
     dlg.exec();
 }
 
-void BitcoinGUI::aboutClicked()
+void MudcoinGUI::aboutClicked()
 {
     AboutDialog dlg;
     dlg.setModel(clientModel);
     dlg.exec();
 }
 
-void BitcoinGUI::setNumConnections(int count)
+void MudcoinGUI::setNumConnections(int count)
 {
     QString icon;
     switch(count)
@@ -480,10 +481,10 @@ void BitcoinGUI::setNumConnections(int count)
     default: icon = ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to PPCoin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to MudCoin network", "", count));
 }
 
-void BitcoinGUI::setNumBlocks(int count)
+void MudcoinGUI::setNumBlocks(int count)
 {
     // don't show / hide progressBar and it's label if we have no connection(s) to the network
     if (!clientModel || clientModel->getNumConnections() == 0)
@@ -583,7 +584,7 @@ void BitcoinGUI::setNumBlocks(int count)
     progressBar->setToolTip(tooltip);
 }
 
-void BitcoinGUI::error(const QString &title, const QString &message, bool modal)
+void MudcoinGUI::error(const QString &title, const QString &message, bool modal)
 {
     // Report errors from network/worker thread
     if(modal)
@@ -594,7 +595,7 @@ void BitcoinGUI::error(const QString &title, const QString &message, bool modal)
     }
 }
 
-void BitcoinGUI::changeEvent(QEvent *e)
+void MudcoinGUI::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
 #ifndef Q_WS_MAC // Ignored on Mac
@@ -613,7 +614,7 @@ void BitcoinGUI::changeEvent(QEvent *e)
 #endif
 }
 
-void BitcoinGUI::closeEvent(QCloseEvent *event)
+void MudcoinGUI::closeEvent(QCloseEvent *event)
 {
     if(clientModel)
     {
@@ -628,20 +629,20 @@ void BitcoinGUI::closeEvent(QCloseEvent *event)
     QMainWindow::closeEvent(event);
 }
 
-void BitcoinGUI::askFee(qint64 nFeeRequired, bool *payFee)
+void MudcoinGUI::askFee(qint64 nFeeRequired, bool *payFee)
 {
     QString strMessage =
         tr("This transaction is over the size limit.  You can still send it for a fee of %1, "
           "which goes to the nodes that process your transaction and helps to support the network.  "
           "Do you want to pay the fee?").arg(
-                BitcoinUnits::formatWithUnit(BitcoinUnits::BTC, nFeeRequired));
+                MudcoinUnits::formatWithUnit(MudcoinUnits::MUD, nFeeRequired));
     QMessageBox::StandardButton retval = QMessageBox::question(
           this, tr("Sending..."), strMessage,
           QMessageBox::Yes|QMessageBox::Cancel, QMessageBox::Yes);
     *payFee = (retval == QMessageBox::Yes);
 }
 
-void BitcoinGUI::incomingTransaction(const QModelIndex & parent, int start, int end)
+void MudcoinGUI::incomingTransaction(const QModelIndex & parent, int start, int end)
 {
     if(!walletModel || !clientModel)
         return;
@@ -670,13 +671,13 @@ void BitcoinGUI::incomingTransaction(const QModelIndex & parent, int start, int 
                                  "Type: %3\n"
                                  "Address: %4\n")
                               .arg(date)
-                              .arg(BitcoinUnits::formatWithUnit(walletModel->getOptionsModel()->getDisplayUnit(), amount, true))
+                              .arg(MudcoinUnits::formatWithUnit(walletModel->getOptionsModel()->getDisplayUnit(), amount, true))
                               .arg(type)
                               .arg(address), icon);
     }
 }
 
-void BitcoinGUI::gotoOverviewPage()
+void MudcoinGUI::gotoOverviewPage()
 {
     overviewAction->setChecked(true);
     centralWidget->setCurrentWidget(overviewPage);
@@ -685,7 +686,7 @@ void BitcoinGUI::gotoOverviewPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void BitcoinGUI::gotoHistoryPage()
+void MudcoinGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);
     centralWidget->setCurrentWidget(transactionsPage);
@@ -695,7 +696,7 @@ void BitcoinGUI::gotoHistoryPage()
     connect(exportAction, SIGNAL(triggered()), transactionView, SLOT(exportClicked()));
 }
 
-void BitcoinGUI::gotoAddressBookPage()
+void MudcoinGUI::gotoAddressBookPage()
 {
     addressBookAction->setChecked(true);
     centralWidget->setCurrentWidget(addressBookPage);
@@ -705,7 +706,7 @@ void BitcoinGUI::gotoAddressBookPage()
     connect(exportAction, SIGNAL(triggered()), addressBookPage, SLOT(exportClicked()));
 }
 
-void BitcoinGUI::gotoReceiveCoinsPage()
+void MudcoinGUI::gotoReceiveCoinsPage()
 {
     receiveCoinsAction->setChecked(true);
     centralWidget->setCurrentWidget(receiveCoinsPage);
@@ -715,7 +716,7 @@ void BitcoinGUI::gotoReceiveCoinsPage()
     connect(exportAction, SIGNAL(triggered()), receiveCoinsPage, SLOT(exportClicked()));
 }
 
-void BitcoinGUI::gotoSendCoinsPage()
+void MudcoinGUI::gotoSendCoinsPage()
 {
     sendCoinsAction->setChecked(true);
     centralWidget->setCurrentWidget(sendCoinsPage);
@@ -724,7 +725,7 @@ void BitcoinGUI::gotoSendCoinsPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void BitcoinGUI::gotoMessagePage()
+void MudcoinGUI::gotoMessagePage()
 {
 #ifdef FIRST_CLASS_MESSAGING
     messageAction->setChecked(true);
@@ -738,20 +739,20 @@ void BitcoinGUI::gotoMessagePage()
 #endif
 }
 
-void BitcoinGUI::gotoMessagePage(QString addr)
+void MudcoinGUI::gotoMessagePage(QString addr)
 {
     gotoMessagePage();
     messagePage->setAddress(addr);
 }
 
-void BitcoinGUI::dragEnterEvent(QDragEnterEvent *event)
+void MudcoinGUI::dragEnterEvent(QDragEnterEvent *event)
 {
     // Accept only URIs
     if(event->mimeData()->hasUrls())
         event->acceptProposedAction();
 }
 
-void BitcoinGUI::dropEvent(QDropEvent *event)
+void MudcoinGUI::dropEvent(QDropEvent *event)
 {
     if(event->mimeData()->hasUrls())
     {
@@ -766,7 +767,7 @@ void BitcoinGUI::dropEvent(QDropEvent *event)
     event->acceptProposedAction();
 }
 
-void BitcoinGUI::handleURI(QString strURI)
+void MudcoinGUI::handleURI(QString strURI)
 {
     gotoSendCoinsPage();
     sendCoinsPage->handleURI(strURI);
@@ -777,7 +778,7 @@ void BitcoinGUI::handleURI(QString strURI)
     showNormalIfMinimized();
 }
 
-void BitcoinGUI::setEncryptionStatus(int status)
+void MuMudinGUI::setEncryptionStatus(int status)
 {
     switch(status)
     {
@@ -806,7 +807,7 @@ void BitcoinGUI::setEncryptionStatus(int status)
     }
 }
 
-void BitcoinGUI::encryptWallet(bool status)
+void MudcoinGUI::encryptWallet(bool status)
 {
     if(!walletModel)
         return;
@@ -818,7 +819,7 @@ void BitcoinGUI::encryptWallet(bool status)
     setEncryptionStatus(walletModel->getEncryptionStatus());
 }
 
-void BitcoinGUI::backupWallet()
+void MudcoinGUI::backupWallet()
 {
     QString saveDir = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
     QString filename = QFileDialog::getSaveFileName(this, tr("Backup Wallet"), saveDir, tr("Wallet Data (*.dat)"));
@@ -829,14 +830,14 @@ void BitcoinGUI::backupWallet()
     }
 }
 
-void BitcoinGUI::changePassphrase()
+void MudcoinGUI::changePassphrase()
 {
     AskPassphraseDialog dlg(AskPassphraseDialog::ChangePass, this);
     dlg.setModel(walletModel);
     dlg.exec();
 }
 
-void BitcoinGUI::unlockWallet()
+void MudcoinGUI::unlockWallet()
 {
     if(!walletModel)
         return;
@@ -849,7 +850,7 @@ void BitcoinGUI::unlockWallet()
     }
 }
 
-void BitcoinGUI::showNormalIfMinimized()
+void MudcoinGUI::showNormalIfMinimized()
 {
     if(!isVisible()) // Show, if hidden
         show();

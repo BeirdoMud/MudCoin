@@ -4,24 +4,24 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="14"/>
-        <source>About PPCoin</source>
-        <translation>Über PPCoin</translation>
+        <source>About MudCoin</source>
+        <translation>Über MudCoin</translation>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="53"/>
-        <source>&lt;b&gt;PPCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;PPCoin&lt;/b&gt; Version</translation>
+        <source>&lt;b&gt;MudCoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;MudCoin&lt;/b&gt; Version</translation>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="85"/>
-        <source>Copyright © 2011-2013 PPCoin Developers
+        <source>Copyright © 2017 MudCoin Developers
 
 This is experimental software.
 
 Distributed under the MIT/X11 software license, see the accompanying file license.txt or http://www.opensource.org/licenses/mit-license.php.
 
 This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</source>
-        <translation>Copyright © 2011-2013 PPCoin Entwickler
+        <translation>Copyright © 2017 MudCoin Entwickler
 
 Dies ist experimentelle Software.
 
@@ -39,8 +39,8 @@ Dieses Produkt enthält Software, die vom OpenSSL Projekt zur Verwendung im Open
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="20"/>
-        <source>These are your PPCoin addresses for receiving payments.  You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Dies sind Ihre PPCoin-Adressen zum Empfangen von Zahlungen. Es steht Ihnen frei, jedem Absender eine andere mitzuteilen, um einen besseren Überblick über eingehende Zahlungen zu erhalten.</translation>
+        <source>These are your MudCoin addresses for receiving payments.  You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Dies sind Ihre MudCoin-Adressen zum Empfangen von Zahlungen. Es steht Ihnen frei, jedem Absender eine andere mitzuteilen, um einen besseren Überblick über eingehende Zahlungen zu erhalten.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="33"/>
@@ -226,9 +226,9 @@ Dieses Produkt enthält Software, die vom OpenSSL Projekt zur Verwendung im Open
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="102"/>
-        <source>WARNING: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PPCoinS&lt;/b&gt;!
+        <source>WARNING: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MudCoinS&lt;/b&gt;!
 Are you sure you wish to encrypt your wallet?</source>
-        <translation>WARNUNG: Wenn Sie Ihre Brieftasche verschlüsseln und Ihre Passphrase verlieren, werden Sie &lt;b&gt;ALLE IHRE PPCoinS VERLIEREN&lt;/b&gt;!&lt;br&gt;&lt;br&gt;Sind Sie sich sicher, dass Sie Ihre Brieftasche verschlüsseln möchten?</translation>
+        <translation>WARNUNG: Wenn Sie Ihre Brieftasche verschlüsseln und Ihre Passphrase verlieren, werden Sie &lt;b&gt;ALLE IHRE MudCoinS VERLIEREN&lt;/b&gt;!&lt;br&gt;&lt;br&gt;Sind Sie sich sicher, dass Sie Ihre Brieftasche verschlüsseln möchten?</translation>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="111"/>
@@ -238,8 +238,8 @@ Are you sure you wish to encrypt your wallet?</source>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="112"/>
-        <source>PPCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PPCoins from being stolen by malware infecting your computer.</source>
-        <translation>PPCoin wird jetzt beendet, um den Verschlüsselungsprozess abzuschließen. Bitte beachten Sie, dass die Verschlüsselung Ihrer Brieftasche nicht vollständig vor Diebstahl Ihrer PPCoins durch Schadsoftware schützt, die Ihren Computer befällt.</translation>
+        <source>MudCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MudCoins from being stolen by malware infecting your computer.</source>
+        <translation>MudCoin wird jetzt beendet, um den Verschlüsselungsprozess abzuschließen. Bitte beachten Sie, dass die Verschlüsselung Ihrer Brieftasche nicht vollständig vor Diebstahl Ihrer MudCoins durch Schadsoftware schützt, die Ihren Computer befällt.</translation>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="208"/>
@@ -290,280 +290,280 @@ Are you sure you wish to encrypt your wallet?</source>
     </message>
 </context>
 <context>
-    <name>PPCoinGUI</name>
+    <name>MudCoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="69"/>
-        <source>PPCoin Wallet</source>
-        <translation>PPCoin-Brieftasche</translation>
+        <location filename="../mudcoingui.cpp" line="69"/>
+        <source>MudCoin Wallet</source>
+        <translation>MudCoin-Brieftasche</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="142"/>
-        <location filename="../bitcoingui.cpp" line="464"/>
+        <location filename="../mudcoingui.cpp" line="142"/>
+        <location filename="../mudcoingui.cpp" line="464"/>
         <source>Synchronizing with network...</source>
         <translation>Synchronisiere mit Netzwerk...</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="145"/>
+        <location filename="../mudcoingui.cpp" line="145"/>
         <source>Block chain synchronization in progress</source>
         <translation>Synchronisation der Blockkette wird durchgeführt</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="176"/>
+        <location filename="../mudcoingui.cpp" line="176"/>
         <source>&amp;Overview</source>
         <translation>&amp;Übersicht</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="177"/>
+        <location filename="../mudcoingui.cpp" line="177"/>
         <source>Show general overview of wallet</source>
         <translation>Allgemeine Übersicht der Brieftasche anzeigen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="182"/>
+        <location filename="../mudcoingui.cpp" line="182"/>
         <source>&amp;Transactions</source>
         <translation>&amp;Transaktionen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="183"/>
+        <location filename="../mudcoingui.cpp" line="183"/>
         <source>Browse transaction history</source>
         <translation>Transaktionsverlauf durchsehen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="188"/>
+        <location filename="../mudcoingui.cpp" line="188"/>
         <source>&amp;Address Book</source>
         <translation>&amp;Adressbuch</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="189"/>
+        <location filename="../mudcoingui.cpp" line="189"/>
         <source>Edit the list of stored addresses and labels</source>
         <translation>Liste der gespeicherten Zahlungsadressen und Bezeichnungen bearbeiten</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="194"/>
+        <location filename="../mudcoingui.cpp" line="194"/>
         <source>&amp;Receive coins</source>
-        <translation>PPCoins &amp;empfangen</translation>
+        <translation>MudCoins &amp;empfangen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="195"/>
+        <location filename="../mudcoingui.cpp" line="195"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation>Liste der Empfangsadressen anzeigen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="200"/>
+        <location filename="../mudcoingui.cpp" line="200"/>
         <source>&amp;Send coins</source>
-        <translation>PPCoins &amp;überweisen</translation>
+        <translation>MudCoins &amp;überweisen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="201"/>
-        <source>Send coins to a PPCoin address</source>
-        <translation>PPCoins an eine PPCoin-Adresse überweisen</translation>
+        <location filename="../mudcoingui.cpp" line="201"/>
+        <source>Send coins to a MudCoin address</source>
+        <translation>MudCoins an eine MudCoin-Adresse überweisen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="206"/>
+        <location filename="../mudcoingui.cpp" line="206"/>
         <source>Sign &amp;message</source>
         <translation>&amp;Nachricht signieren...</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="207"/>
+        <location filename="../mudcoingui.cpp" line="207"/>
         <source>Prove you control an address</source>
         <translation>Beweisen Sie die Kontrolle einer Adresse</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="226"/>
+        <location filename="../mudcoingui.cpp" line="226"/>
         <source>E&amp;xit</source>
         <translation>&amp;Beenden</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="227"/>
+        <location filename="../mudcoingui.cpp" line="227"/>
         <source>Quit application</source>
         <translation>Anwendung beenden</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="230"/>
+        <location filename="../mudcoingui.cpp" line="230"/>
         <source>&amp;About %1</source>
         <translation>&amp;Über %1</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="231"/>
-        <source>Show information about PPCoin</source>
-        <translation>Informationen über PPCoin anzeigen</translation>
+        <location filename="../mudcoingui.cpp" line="231"/>
+        <source>Show information about MudCoin</source>
+        <translation>Informationen über MudCoin anzeigen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="233"/>
+        <location filename="../mudcoingui.cpp" line="233"/>
         <source>About &amp;Qt</source>
         <translation>Über &amp;Qt</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="234"/>
+        <location filename="../mudcoingui.cpp" line="234"/>
         <source>Show information about Qt</source>
         <translation>Informationen über Qt anzeigen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="236"/>
+        <location filename="../mudcoingui.cpp" line="236"/>
         <source>&amp;Options...</source>
         <translation>&amp;Erweiterte Einstellungen...</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="237"/>
-        <source>Modify configuration options for PPCoin</source>
-        <translation>Erweiterte PPCoin-Einstellungen ändern</translation>
+        <location filename="../mudcoingui.cpp" line="237"/>
+        <source>Modify configuration options for MudCoin</source>
+        <translation>Erweiterte MudCoin-Einstellungen ändern</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="239"/>
-        <source>Open &amp;PPCoin</source>
-        <translation>&amp;PPCoin öffnen</translation>
+        <location filename="../mudcoingui.cpp" line="239"/>
+        <source>Open &amp;MudCoin</source>
+        <translation>&amp;MudCoin öffnen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="240"/>
-        <source>Show the PPCoin window</source>
-        <translation>PPCoin-Fenster anzeigen</translation>
+        <location filename="../mudcoingui.cpp" line="240"/>
+        <source>Show the MudCoin window</source>
+        <translation>MudCoin-Fenster anzeigen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="241"/>
+        <location filename="../mudcoingui.cpp" line="241"/>
         <source>&amp;Export...</source>
         <translation>&amp;Exportieren nach...</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="242"/>
+        <location filename="../mudcoingui.cpp" line="242"/>
         <source>Export the data in the current tab to a file</source>
         <translation>Daten der aktuellen Ansicht in eine Datei exportieren</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="243"/>
+        <location filename="../mudcoingui.cpp" line="243"/>
         <source>&amp;Encrypt Wallet</source>
         <translation>Brieftasche &amp;verschlüsseln...</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="244"/>
+        <location filename="../mudcoingui.cpp" line="244"/>
         <source>Encrypt or decrypt wallet</source>
         <translation>Brieftasche ent- oder verschlüsseln</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="246"/>
+        <location filename="../mudcoingui.cpp" line="246"/>
         <source>&amp;Backup Wallet</source>
         <translation>Brieftasche &amp;sichern...</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="247"/>
+        <location filename="../mudcoingui.cpp" line="247"/>
         <source>Backup wallet to another location</source>
         <translation>Eine Sicherungskopie der Brieftasche erstellen und abspeichern</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="248"/>
+        <location filename="../mudcoingui.cpp" line="248"/>
         <source>&amp;Change Passphrase</source>
         <translation>Passphrase &amp;ändern...</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="249"/>
+        <location filename="../mudcoingui.cpp" line="249"/>
         <source>Change the passphrase used for wallet encryption</source>
         <translation>Ändert die Passphrase, die für die Verschlüsselung der Brieftasche benutzt wird</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="272"/>
+        <location filename="../mudcoingui.cpp" line="272"/>
         <source>&amp;File</source>
         <translation>&amp;Datei</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="281"/>
+        <location filename="../mudcoingui.cpp" line="281"/>
         <source>&amp;Settings</source>
         <translation>&amp;Einstellungen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="287"/>
+        <location filename="../mudcoingui.cpp" line="287"/>
         <source>&amp;Help</source>
         <translation>&amp;Hilfe</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="294"/>
+        <location filename="../mudcoingui.cpp" line="294"/>
         <source>Tabs toolbar</source>
         <translation>Registerkarten-Leiste</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="305"/>
+        <location filename="../mudcoingui.cpp" line="305"/>
         <source>Actions toolbar</source>
         <translation>Aktionen-Werkzeugleiste</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="317"/>
+        <location filename="../mudcoingui.cpp" line="317"/>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="407"/>
-        <source>PPCoin-qt</source>
-        <translation>PPCoin-qt</translation>
+        <location filename="../mudcoingui.cpp" line="407"/>
+        <source>MudCoin-qt</source>
+        <translation>MudCoin-qt</translation>
     </message>
     <message numerus="yes">
-        <location filename="../bitcoingui.cpp" line="449"/>
-        <source>%n active connection(s) to PPCoin network</source>
-        <translation><numerusform>%n aktive Verbindung zum PPCoin-Netzwerk</numerusform><numerusform>%n aktive Verbindungen zum PPCoin-Netzwerk</numerusform></translation>
+        <location filename="../mudcoingui.cpp" line="449"/>
+        <source>%n active connection(s) to MudCoin network</source>
+        <translation><numerusform>%n aktive Verbindung zum MudCoin-Netzwerk</numerusform><numerusform>%n aktive Verbindungen zum MudCoin-Netzwerk</numerusform></translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="475"/>
+        <location filename="../mudcoingui.cpp" line="475"/>
         <source>Downloaded %1 of %2 blocks of transaction history.</source>
         <translation>%1 von %2 Blöcken des Transaktionsverlaufs heruntergeladen.</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="487"/>
+        <location filename="../mudcoingui.cpp" line="487"/>
         <source>Downloaded %1 blocks of transaction history.</source>
         <translation>%1 Blöcke des Transaktionsverlaufs heruntergeladen.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../bitcoingui.cpp" line="502"/>
+        <location filename="../mudcoingui.cpp" line="502"/>
         <source>%n second(s) ago</source>
         <translation><numerusform>vor %n Sekunde</numerusform><numerusform>vor %n Sekunden</numerusform></translation>
     </message>
     <message numerus="yes">
-        <location filename="../bitcoingui.cpp" line="506"/>
+        <location filename="../mudcoingui.cpp" line="506"/>
         <source>%n minute(s) ago</source>
         <translation><numerusform>vor %n Minute</numerusform><numerusform>vor %n Minuten</numerusform></translation>
     </message>
     <message numerus="yes">
-        <location filename="../bitcoingui.cpp" line="510"/>
+        <location filename="../mudcoingui.cpp" line="510"/>
         <source>%n hour(s) ago</source>
         <translation><numerusform>vor %n Stunde</numerusform><numerusform>vor %n Stunden</numerusform></translation>
     </message>
     <message numerus="yes">
-        <location filename="../bitcoingui.cpp" line="514"/>
+        <location filename="../mudcoingui.cpp" line="514"/>
         <source>%n day(s) ago</source>
         <translation><numerusform>vor %n Tag</numerusform><numerusform>vor %n Tagen</numerusform></translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="520"/>
+        <location filename="../mudcoingui.cpp" line="520"/>
         <source>Up to date</source>
         <translation>Auf aktuellem Stand</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="525"/>
+        <location filename="../mudcoingui.cpp" line="525"/>
         <source>Catching up...</source>
         <translation>Hole auf...</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="533"/>
+        <location filename="../mudcoingui.cpp" line="533"/>
         <source>Last received block was generated %1.</source>
         <translation>Der letzte empfangene Block wurde %1 generiert.</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="597"/>
+        <location filename="../mudcoingui.cpp" line="597"/>
         <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
-        <translation>Die Transaktion übersteigt das Größenlimit. Sie können sie trotzdem senden, wenn Sie eine zusätzliche Transaktionsgebühr in Höhe von %1 zahlen. Diese wird an die Knoten verteilt, die Ihre Transaktion bearbeiten und unterstützt damit das PPCoin-Netzwerk.&lt;br&gt;&lt;br&gt;Möchten Sie die Gebühr bezahlen?</translation>
+        <translation>Die Transaktion übersteigt das Größenlimit. Sie können sie trotzdem senden, wenn Sie eine zusätzliche Transaktionsgebühr in Höhe von %1 zahlen. Diese wird an die Knoten verteilt, die Ihre Transaktion bearbeiten und unterstützt damit das MudCoin-Netzwerk.&lt;br&gt;&lt;br&gt;Möchten Sie die Gebühr bezahlen?</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="602"/>
+        <location filename="../mudcoingui.cpp" line="602"/>
         <source>Sending...</source>
         <translation>Transaktionsgebühr bestätigen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="629"/>
+        <location filename="../mudcoingui.cpp" line="629"/>
         <source>Sent transaction</source>
         <translation>Gesendete Transaktion</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="630"/>
+        <location filename="../mudcoingui.cpp" line="630"/>
         <source>Incoming transaction</source>
         <translation>Eingehende Transaktion</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="631"/>
+        <location filename="../mudcoingui.cpp" line="631"/>
         <source>Date: %1
 Amount: %2
 Type: %3
@@ -575,32 +575,32 @@ Typ: %3
 Adresse: %4</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="751"/>
+        <location filename="../mudcoingui.cpp" line="751"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Brieftasche ist &lt;b&gt;verschlüsselt&lt;/b&gt; und aktuell &lt;b&gt;entsperrt&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="759"/>
+        <location filename="../mudcoingui.cpp" line="759"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
         <translation>Brieftasche ist &lt;b&gt;verschlüsselt&lt;/b&gt; und aktuell &lt;b&gt;gesperrt&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="782"/>
+        <location filename="../mudcoingui.cpp" line="782"/>
         <source>Backup Wallet</source>
         <translation>Brieftasche sichern</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="782"/>
+        <location filename="../mudcoingui.cpp" line="782"/>
         <source>Wallet Data (*.dat)</source>
         <translation>Brieftaschen-Datei (*.dat)</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="785"/>
+        <location filename="../mudcoingui.cpp" line="785"/>
         <source>Backup Failed</source>
         <translation>Sicherung der Brieftasche fehlgeschlagen</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="785"/>
+        <location filename="../mudcoingui.cpp" line="785"/>
         <source>There was an error trying to save the wallet data to the new location.</source>
         <translation>Fehler beim abspeichern der Sicherungskopie der Brieftasche.</translation>
     </message>
@@ -615,7 +615,7 @@ Adresse: %4</translation>
     <message>
         <location filename="../optionsdialog.cpp" line="274"/>
         <source>Choose the default subdivision unit to show in the interface, and when sending coins</source>
-        <translation>Wählen Sie die Standard-Untereinheit, die in der Benutzeroberfläche und beim Überweisen von PPCoins angezeigt werden soll</translation>
+        <translation>Wählen Sie die Standard-Untereinheit, die in der Benutzeroberfläche und beim Überweisen von MudCoins angezeigt werden soll</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="281"/>
@@ -677,8 +677,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location filename="../editaddressdialog.cpp" line="96"/>
-        <source>The entered address &quot;%1&quot; is not a valid PPCoin address.</source>
-        <translation>Die eingegebene Adresse &quot;%1&quot; ist keine gültige PPCoin-Adresse.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid MudCoin address.</source>
+        <translation>Die eingegebene Adresse &quot;%1&quot; ist keine gültige MudCoin-Adresse.</translation>
     </message>
     <message>
         <location filename="../editaddressdialog.cpp" line="101"/>
@@ -695,13 +695,13 @@ Adresse: %4</translation>
     <name>MainOptionsPage</name>
     <message>
         <location filename="../optionsdialog.cpp" line="170"/>
-        <source>&amp;Start PPCoin on window system startup</source>
-        <translation>PPCoin beim &amp;Systemstart ausführen</translation>
+        <source>&amp;Start MudCoin on window system startup</source>
+        <translation>MudCoin beim &amp;Systemstart ausführen</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="171"/>
-        <source>Automatically start PPCoin after the computer is turned on</source>
-        <translation>PPCoin automatisch ausführen, wenn der Computer eingeschaltet wird</translation>
+        <source>Automatically start MudCoin after the computer is turned on</source>
+        <translation>MudCoin automatisch ausführen, wenn der Computer eingeschaltet wird</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="175"/>
@@ -720,8 +720,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="181"/>
-        <source>Automatically open the PPCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatisch den PPCoin Client-Port auf dem Router öffnen. Dies funktioniert nur, wenn Ihr Router UPnP unterstützt und dies aktiviert ist.</translation>
+        <source>Automatically open the MudCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatisch den MudCoin Client-Port auf dem Router öffnen. Dies funktioniert nur, wenn Ihr Router UPnP unterstützt und dies aktiviert ist.</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="185"/>
@@ -741,7 +741,7 @@ Adresse: %4</translation>
     <message>
         <location filename="../optionsdialog.cpp" line="191"/>
         <source>Connect to the Bitcon network through a SOCKS4 proxy (e.g. when connecting through Tor)</source>
-        <translation>Über einen SOCKS4-Proxy zum PPCoin-Netzwerk verbinden (z.B. bei einer Verbindung über Tor)</translation>
+        <translation>Über einen SOCKS4-Proxy zum MudCoin-Netzwerk verbinden (z.B. bei einer Verbindung über Tor)</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="196"/>
@@ -901,8 +901,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="47"/>
-        <source>123.456 BTC</source>
-        <translation>123.456 BTC</translation>
+        <source>123.456 MUD</source>
+        <translation>123.456 MUD</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="54"/>
@@ -921,8 +921,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="75"/>
-        <source>0 BTC</source>
-        <translation>0 BTC</translation>
+        <source>0 MUD</source>
+        <translation>0 MUD</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="82"/>
@@ -982,8 +982,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../forms/qrcodedialog.ui" line="102"/>
-        <source>BTC</source>
-        <translation>BTC</translation>
+        <source>MUD</source>
+        <translation>MUD</translation>
     </message>
     <message>
         <location filename="../forms/qrcodedialog.ui" line="118"/>
@@ -1023,7 +1023,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../sendcoinsdialog.cpp" line="148"/>
         <location filename="../sendcoinsdialog.cpp" line="153"/>
         <source>Send Coins</source>
-        <translation>PPCoins überweisen</translation>
+        <translation>MudCoins überweisen</translation>
     </message>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="64"/>
@@ -1052,8 +1052,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="113"/>
-        <source>123.456 BTC</source>
-        <translation>123.456 BTC</translation>
+        <source>123.456 MUD</source>
+        <translation>123.456 MUD</translation>
     </message>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="144"/>
@@ -1118,7 +1118,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../sendcoinsdialog.cpp" line="154"/>
         <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Fehler: Die Transaktion wurde abgelehnt. Dies kann passieren, wenn einige PPCoins aus Ihrer Brieftasche bereits ausgegeben wurden. Beispielsweise weil Sie eine Kopie Ihrer wallet.dat genutzt, die PPCoins dort ausgegeben haben und dies daher in der derzeit aktiven Brieftasche nicht vermerkt ist.</translation>
+        <translation>Fehler: Die Transaktion wurde abgelehnt. Dies kann passieren, wenn einige MudCoins aus Ihrer Brieftasche bereits ausgegeben wurden. Beispielsweise weil Sie eine Kopie Ihrer wallet.dat genutzt, die MudCoins dort ausgegeben haben und dies daher in der derzeit aktiven Brieftasche nicht vermerkt ist.</translation>
     </message>
 </context>
 <context>
@@ -1181,8 +1181,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="25"/>
-        <source>Enter a PPCoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>PPCoin-Adresse eingeben (z.B. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a MudCoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>MudCoin-Adresse eingeben (z.B. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
@@ -1323,7 +1323,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../transactiondesc.cpp" line="224"/>
         <source>Generated coins must wait 120 blocks before they can be spent.  When you generated this block, it was broadcast to the network to be added to the block chain.  If it fails to get into the chain, it will change to &quot;not accepted&quot; and not be spendable.  This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Generierte PPCoins müssen 120 Blöcke lang warten, bevor sie ausgegeben werden können. Als Sie diesen Block generierten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in &quot;nicht angenommen&quot; geändert und der Betrag wird nicht verfügbar werden. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block zur selben Zeit wie Sie generierte.</translation>
+        <translation>Generierte MudCoins müssen 120 Blöcke lang warten, bevor sie ausgegeben werden können. Als Sie diesen Block generierten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in &quot;nicht angenommen&quot; geändert und der Betrag wird nicht verfügbar werden. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block zur selben Zeit wie Sie generierte.</translation>
     </message>
 </context>
 <context>
@@ -1630,346 +1630,346 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
-    <name>PPCoin-core</name>
+    <name>MudCoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="3"/>
-        <source>PPCoin version</source>
-        <translation>PPCoin Version</translation>
+        <location filename="../mudcoinstrings.cpp" line="3"/>
+        <source>MudCoin version</source>
+        <translation>MudCoin Version</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="4"/>
+        <location filename="../mudcoinstrings.cpp" line="4"/>
         <source>Usage:</source>
         <translation>Verwendung:</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="5"/>
-        <source>Send command to -server or ppcoind</source>
-        <translation>Befehl an -server oder ppcoind senden</translation>
+        <location filename="../mudcoinstrings.cpp" line="5"/>
+        <source>Send command to -server or MudCoind</source>
+        <translation>Befehl an -server oder MudCoind senden</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="6"/>
+        <location filename="../mudcoinstrings.cpp" line="6"/>
         <source>List commands</source>
         <translation>Befehle auflisten</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="7"/>
+        <location filename="../mudcoinstrings.cpp" line="7"/>
         <source>Get help for a command</source>
         <translation>Hilfe zu einem Befehl erhalten</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="8"/>
+        <location filename="../mudcoinstrings.cpp" line="8"/>
         <source>Options:</source>
         <translation>Einstellungen:</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="9"/>
-        <source>Specify configuration file (default: PPCoin.conf)</source>
-        <translation>Konfigurationsdatei angeben (Standard: PPCoin.conf)</translation>
+        <location filename="../mudcoinstrings.cpp" line="9"/>
+        <source>Specify configuration file (default: MudCoin.conf)</source>
+        <translation>Konfigurationsdatei angeben (Standard: MudCoin.conf)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="10"/>
-        <source>Specify pid file (default: ppcoind.pid)</source>
-        <translation>PID-Datei angeben (Standard: ppcoind.pid)</translation>
+        <location filename="../mudcoinstrings.cpp" line="10"/>
+        <source>Specify pid file (default: MudCoind.pid)</source>
+        <translation>PID-Datei angeben (Standard: MudCoind.pid)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="11"/>
+        <location filename="../mudcoinstrings.cpp" line="11"/>
         <source>Generate coins</source>
-        <translation>PPCoins generieren</translation>
+        <translation>MudCoins generieren</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="12"/>
+        <location filename="../mudcoinstrings.cpp" line="12"/>
         <source>Don&apos;t generate coins</source>
-        <translation>Keine PPCoins generieren</translation>
+        <translation>Keine MudCoins generieren</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="13"/>
+        <location filename="../mudcoinstrings.cpp" line="13"/>
         <source>Start minimized</source>
         <translation>Minimiert starten</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="14"/>
+        <location filename="../mudcoinstrings.cpp" line="14"/>
         <source>Specify data directory</source>
         <translation>Datenverzeichnis angeben</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="15"/>
+        <location filename="../mudcoinstrings.cpp" line="15"/>
         <source>Specify connection timeout (in milliseconds)</source>
         <translation>Verbindungstimeout angeben (in Millisekunden)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="16"/>
+        <location filename="../mudcoinstrings.cpp" line="16"/>
         <source>Connect through socks4 proxy</source>
         <translation>Über einen SOCKS4-Proxy verbinden:</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="17"/>
+        <location filename="../mudcoinstrings.cpp" line="17"/>
         <source>Allow DNS lookups for addnode and connect</source>
         <translation>Erlaube DNS Namensauflösung für addnode und connect</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="18"/>
+        <location filename="../mudcoinstrings.cpp" line="18"/>
         <source>Listen for connections on &lt;port&gt; (default: 8333 or testnet: 18333)</source>
         <translation>Verbindungen erwarten an &lt;port&gt; (Standard: 8333 oder test-Netzwerk: 18333)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="19"/>
+        <location filename="../mudcoinstrings.cpp" line="19"/>
         <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
         <translation>Maximal &lt;n&gt; Verbindungen zu Peers aufrechterhalten (Standard: 125)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="20"/>
+        <location filename="../mudcoinstrings.cpp" line="20"/>
         <source>Add a node to connect to</source>
         <translation>Einen Knoten hinzufügen, mit dem sich verbunden werden soll</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="21"/>
+        <location filename="../mudcoinstrings.cpp" line="21"/>
         <source>Connect only to the specified node</source>
         <translation>Nur mit dem angegebenem Knoten verbinden</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="22"/>
+        <location filename="../mudcoinstrings.cpp" line="22"/>
         <source>Don&apos;t accept connections from outside</source>
         <translation>Keine Verbindungen von außen akzeptieren</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="23"/>
+        <location filename="../mudcoinstrings.cpp" line="23"/>
         <source>Don&apos;t bootstrap list of peers using DNS</source>
         <translation>Keine Peerliste durch die Nutzung von DNS erzeugen</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="24"/>
+        <location filename="../mudcoinstrings.cpp" line="24"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
         <translation>Schwellenwert, um Verbindungen zu sich nicht konform verhaltenden Peers zu beenden (Standard: 100)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="25"/>
+        <location filename="../mudcoinstrings.cpp" line="25"/>
         <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
         <translation>Anzahl Sekunden, während denen sich nicht konform verhaltenden Peers die Wiederverbindung verweigert wird (Standard: 86400)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="28"/>
+        <location filename="../mudcoinstrings.cpp" line="28"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 10000)</source>
         <translation>Maximale Größe des Empfangspuffers pro Verbindung, &lt;n&gt;*1000 Bytes (Standard: 10000)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="29"/>
+        <location filename="../mudcoinstrings.cpp" line="29"/>
         <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 10000)</source>
         <translation>Maximale Größe des Sendepuffers pro Verbindung, &lt;n&gt;*1000 Bytes (Standard: 10000)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="30"/>
+        <location filename="../mudcoinstrings.cpp" line="30"/>
         <source>Don&apos;t attempt to use UPnP to map the listening port</source>
         <translation>Nicht versuchen UPnP zu verwenden, um den abgehörten Port weiterzuleiten</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="31"/>
+        <location filename="../mudcoinstrings.cpp" line="31"/>
         <source>Attempt to use UPnP to map the listening port</source>
         <translation>Versuchen UPnP zu verwenden, um den abgehörten Port weiterzuleiten</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="32"/>
+        <location filename="../mudcoinstrings.cpp" line="32"/>
         <source>Fee per kB to add to transactions you send</source>
         <translation>Gebühr pro kB, die gesendeten Transaktionen hinzugefügt wird</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="33"/>
+        <location filename="../mudcoinstrings.cpp" line="33"/>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Kommandozeilenbefehle und JSON-RPC Befehle annehmen</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="34"/>
+        <location filename="../mudcoinstrings.cpp" line="34"/>
         <source>Run in the background as a daemon and accept commands</source>
         <translation>Als Hintergrunddienst starten und Befehle akzeptieren</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="35"/>
+        <location filename="../mudcoinstrings.cpp" line="35"/>
         <source>Use the test network</source>
         <translation>Das test-Netzwerk verwenden</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="36"/>
+        <location filename="../mudcoinstrings.cpp" line="36"/>
         <source>Output extra debugging information</source>
         <translation>Ausgabe zusätzlicher Debugging-Informationen</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="37"/>
+        <location filename="../mudcoinstrings.cpp" line="37"/>
         <source>Prepend debug output with timestamp</source>
         <translation>Der Debug-Ausgabe einen Zeitstempel voranstellen</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="38"/>
+        <location filename="../mudcoinstrings.cpp" line="38"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Rückverfolgungs- und Debug-Informationen an die Konsole senden anstatt sie in die debug.log Datei zu schreiben</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="39"/>
+        <location filename="../mudcoinstrings.cpp" line="39"/>
         <source>Send trace/debug info to debugger</source>
         <translation>Rückverfolgungs- und Debug-Informationen an den Debugger senden</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="40"/>
+        <location filename="../mudcoinstrings.cpp" line="40"/>
         <source>Username for JSON-RPC connections</source>
         <translation>Benutzername für JSON-RPC Verbindungen</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="41"/>
+        <location filename="../mudcoinstrings.cpp" line="41"/>
         <source>Password for JSON-RPC connections</source>
         <translation>Passwort für JSON-RPC Verbindungen</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="42"/>
+        <location filename="../mudcoinstrings.cpp" line="42"/>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332)</source>
         <translation>JSON-RPC Verbindungen erwarten an &lt;port&gt; (Standard: 8332)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="43"/>
+        <location filename="../mudcoinstrings.cpp" line="43"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
         <translation>JSON-RPC Verbindungen von der angegebenen IP-Adresse erlauben</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="44"/>
+        <location filename="../mudcoinstrings.cpp" line="44"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
         <translation>Sende Befehle an Knoten &lt;ip&gt; (Standard: 127.0.0.1)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="45"/>
+        <location filename="../mudcoinstrings.cpp" line="45"/>
         <source>Set key pool size to &lt;n&gt; (default: 100)</source>
         <translation>Setze Größe des Schlüsselpools auf &lt;n&gt; (Standard: 100)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="46"/>
+        <location filename="../mudcoinstrings.cpp" line="46"/>
         <source>Rescan the block chain for missing wallet transactions</source>
         <translation>Blockkette erneut nach fehlenden Transaktionen der Brieftasche durchsuchen</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="47"/>
+        <location filename="../mudcoinstrings.cpp" line="47"/>
         <source>
-SSL options: (see the PPCoin Wiki for SSL setup instructions)</source>
+SSL options: (see the MudCoin Wiki for SSL setup instructions)</source>
         <translation>
-SSL Einstellungen: (siehe PPCoin-Wiki für SSL Installationsanweisungen)</translation>
+SSL Einstellungen: (siehe MudCoin-Wiki für SSL Installationsanweisungen)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="50"/>
+        <location filename="../mudcoinstrings.cpp" line="50"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
         <translation>OpenSSL (https) für JSON-RPC Verbindungen benutzen</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="51"/>
+        <location filename="../mudcoinstrings.cpp" line="51"/>
         <source>Server certificate file (default: server.cert)</source>
         <translation>Server Zertifikat (Standard: server.cert)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="52"/>
+        <location filename="../mudcoinstrings.cpp" line="52"/>
         <source>Server private key (default: server.pem)</source>
         <translation>Privater Serverschlüssel (Standard: server.pem)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="53"/>
+        <location filename="../mudcoinstrings.cpp" line="53"/>
         <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
         <translation>Akzeptierte Chiffren (Standard: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="56"/>
+        <location filename="../mudcoinstrings.cpp" line="56"/>
         <source>This help message</source>
         <translation>Dieser Hilfetext</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="57"/>
-        <source>Cannot obtain a lock on data directory %s.  PPCoin is probably already running.</source>
-        <translation>Konnte das Datenverzeichnis %s nicht sperren. Evtl. wurde PPCoin bereits gestartet.</translation>
+        <location filename="../mudcoinstrings.cpp" line="57"/>
+        <source>Cannot obtain a lock on data directory %s.  MudCoin is probably already running.</source>
+        <translation>Konnte das Datenverzeichnis %s nicht sperren. Evtl. wurde MudCoin bereits gestartet.</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="60"/>
+        <location filename="../mudcoinstrings.cpp" line="60"/>
         <source>Loading addresses...</source>
         <translation>Lade Adressen...</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="61"/>
+        <location filename="../mudcoinstrings.cpp" line="61"/>
         <source>Error loading addr.dat</source>
         <translation>Fehler beim Laden von addr.dat</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="63"/>
+        <location filename="../mudcoinstrings.cpp" line="63"/>
         <source>Error loading blkindex.dat</source>
         <translation>Fehler beim Laden von blkindex.dat</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="65"/>
+        <location filename="../mudcoinstrings.cpp" line="65"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
         <translation>Fehler beim Laden von wallet.dat: Brieftasche beschädigt</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="66"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of PPCoin</source>
-        <translation>Fehler beim Laden von wallet.dat: Brieftasche benötigt neuere Version von PPCoin</translation>
+        <location filename="../mudcoinstrings.cpp" line="66"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of MudCoin</source>
+        <translation>Fehler beim Laden von wallet.dat: Brieftasche benötigt neuere Version von MudCoin</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="67"/>
-        <source>Wallet needed to be rewritten: restart PPCoin to complete</source>
-        <translation>Brieftasche muss neu geschrieben werden: starten Sie PPCoin zur Fertigstellung neu</translation>
+        <location filename="../mudcoinstrings.cpp" line="67"/>
+        <source>Wallet needed to be rewritten: restart MudCoin to complete</source>
+        <translation>Brieftasche muss neu geschrieben werden: starten Sie MudCoin zur Fertigstellung neu</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="68"/>
+        <location filename="../mudcoinstrings.cpp" line="68"/>
         <source>Error loading wallet.dat</source>
         <translation>Fehler beim Laden von wallet.dat (Brieftasche)</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="62"/>
+        <location filename="../mudcoinstrings.cpp" line="62"/>
         <source>Loading block index...</source>
         <translation>Lade Blockindex...</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="64"/>
+        <location filename="../mudcoinstrings.cpp" line="64"/>
         <source>Loading wallet...</source>
         <translation>Lade Geldbörse...</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="69"/>
+        <location filename="../mudcoinstrings.cpp" line="69"/>
         <source>Rescanning...</source>
         <translation>Durchsuche erneut...</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="70"/>
+        <location filename="../mudcoinstrings.cpp" line="70"/>
         <source>Done loading</source>
         <translation>Laden abgeschlossen</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="71"/>
+        <location filename="../mudcoinstrings.cpp" line="71"/>
         <source>Invalid -proxy address</source>
         <translation>Fehlerhafte Proxy-Adresse</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="72"/>
+        <location filename="../mudcoinstrings.cpp" line="72"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;</source>
         <translation>Ungültige Angabe für -paytxfee=&lt;Betrag&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="73"/>
+        <location filename="../mudcoinstrings.cpp" line="73"/>
         <source>Warning: -paytxfee is set very high.  This is the transaction fee you will pay if you send a transaction.</source>
         <translation>Warnung: -paytxfee ist auf einen sehr hohen Wert gesetzt. Dies ist die Gebühr die beim Senden einer Transaktion fällig wird.</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="76"/>
+        <location filename="../mudcoinstrings.cpp" line="76"/>
         <source>Error: CreateThread(StartNode) failed</source>
         <translation>Fehler: CreateThread(StartNode) fehlgeschlagen</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="77"/>
+        <location filename="../mudcoinstrings.cpp" line="77"/>
         <source>Warning: Disk space is low  </source>
         <translation>Warnung: Festplattenplatz wird knapp</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="78"/>
-        <source>Unable to bind to port %d on this computer.  PPCoin is probably already running.</source>
-        <translation>Fehler beim registrieren des Ports %d auf diesem Computer. Evtl. wurde PPCoin bereits gestartet.</translation>
+        <location filename="../mudcoinstrings.cpp" line="78"/>
+        <source>Unable to bind to port %d on this computer.  MudCoin is probably already running.</source>
+        <translation>Fehler beim registrieren des Ports %d auf diesem Computer. Evtl. wurde MudCoin bereits gestartet.</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="81"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct.  If your clock is wrong PPCoin will not work properly.</source>
-        <translation>Warnung: Bitte korrigieren Sie die Datums- und Uhrzeiteinstellungen Ihres Computers, da PPCoin ansonsten nicht ordnungsgemäß funktionieren wird.</translation>
+        <location filename="../mudcoinstrings.cpp" line="81"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct.  If your clock is wrong MudCoin will not work properly.</source>
+        <translation>Warnung: Bitte korrigieren Sie die Datums- und Uhrzeiteinstellungen Ihres Computers, da MudCoin ansonsten nicht ordnungsgemäß funktionieren wird.</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="84"/>
+        <location filename="../mudcoinstrings.cpp" line="84"/>
         <source>beta</source>
         <translation>Beta</translation>
     </message>

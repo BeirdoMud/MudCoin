@@ -1,8 +1,9 @@
 /*
- * W.J. van der Laan 2011-2012
- * The PPCoin Developers 2013
+ * Copyright (c) 2011-2012 W.J. van der Laan
+ * Copyright (c) 2013 The PPCoin Developers
+ * Copyright (c) 2017 MudCoin Developers
  */
-#include "bitcoingui.h"
+#include "mudcoingui.h"
 #include "clientmodel.h"
 #include "walletmodel.h"
 #include "optionsmodel.h"
@@ -22,8 +23,8 @@
 
 #include <boost/interprocess/ipc/message_queue.hpp>
 
-#if defined(BITCOIN_NEED_QT_PLUGINS) && !defined(_BITCOIN_QT_PLUGINS_INCLUDED)
-#define _BITCOIN_QT_PLUGINS_INCLUDED
+#if defined(MUDCOIN_NEED_QT_PLUGINS) && !defined(_MUDCOIN_QT_PLUGINS_INCLUDED)
+#define _MUDCOIN_QT_PLUGINS_INCLUDED
 #define __INSURE__
 #include <QtPlugin>
 Q_IMPORT_PLUGIN(qcncodecs)
@@ -34,7 +35,7 @@ Q_IMPORT_PLUGIN(qtaccessiblewidgets)
 #endif
 
 // Need a global reference for the notifications to find the GUI
-static BitcoinGUI *guiref;
+static MudcoinGUI *guiref;
 static QSplashScreen *splashref;
 static WalletModel *walletmodel;
 static ClientModel *clientmodel;
@@ -117,7 +118,7 @@ void QueueShutdown()
  */
 std::string _(const char* psz)
 {
-    return QCoreApplication::translate("bitcoin-core", psz).toStdString();
+    return QCoreApplication::translate("mudcoin-core", psz).toStdString();
 }
 
 /* Handle runaway exceptions. Shows a message box with the problem and quits the program.
@@ -125,14 +126,14 @@ std::string _(const char* psz)
 static void handleRunawayException(std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
-    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occured. PPCoin can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
+    QMessageBox::critical(0, "Runaway exception", MudcoinGUI::tr("A fatal error occured. MudCoin can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
     exit(1);
 }
 
 #ifdef WIN32
 #define strncasecmp strnicmp
 #endif
-#ifndef BITCOIN_QT_TEST
+#ifndef MUDCOIN_QT_TEST
 int main(int argc, char *argv[])
 {
 #if !defined(MAC_OSX) && !defined(WIN32)
@@ -141,11 +142,11 @@ int main(int argc, char *argv[])
     // Do this early as we don't want to bother initializing if we are just calling IPC
     for (int i = 1; i < argc; i++)
     {
-        if (strlen(argv[i]) >= 7 && strncasecmp(argv[i], "ppcoin:", 7) == 0)
+        if (strlen(argv[i]) >= 7 && strncasecmp(argv[i], "mudcoin:", 7) == 0)
         {
             const char *strURI = argv[i];
             try {
-                boost::interprocess::message_queue mq(boost::interprocess::open_only, BITCOINURI_QUEUE_NAME);
+                boost::interprocess::message_queue mq(boost::interprocess::open_only, MUDCOINURI_QUEUE_NAME);
                 if(mq.try_send(strURI, strlen(strURI), 0))
                     exit(0);
                 else
@@ -164,13 +165,13 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForCStrings(QTextCodec::codecForTr());
 #endif
 
-    Q_INIT_RESOURCE(bitcoin);
+    Q_INIT_RESOURCE(mudcoin);
     QApplication app(argc, argv);
 
     // Command-line options take precedence:
     ParseParameters(argc, argv);
 
-    // ... then bitcoin.conf:
+    // ... then MudCoin.conf:
     if (!boost::filesystem::is_directory(GetDataDir(false)))
     {
         fprintf(stderr, "Error: Specified directory does not exist\n");
@@ -180,12 +181,12 @@ int main(int argc, char *argv[])
 
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
-    app.setOrganizationName("PPCoin");
-    app.setOrganizationDomain("ppcoin.org");
+    app.setOrganizationName("MudCoin");
+    app.setOrganizationDomain("blah.org");
     if(GetBoolArg("-testnet")) // Separate UI settings for testnet
-        app.setApplicationName("PPCoin-Qt-testnet");
+        app.setApplicationName("MudCoin-Qt-testnet");
     else
-        app.setApplicationName("PPCoin-Qt");
+        app.setApplicationName("MudCoin-Qt");
 
     // ... then GUI settings:
     OptionsModel optionsModel;
@@ -230,7 +231,7 @@ int main(int argc, char *argv[])
 
     try
     {
-        BitcoinGUI window;
+        MudcoinGUI window;
         guiref = &window;
         if(AppInit2(argc, argv))
         {
@@ -270,11 +271,11 @@ int main(int argc, char *argv[])
                 // Check for URI in argv
                 for (int i = 1; i < argc; i++)
                 {
-                    if (strlen(argv[i]) >= 7 && strncasecmp(argv[i], "ppcoin:", 7) == 0)
+                    if (strlen(argv[i]) >= 7 && strncasecmp(argv[i], "mudcoin:", 7) == 0)
                     {
                         const char *strURI = argv[i];
                         try {
-                            boost::interprocess::message_queue mq(boost::interprocess::open_only, BITCOINURI_QUEUE_NAME);
+                            boost::interprocess::message_queue mq(boost::interprocess::open_only, MUDCOINURI_QUEUE_NAME);
                             mq.try_send(strURI, strlen(strURI), 0);
                         }
                         catch (boost::interprocess::interprocess_exception &ex) {
@@ -291,7 +292,7 @@ int main(int argc, char *argv[])
                 clientmodel = 0;
                 walletmodel = 0;
             }
-            // Shutdown the core and it's threads, but don't exit Bitcoin-Qt here
+            // Shutdown the core and it's threads, but don't exit Mudcoin-Qt here
             Shutdown(NULL);
         }
         else
@@ -305,4 +306,4 @@ int main(int argc, char *argv[])
     }
     return 0;
 }
-#endif // BITCOIN_QT_TEST
+#endif // MUDCOIN_QT_TEST
