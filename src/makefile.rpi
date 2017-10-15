@@ -145,11 +145,12 @@ OBJS= \
     obj/noui.o \
     obj/kernel.o
 
+COIN = MudCoin
 
-all: mudcoind
+all: ${COIN}d
 
-test check: test_mudcoin FORCE
-	./test_mudcoin
+test check: test_${COIN} FORCE
+	./test_${COIN}
 
 # auto-generated dependencies:
 -include obj/*.P
@@ -167,7 +168,7 @@ obj/%.o: %.cpp
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-mudcoind: $(OBJS:obj/%=obj/%)
+${COIN}d: $(OBJS:obj/%=obj/%)
 	$(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -179,11 +180,11 @@ obj-test/%.o: test/%.cpp
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-test_mudcoin: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_${COIN}: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(LINK) $(xCXXFLAGS) -o $@ $(LIBPATHS) $^ -Wl,-B$(LMODE) -lboost_unit_test_framework $(xLDFLAGS) $(LIBS)
 
 clean:
-	-rm -f mudcoind test_mudcoin
+	-rm -f ${COIN}d test_${COIN}
 	-rm -f obj/*.o
 	-rm -f obj-test/*.o
 	-rm -f obj/*.P
