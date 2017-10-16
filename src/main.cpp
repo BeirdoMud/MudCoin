@@ -572,9 +572,11 @@ bool CTxMemPool::accept(CTxDB& txdb, CTransaction &tx, bool fCheckInputs,
     if ((int64)tx.nLockTime > std::numeric_limits<int>::max())
         return error("CTxMemPool::accept() : not accepting nLockTime beyond 2038 yet");
 
+#ifndef ALLOW_BURN
     // Rather not work on nonstandard transactions (unless -testnet)
     if (!fTestNet && !tx.IsStandard())
         return error("CTxMemPool::accept() : nonstandard transaction type");
+#endif
 
     // Do we already have it?
     uint256 hash = tx.GetHash();
@@ -640,12 +642,14 @@ bool CTxMemPool::accept(CTxDB& txdb, CTransaction &tx, bool fCheckInputs,
         int64 nFees = tx.GetValueIn(mapInputs)-tx.GetValueOut();
         unsigned int nSize = ::GetSerializeSize(tx, SER_NETWORK, PROTOCOL_VERSION);
 
+#ifndef ALLOW_BURN
         // Don't accept it if it can't get into a block
         int64 txMinFee = tx.GetMinFee(1000, false, GMF_RELAY, nSize); //line changed by presstab - added nSize
         if (nFees < txMinFee)
             return error("CTxMemPool::accept() : not enough fees %s, %" PRI64d " < %" PRI64d,
                          hash.ToString().c_str(),
                          nFees, txMinFee);
+#endif
 
         // Continuously rate-limit free transactions
         // This mitigates 'penny-flooding' -- sending thousands of free transactions just to
@@ -1383,7 +1387,11 @@ bool CTransaction::ConnectInputs(CTxDB& txdb, MapPrevTx inputs,
         else
         {
             if (nValueIn < GetValueOut())
+#ifdef ALLOW_BURN
+                return true;
+#else
                 return DoS(100, error("ConnectInputs() : %s value in < value out", GetHash().ToString().substr(0,10).c_str()));
+#endif
 
             // Tally transaction fees
             int64 nTxFee = nValueIn - GetValueOut();

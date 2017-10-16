@@ -1,2 +1,3 @@
 mudcoind
 *.exe
+obj/
