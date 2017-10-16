@@ -28,3 +28,9 @@ PortIndex*
 dist
 *.app
 *.dmg
+.qmake.stash
+Makefile.Debug
+Makefile.Release
+object_script.MudCoin-qt.Debug
+object_script.MudCoin-qt.Release
+release/
