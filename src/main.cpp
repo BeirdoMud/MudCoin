@@ -902,7 +902,7 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
 int64 GetProofOfWorkReward(unsigned int nBits)
 {
     // Special case for genesis block
-    if (hashBlock == 0 || nIndex == -1)
+    if (!pindexBest)
         return 0;
 
     CBigNum bnSubsidyLimit = MAX_MINT_PROOF_OF_WORK;
