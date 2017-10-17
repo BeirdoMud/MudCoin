@@ -901,15 +901,15 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
 
 int64 GetProofOfWorkReward(unsigned int nBits)
 {
-    // Special case for genesis block
-    if (!pindexBest)
-        return 0;
 
     CBigNum bnSubsidyLimit = MAX_MINT_PROOF_OF_WORK;
-    int64_t height = pindexBest->nHeight + 1;
 
-    if(height == 1) { //  Premine block 1
-	return 2000000 * COIN;
+    if (pindexBest)
+        int64_t height = pindexBest->nHeight + 1;
+
+        if(height == 1) { //  Premine block 1
+	    return 2000000 * COIN;
+        }
     }
 
     CBigNum bnTarget;
@@ -936,7 +936,7 @@ int64 GetProofOfWorkReward(unsigned int nBits)
 
     int64 nSubsidy = bnUpperBound.getuint64();
     nSubsidy = (nSubsidy / CENT) * CENT;
-    if (fDebug && GetBoolArg("-printcreation"))
+    //if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfWorkReward() : create=%s nBits=0x%08x nSubsidy=%" PRI64d "\n", FormatMoney(nSubsidy).c_str(), nBits, nSubsidy);
 
     return min(nSubsidy, MAX_MINT_PROOF_OF_WORK);
