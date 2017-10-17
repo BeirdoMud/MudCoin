@@ -1,9 +1,10 @@
 // Copyright (c) 2012 The Bitcoin developers
 // Copyright (c) 2012-2013 The PPCoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BITCOIN_VERSION_H
-#define BITCOIN_VERSION_H
+#ifndef MUDCOIN_VERSION_H
+#define MUDCOIN_VERSION_H
 
 #include <string>
 
@@ -11,7 +12,7 @@
 // client versioning
 //
 
-// These need to be macro's, as version.cpp's voodoo requires it
+// These need to be macros, as version.cpp's voodoo requires it
 #define CLIENT_VERSION_MAJOR       0
 #define CLIENT_VERSION_MINOR       6
 #define CLIENT_VERSION_REVISION    3
@@ -27,17 +28,17 @@ extern const std::string CLIENT_NAME;
 extern const std::string CLIENT_BUILD;
 extern const std::string CLIENT_DATE;
 
-// ppcoin version - intended for display purpose ONLY
-#define PPCOIN_VERSION_MAJOR       0
-#define PPCOIN_VERSION_MINOR       5
-#define PPCOIN_VERSION_REVISION    4
-#define PPCOIN_VERSION_BUILD       0
+// mudcoin version - intended for display purpose ONLY
+#define MUDCOIN_VERSION_MAJOR       0
+#define MUDCOIN_VERSION_MINOR       5
+#define MUDCOIN_VERSION_REVISION    4
+#define MUDCOIN_VERSION_BUILD       0
 
-static const int PPCOIN_VERSION =
-                           1000000 * PPCOIN_VERSION_MAJOR
-                         +   10000 * PPCOIN_VERSION_MINOR
-                         +     100 * PPCOIN_VERSION_REVISION
-                         +       1 * PPCOIN_VERSION_BUILD;
+static const int MUDCOIN_VERSION =
+                           1000000 * MUDCOIN_VERSION_MAJOR
+                         +   10000 * MUDCOIN_VERSION_MINOR
+                         +     100 * MUDCOIN_VERSION_REVISION
+                         +       1 * MUDCOIN_VERSION_BUILD;
 
 //
 // network protocol versioning
@@ -46,7 +47,7 @@ static const int PPCOIN_VERSION =
 static const int PROTOCOL_VERSION = 60006;
 
 // earlier versions not supported as of Feb 2012, and are disconnected
-// NOTE: as of bitcoin v0.6 message serialization (vSend, vRecv) still
+// NOTE: as of mudcoin v0.6 message serialization (vSend, vRecv) still
 // uses MIN_PROTO_VERSION(209), where message format uses PROTOCOL_VERSION
 static const int MIN_PROTO_VERSION = 209;
 

@@ -43,14 +43,14 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
 
     if (showTransaction(wtx))
     {
-        if (wtx.IsCoinStake()) // ppcoin: coinstake transaction
+        if (wtx.IsCoinStake()) // mudcoin: coinstake transaction
         {
             TransactionRecord sub(hash, nTime, TransactionRecord::StakeMint, "", -nDebit, wtx.GetValueOut());
             CTxDestination address;
             CTxOut txout = wtx.vout[1];
 
             if(ExtractDestination(txout.scriptPubKey, address) && IsMine(*wallet, address))
-                sub.address = CBitcoinAddress(address).ToString();
+                sub.address = CMudcoinAddress(address).ToString();
 
             parts.append(sub);
         }
@@ -70,9 +70,9 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
 
                     if (ExtractDestination(txout.scriptPubKey, address) && IsMine(*wallet, address))
                     {
-                        // Received by Bitcoin Address
+                        // Received by Mudcoin Address
                         sub.type = TransactionRecord::RecvWithAddress;
-                        sub.address = CBitcoinAddress(address).ToString();
+                        sub.address = CMudcoinAddress(address).ToString();
                     }
                     else
                     {
@@ -131,9 +131,9 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
                     CTxDestination address;
                     if (ExtractDestination(txout.scriptPubKey, address))
                     {
-                        // Sent to Bitcoin Address
+                        // Sent to Mudcoin Address
                         sub.type = TransactionRecord::SendToAddress;
-                        sub.address = CBitcoinAddress(address).ToString();
+                        sub.address = CMudcoinAddress(address).ToString();
                     }
                     else
                     {

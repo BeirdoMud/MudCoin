@@ -1,4 +1,5 @@
 // Copyright (c) 2009-2012 The Bitcoin developers
+// Copyright (c) 2017 MudCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -405,9 +406,6 @@ static std::vector<unsigned char> EncodeLength(size_t nLength)
 
 static bool NormalizeSignature(std::vector<unsigned char>& vchSig)
 {
-    // Prevent the problem described here: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-July/009697.html
-    // by removing the extra length bytes
-
     if (vchSig.size() < 2 || vchSig[0] != 0x30)
         return false;
 

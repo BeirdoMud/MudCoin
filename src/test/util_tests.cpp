@@ -105,7 +105,7 @@ BOOST_AUTO_TEST_CASE(util_DateTimeStrFormat)
 {
     BOOST_CHECK_EQUAL(DateTimeStrFormat("%x %H:%M:%S", 0), "01/01/70 00:00:00");
     BOOST_CHECK_EQUAL(DateTimeStrFormat("%x %H:%M:%S", 0x7FFFFFFF), "01/19/38 03:14:07");
-    // Formats used within bitcoin
+    // Formats used within mudcoin
     BOOST_CHECK_EQUAL(DateTimeStrFormat("%x %H:%M:%S", 1317425777), "09/30/11 23:36:17");
     BOOST_CHECK_EQUAL(DateTimeStrFormat("%x %H:%M", 1317425777), "09/30/11 23:36");
 }
@@ -193,7 +193,7 @@ BOOST_AUTO_TEST_CASE(util_FormatMoney)
     BOOST_CHECK_EQUAL(FormatMoney(COIN/100000, false), "0.00001");
     BOOST_CHECK_EQUAL(FormatMoney(COIN/1000000, false), "0.000001");
 
-// ppcoin: COIN = 1000000, cannot format money smaller than one satoshi
+// mudcoin: COIN = 1000000, cannot format money smaller than one satoshi
     BOOST_CHECK_NE(FormatMoney(COIN/10000000, false), "0.0000001");
     BOOST_CHECK_NE(FormatMoney(COIN/100000000, false), "0.00000001");
 }
@@ -238,7 +238,7 @@ BOOST_AUTO_TEST_CASE(util_ParseMoney)
     BOOST_CHECK(ParseMoney("0.000001", ret));
     BOOST_CHECK_EQUAL(ret, COIN/1000000);
 
-// ppcoin: COIN = 1000000, cannot parse money smaller than one satoshi
+// mudcoin: COIN = 1000000, cannot parse money smaller than one satoshi
     BOOST_CHECK(!ParseMoney("0.0000001", ret));
     BOOST_CHECK(!ParseMoney("0.00000001", ret));
 
