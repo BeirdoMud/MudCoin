@@ -904,7 +904,7 @@ int64 GetProofOfWorkReward(unsigned int nBits)
 
     CBigNum bnSubsidyLimit = MAX_MINT_PROOF_OF_WORK;
 
-    if (pindexBest)
+    if (pindexBest) {
         int64_t height = pindexBest->nHeight + 1;
 
         if(height == 1) { //  Premine block 1
