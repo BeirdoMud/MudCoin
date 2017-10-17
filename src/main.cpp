@@ -22,7 +22,7 @@ using namespace boost;
 // Global state
 //
 
-const bool IsCalculatingGenesisBlockHash = true;
+const bool IsCalculatingGenesisBlockHash = false;
 
 CCriticalSection cs_setpwalletRegistered;
 set<CWallet*> setpwalletRegistered;
@@ -2350,7 +2350,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = 1508139102;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 0;
+        block.nNonce   = 1202302;
 
         if (fTestNet)
         {
@@ -2388,7 +2388,7 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("block.nNonce = %u \n", block.nNonce);
         printf("block.nBits = %u \n", block.nBits);
 
-        assert(block.hashMerkleRoot == uint256("0x3c2d8f85fab4d17aac558cc648a1a58acff0de6deb890c29985690052c5993c2"));
+        assert(block.hashMerkleRoot == uint256("0x353fd49b967b564b2e0d1f90d3002ed92fb487186fe78a48503e86a62c864a98"));
 
         block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
