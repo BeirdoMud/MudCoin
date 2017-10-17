@@ -21,6 +21,8 @@ using namespace boost;
 // Global state
 //
 
+const bool IsCalculatingGenesisBlockHash = false;
+
 CCriticalSection cs_setpwalletRegistered;
 set<CWallet*> setpwalletRegistered;
 
@@ -2348,13 +2350,38 @@ bool LoadBlockIndex(bool fAllowNew)
             block.nNonce   = 122894938;
         }
 
+        if (IsCalculatingGenesisBlockHash && (block.GetHash() != hashGenesisBlock)) {
+			block.nNonce = 0;
+
+            // This will figure out a valid hash and Nonce if you're
+            // creating a different genesis block:
+            uint256 hashTarget = CBigNum().SetCompact(block.nBits).getuint256();
+            while (block.GetHash() > hashTarget)
+            {
+                ++block.nNonce;
+                if (block.nNonce == 0)
+                {
+                    printf("NONCE WRAPPED, incrementing time");
+                    ++block.nTime;
+                }
+		if (block.nNonce % 10000 == 0)
+		{
+		    printf("nonce %08u: hash = %s \n", block.nNonce, block.GetHash().ToString().c_str());
+		}
+            }
+        }
+
         //// debug print
-        printf("%s\n", block.GetHash().ToString().c_str());
-        printf("%s\n", hashGenesisBlock.ToString().c_str());
-        printf("%s\n", block.hashMerkleRoot.ToString().c_str());
+        block.print();
+        printf("block.GetHash() == %s\n", block.GetHash().ToString().c_str());
+        printf("block.hashMerkleRoot == %s\n", block.hashMerkleRoot.ToString().c_str());
+        printf("block.nTime = %u \n", block.nTime);
+        printf("block.nNonce = %u \n", block.nNonce);
+        printf("block.nBits = %u \n", block.nBits);
+
         assert(block.hashMerkleRoot == uint256("0x3c2d8f85fab4d17aac558cc648a1a58acff0de6deb890c29985690052c5993c2"));
         block.print();
-        assert(block.GetHash() == hashGenesisBlock);
+        assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
 
         // Start new block file
