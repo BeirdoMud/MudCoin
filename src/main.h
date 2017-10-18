@@ -38,6 +38,7 @@ static const int64 MIN_RELAY_TX_FEE = 0.00001 * COIN;
 static const int64 MAX_MONEY = 10000000000 * COIN;  // 10B
 static const int64 MAX_MINT_PROOF_OF_WORK = 10000 * COIN;
 static const int64 MIN_TXOUT_AMOUNT = MIN_TX_FEE;
+static const int64 PREMINE_BLOCK_1 = 2000000 * COIN;
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 static const int COINBASE_MATURITY = 500;
 // Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp.
@@ -1124,7 +1125,7 @@ public:
     bool ReadFromDisk(const CBlockIndex* pindex, bool fReadTransactions=true);
     bool SetBestChain(CTxDB& txdb, CBlockIndex* pindexNew);
     bool AddToBlockIndex(unsigned int nFile, unsigned int nBlockPos);
-    bool CheckBlock() const;
+    bool CheckBlock(int nHeight = -1) const;
     bool AcceptBlock();
     bool GetCoinAge(uint64& nCoinAge) const; // mudcoin: calculate total coin age spent in block
     bool SignBlock(const CKeyStore& keystore);

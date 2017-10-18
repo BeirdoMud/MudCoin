@@ -905,11 +905,11 @@ int64 GetProofOfWorkReward(unsigned int nBits)
 
     CBigNum bnSubsidyLimit = MAX_MINT_PROOF_OF_WORK;
 
-    if (pindexBest) {
+    if (pindexBest && PREMINE_BLOCK_1) {
         int64_t height = pindexBest->nHeight + 1;
 
         if(height == 1) { //  Premine block 1
-	    return 2000000 * COIN;
+	    return PREMINE_BLOCK_1;
         }
     }
 
@@ -1756,7 +1756,7 @@ bool CBlock::SetBestChain(CTxDB& txdb, CBlockIndex* pindexNew)
 // mudcoin: total coin age spent in transaction, in the unit of coin-days.
 // Only those coins meeting minimum age requirement counts. As those
 // transactions not in main chain are not currently indexed so we
-// might not find out about their coin age. Older transactions are 
+// might not find out about their coin age. Older transactions are
 // guaranteed to be in main chain by sync-checkpoint. This rule is
 // introduced to help nodes establish a consistent view of the coin
 // age (trust score) of competing branches.
@@ -1903,7 +1903,7 @@ bool CBlock::AddToBlockIndex(unsigned int nFile, unsigned int nBlockPos)
 
 
 
-bool CBlock::CheckBlock() const
+bool CBlock::CheckBlock(int nHeight) const
 {
     // These are checks that are independent of context
     // that can be verified before saving an orphan block.
@@ -1945,10 +1945,16 @@ bool CBlock::CheckBlock() const
         return DoS(50, error("CheckBlock() : coinstake timestamp violation nTimeBlock=%u nTimeTx=%u", GetBlockTime(), vtx[1].nTime));
 
     // Check coinbase reward
-    if (vtx[0].GetValueOut() > (IsProofOfWork()? (GetProofOfWorkReward(nBits) - vtx[0].GetMinFee() + MIN_TX_FEE) : 0))
-        return DoS(50, error("CheckBlock() : coinbase reward exceeded %s > %s", 
-                   FormatMoney(vtx[0].GetValueOut()).c_str(),
-                   FormatMoney(IsProofOfWork()? GetProofOfWorkReward(nBits) : 0).c_str()));
+    if (nHeight == 1 && PREMINE_BLOCK_1) {
+	if vtx[0].GetValueOut() != PREMINE_BLOCK_1)
+            return DoS(50, error("CheckBlock() : premine block reward != %s",
+                       FormatMoney(PREMINE_BLOCK_1)))
+    } else {
+        if (vtx[0].GetValueOut() > (IsProofOfWork()? (GetProofOfWorkReward(nBits) - vtx[0].GetMinFee() + MIN_TX_FEE) : 0))
+            return DoS(50, error("CheckBlock() : coinbase reward exceeded %s > %s",
+                       FormatMoney(vtx[0].GetValueOut()).c_str(),
+                       FormatMoney(IsProofOfWork()? GetProofOfWorkReward(nBits) : 0).c_str()));
+    }
 
     // Check transactions
     BOOST_FOREACH(const CTransaction& tx, vtx)
@@ -2576,7 +2582,7 @@ void PrintBlockTree()
 map<uint256, CAlert> mapAlerts;
 CCriticalSection cs_mapAlerts;
 
-static string strMintMessage = _("Info: Minting suspended due to locked wallet."); 
+static string strMintMessage = _("Info: Minting suspended due to locked wallet.");
 static string strMintWarning;
 
 string GetWarnings(string strFor)
@@ -2626,7 +2632,7 @@ string GetWarnings(string strFor)
     else if (IsProtocolV05(nProtocolV05UpgradeTime + 60*60*24)) // 1 day margin
     {
         // v0.5 protocol does not change modifier computation from v0.4.
-        // So redownload of blockchain is not required for late upgrades, 
+        // So redownload of blockchain is not required for late upgrades,
         // but still recommended.
         nPriority = 200;
         strStatusBar = strRPC = "WARNING: Blockchain redownload recommended approaching or past v0.5 upgrade deadline.";
@@ -3041,7 +3047,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
                         // and we want it right after the last block so they don't
                         // wait for other stuff first.
                         // mudcoin: send latest proof-of-work block to allow the
-                        // download node to accept as orphan (proof-of-stake 
+                        // download node to accept as orphan (proof-of-stake
                         // block might be rejected by stake connection check)
                         vector<CInv> vInv;
                         vInv.push_back(CInv(MSG_BLOCK, GetLastBlockIndex(pindexBest, false)->GetBlockHash()));
@@ -4124,7 +4130,7 @@ void MudCoinMiner(CWallet *pwallet, bool fProofOfStake)
                     continue;
                 }
                 strMintWarning = "";
-                printf("CPUMiner : proof-of-stake block found %s\n", pblock->GetHash().ToString().c_str()); 
+                printf("CPUMiner : proof-of-stake block found %s\n", pblock->GetHash().ToString().c_str());
                 SetThreadPriority(THREAD_PRIORITY_NORMAL);
                 CheckWork(pblock.get(), *pwalletMain, reservekey);
                 SetThreadPriority(THREAD_PRIORITY_LOWEST);
