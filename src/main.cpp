@@ -1946,7 +1946,7 @@ bool CBlock::CheckBlock(int nHeight) const
 
     // Check coinbase reward
     if (nHeight == 1 && PREMINE_BLOCK_1) {
-	if vtx[0].GetValueOut() != PREMINE_BLOCK_1)
+	if (vtx[0].GetValueOut() != PREMINE_BLOCK_1)
             return DoS(50, error("CheckBlock() : premine block reward != %s",
                        FormatMoney(PREMINE_BLOCK_1)))
     } else {
