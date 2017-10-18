@@ -1948,7 +1948,7 @@ bool CBlock::CheckBlock(int nHeight) const
     if (nHeight == 1 && PREMINE_BLOCK_1) {
 	if (vtx[0].GetValueOut() != PREMINE_BLOCK_1)
             return DoS(50, error("CheckBlock() : premine block reward != %s",
-                       FormatMoney(PREMINE_BLOCK_1)))
+                       FormatMoney(PREMINE_BLOCK_1)));
     } else {
         if (vtx[0].GetValueOut() > (IsProofOfWork()? (GetProofOfWorkReward(nBits) - vtx[0].GetMinFee() + MIN_TX_FEE) : 0))
             return DoS(50, error("CheckBlock() : coinbase reward exceeded %s > %s",
