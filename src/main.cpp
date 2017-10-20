@@ -834,7 +834,8 @@ bool GetTransaction(const uint256 &hash, CTransaction &tx, uint256 &hashBlock)
         }
         CTxDB txdb("r");
         CTxIndex txindex;
-        if (tx.ReadFromDisk(txdb, hash, txindex))
+        if (tx.ReadFromDisk(txdb, COutPoint(hash, 0), txindex) ||
+            tx.ReadFromDisk(txdb, hash, txindex))
         {
             CBlock block;
             if (block.ReadFromDisk(txindex.pos.nFile, txindex.pos.nBlockPos, false))
