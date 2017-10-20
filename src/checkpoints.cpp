@@ -36,8 +36,8 @@ namespace Checkpoints
 
         MapCheckpoints::const_iterator i = mapCheckpoints.find(nHeight);
         if (i == mapCheckpoints.end()) return true;
-	printf("CheckHardened: hash: %s, checkpoint: %s\n",
-               hash.ToString().c_str(), i->second.ToString.c_str());
+	printf("CheckHardened: height: %d, hash: %s, checkpoint: %s\n",
+               height, hash.ToString().c_str(), i->second.ToString().c_str());
         return hash == i->second;
     }
 
