@@ -18,7 +18,7 @@ CROSS := arm-unknown-linux-gnueabi
 CXX := ${CROSS}-g++
 
 
-USE_UPNP:=0
+USE_UPNP:=-
 
 DEFS=-DBOOST_SPIRIT_THREADSAFE -std=c++11
 
