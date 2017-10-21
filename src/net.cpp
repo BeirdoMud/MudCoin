@@ -1002,10 +1002,10 @@ void MapPort(bool /* unused fMapPort */)
 // The second name should resolve to a list of seed addresses.
 // testnet dns seed begins with 't', all else are mudcoin dns seeds.
 static const char *strDNSSeed[][2] = {
-    {"seed", "coinnode.beirdo.ca"},
-    {"seedall", "coinnodes.beirdo.ca"},
-    {"tnseed", "testcoinnode.beirdo.ca"},
-    {"tnseedall", "testcoinnodes.beirdo.ca"},
+    {"seed", "seed.mudcoin.mycryptocoins.net"},
+    {"seednodes", "seednodes.mudcoin.mycryptocoins.net"},
+    {"tnseed", "tnseed.mudcoin.mycryptocoins.net"},
+    {"tnseednodes", "tnseednodes.mudcoin.mycryptocoins.net"},
 };
 
 void ThreadDNSAddressSeed(void* parg)
