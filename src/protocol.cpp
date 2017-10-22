@@ -18,7 +18,7 @@
 
 // Public testnet message start
 static unsigned char pchMessageStartTest[4] = { 0xcb, 0xf2, 0xc0, 0xef };
-static unsigned char pchMessageStartMudCoin[4] = { 0xe6, 0xe8, 0xe9, 0xe5 };
+static unsigned char pchMessageStartMudCoin[4] = { 0xe8, 0xe9, 0xe6, 0xe5 };
 
 void GetMessageStart(unsigned char pchMessageStart[], bool fPersistent)
 {
