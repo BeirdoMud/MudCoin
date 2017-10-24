@@ -73,6 +73,8 @@ contains(BITCOIN_NEED_QT_PLUGINS, 1) {
     QTPLUGIN += qcncodecs qjpcodecs qtwcodecs qkrcodecs qtaccessiblewidgets
 }
 
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
 !windows {
     # for extra security against potential buffer overflows
     QMAKE_CXXFLAGS += -fstack-protector
