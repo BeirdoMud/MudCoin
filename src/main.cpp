@@ -2167,7 +2167,7 @@ bool ProcessBlock(CNode* pfrom, CBlock* pblock)
         mapOrphanBlocksByPrev.erase(hashPrev);
     }
 
-    printf("ProcessBlock: ACCEPTED\n");
+    printf("ProcessBlock: ACCEPTED: %s\n", pblock->IsProofOfStake()? "proof-of-stake" : "proof-of-work");
 
     // mudcoin: if responsible for sync-checkpoint send it
     if (pfrom && !CSyncCheckpoint::strMasterPrivKey.empty())
@@ -2612,7 +2612,7 @@ string GetWarnings(string strFor)
 
     // mudcoin: should not enter safe mode for longer invalid chain
     // mudcoin: if sync-checkpoint is too old do not enter safe mode
-    if (Checkpoints::IsSyncCheckpointTooOld(60 * 60 * 24 * 10) && !fTestNet)
+    if (Checkpoints::IsSyncCheckpointTooOld(60 * 60 * 24 * 365) && !fTestNet)
     {
         nPriority = 100;
         strStatusBar = "WARNING: Checkpoint is too old. Wait for block chain to download, or notify developers of the issue.";
