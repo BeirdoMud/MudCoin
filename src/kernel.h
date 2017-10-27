@@ -12,7 +12,7 @@ extern unsigned int nModifierInterval;
 
 // MODIFIER_INTERVAL_RATIO:
 // ratio of group interval length between the last group and the first group
-static const int MODIFIER_INTERVAL_RATIO = 3;
+static const int MODIFIER_INTERVAL_RATIO = 8;
 
 // Protocol switch time of v0.3 kernel protocol
 extern unsigned int nProtocolV03SwitchTime;
